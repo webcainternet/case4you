@@ -327,9 +327,19 @@ ondragover="allowDrop(event)"></div>
 
       <div class="fontc4y1" style="float: left; width: 320px; margin-left: 20px; margin-top: 20px;">
 
+      <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+                <div style="float: left; text-align: left">
+                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', 'png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
+                </div>
+                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
+                        <img style="width: 30px;" src="" alt="">
+                </div>
+                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
+                        Normal
+                </div>
+        </div>
 
-
-<div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+      <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
                 <div style="float: left; text-align: left">
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-sp.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
