@@ -171,10 +171,11 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" style="height: 120px;" /></a></div>
 	
 	
-	<div style="float: left;margin-top: 78px;margin-left: 144px;"><img src="/image/data/indique2.png" style="width: 220px;" alt="Indique!">
+	<div style="float: left;margin-top: 78px;margin-left: 144px;width: 205px;">
 
-		<div class="fontc4y1" style="color: #606060; font-size: 24px;">Quer novidades?</div>
-		<div class="fontc4y2" style="color: #6aa11a; font-size: 24px;">Assine</div><div class="fontc4y1" style="color: #606060; font-size: 24px;"> o Case4You!</div>
+		<div class="fontc4y1" style="color: #606060; font-size: 24px;float: left;width: 200px;">Quer novidades?</div>
+		<div class="fontc4y2" style="color: #6aa11a; font-size: 24px;float: left;width: 80px;">Assine</div>
+		<div class="fontc4y1" style="color: #606060; font-size: 24px;float: left;width: 200px;"> o Case4You!</div>
 	</div>
 
 
