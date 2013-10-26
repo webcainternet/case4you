@@ -332,7 +332,7 @@ ondragover="allowDrop(event)"></div>
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
                 <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
-                        <img src="img/pic-n.png" style="width: 70px;" alt="">
+                        <img src="img/pic-n.png" style="width: 65px;border: solid 3px #6aa11a;border-radius: 10px;" alt="">
                 </div>
         </div>
 
@@ -341,7 +341,7 @@ ondragover="allowDrop(event)"></div>
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-sp.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
                 <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
-                        <img src="img/pic-s.png" style="width: 70px;" alt="">
+                        <img src="img/pic-s.png" style="width: 65px;border: solid 3px #6aa11a;border-radius: 10px;" alt="">
                 </div>
         </div>
 
@@ -350,7 +350,7 @@ ondragover="allowDrop(event)"></div>
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-pb.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
                 <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
-                        <img src="img/pic-p.png" style="width: 70px;" alt="">
+                        <img src="img/pic-p.png" style="width: 65px;border: solid 3px #6aa11a;border-radius: 10px;" alt="">
                 </div>
         </div>
 
@@ -359,7 +359,7 @@ ondragover="allowDrop(event)"></div>
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-40.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
                 <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
-                        <img src="img/pic-c.png" style="width: 70px;" alt="">
+                        <img src="img/pic-c.png" style="width: 65px;border: solid 3px #6aa11a;border-radius: 10px;" alt="">
                 </div>
         </div>
 
