@@ -794,6 +794,9 @@ body .ui-tooltip {
 	width: 755px;
 	color: #7f7f7f;
 	line-height: 18px;
+	border: solid 10px #F9F9F9;
+	border-radius: 4px;
+	padding: 10px;
 }
 .ui-widget .ui-widget {
 	font-size: 1em;
