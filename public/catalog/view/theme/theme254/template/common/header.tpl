@@ -173,7 +173,8 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	
 	<div style="float: left;margin-top: 78px;margin-left: 144px;"><img src="/image/data/indique2.png" style="width: 220px;" alt="Indique!">
 
-		<div class="fontc4y1">dwdwd</div>
+		<div class="fontc4y1" style="color: #606060; font-size: 24px;">Quer novidades?</div>
+		<div class="fontc4y2" style="color: #6aa11a; font-size: 24px;">Assine</div><div class="fontc4y1" style="color: #606060; font-size: 24px;"> o Case4You!</div>
 	</div>
 
 
