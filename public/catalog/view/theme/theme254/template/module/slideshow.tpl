@@ -39,11 +39,11 @@ $(document).ready(function() {
 
 <div id='coin-slider'>
 
-	
-	<a href="image/data/c4y_banner11.png" target="_blank"><img src='image/data/c4y_banner11.png' ></a>
-	<a href="image/data/c4y_banner5b.png" target="_blank"><img src='image/data/c4y_banner5b.png' ></a>
-	<a href="image/data/c4y_banner8.png" target="_blank"><img src='image/data/c4y_banner8.png' ></a>
-	<a href="image/data/c4y_banner6c.png" target="_blank"><img src='image/data/c4y_banner6c.png' ></a>
+	<a class="" >Iphone 5</a>
+	<a rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/"><img src='image/data/c4y_banner11.png' ></a>
+	<a href="http://case4you.com.br/capas-prontas"><img src='image/data/c4y_banner5b.png' ></a>
+	<a rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/"><img src='image/data/c4y_banner8.png' ></a>
+	<a href="http://case4you.com.br/acessorios"><img src='image/data/c4y_banner6c.png' ></a>
 	
 </div>
 
