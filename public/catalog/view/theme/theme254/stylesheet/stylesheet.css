@@ -341,13 +341,13 @@ h2 {
 .topmenu .menu li a.active, .topmenu .menu li a:hover {
 	background:#6aa11a;
 	margin: 0px;
-	border-bottom: solid 3px #567f17;
+	border-bottom: solid 0px #567f17;
 	}
 
 .topmenu .menu li ul li a{
 	background:#6aa11a;
 	margin: 0px;
-	border-bottom: solid 3px #567f17;
+	border-bottom: solid 0px #567f17;
 }
 	
 .submenu {
