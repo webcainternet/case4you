@@ -25,6 +25,7 @@
 body, p {
 font-family: "c4y1", Arial, Verdana;
 margin:0px; padding:0px;
+background-color: transparent;
 }
 
 </style>
