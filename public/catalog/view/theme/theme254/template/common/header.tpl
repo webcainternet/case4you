@@ -142,7 +142,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" style="height: 120px;" /></a></div>
 	
 	
-	<div style="float: left;margin-top: 78px;margin-left: 144px;"><img src="/image/data/indique2.png" style="width: 220px;" alt="Indique!"><a rel="shadowbox[Mixed];width=796;height=755" href="http://case4you.com.br/case4you/0/">link temporario</a></div>
+	<div style="float: left;margin-top: 78px;margin-left: 144px;"><img src="/image/data/indique2.png" style="width: 220px;" alt="Indique!"></div>
 	
 	<?php } ?>
 	<div class="header-top1"> 
@@ -166,12 +166,12 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 			</div>
 			<ul class="menu">
 				<li>
-					<a class="" href="#">Crie Sua Capa</a>
+					<a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=0">Crie Sua Capa</a>
 					<ul style="position: absolute; z-index:1000;">
-						<li><a class="" href="#">Iphone 4</a></li>
-						<li><a class="" href="#">Iphone 5</a></li>
-						<li><a class="" href="#">Galaxy S3</a></li>
-						<li><a class="" href="#">Galaxy S4</a></li>
+						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=0">Iphone 4</a></li>
+						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=1">Iphone 5</a></li>
+						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=2">Galaxy S3</a></li>
+						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=3">Galaxy S4</a></li>
 					</ul>
 				</li>
 				<li>
