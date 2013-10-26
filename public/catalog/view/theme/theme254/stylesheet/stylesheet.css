@@ -339,8 +339,12 @@ h2 {
 	text-align:center;
 	}
 .topmenu .menu li a.active, .topmenu .menu li a:hover {
-	/* background:#6aa11a; */
+	background:#6aa11a;
 	}
+
+.topmenu .menu li ul li a{
+	background:#6aa11a;
+}
 	
 .submenu {
 	background-color: red;
