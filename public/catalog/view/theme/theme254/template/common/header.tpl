@@ -176,8 +176,10 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 				</li>
 				<li>
 					<a class="" href="capas-prontas">Produtos</a>
-					<ul><li><a class="" href="#">Capas prontas</a></li></ul>
-					<ul><li><a class="" href="#">Acessórios</a></li></ul>
+					<ul style="position: absolute; z-index:1000;">
+						<li><a class="" href="#">Capas prontas</a></li>
+						<li><a class="" href="#">Acessórios</a></li>
+					</ul>
 				</li>
 				<li><a class="" href="/quem-somos">Quem Somos</a></li>
 				<li><a class="" href="/duvidas">D&uacute;vidas</a></li>
