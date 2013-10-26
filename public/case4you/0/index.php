@@ -188,13 +188,13 @@ progress:after { content: '%'; }
 .hidden { display: none !important;}
 </style>
 
-<body  class="fonte_personalizada">
+<body  class="fonte_personalizada"><center>
 <input type="hidden" name="modelodocelular" id="modelodocelular" value="">
 <input type="hidden" name="layoutdacapinha" id="layoutdacapinha" value="">
 <form name="form1" method="post" action="">
 
 
-<div id="accordion">
+<div id="accordion" style="text-align: left;">
 
 
   <h3>&nbsp;
@@ -447,7 +447,7 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
 
 
 </form>
-</body>
+</center></body>
 
 
 
