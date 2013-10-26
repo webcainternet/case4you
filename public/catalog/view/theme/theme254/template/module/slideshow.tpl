@@ -39,7 +39,6 @@ $(document).ready(function() {
 
 <div id='coin-slider'>
 
-	<a class="" >Iphone 5</a>
 	<a rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/"><img src='image/data/c4y_banner11.png' ></a>
 	<a href="http://case4you.com.br/capas-prontas"><img src='image/data/c4y_banner5b.png' ></a>
 	<a rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/"><img src='image/data/c4y_banner8.png' ></a>
