@@ -75,7 +75,7 @@
                 imagefilter($image, IMG_FILTER_COLORIZE, 100, 50, 0);
                 imagepng($image, $novoarq.'.png-sp.png');
                 imagedestroy($image);
-
+/*
         //Vermelho
                 $image = imagecreatefromgif($novoarq.'.tmp');
                 imagefilter($image, IMG_FILTER_COLORIZE, 100, 0, 0);
@@ -105,7 +105,7 @@
                 imagefilter($image, IMG_FILTER_COLORIZE, 50, -50, 50);
                 imagepng($image, $novoarq.'.png-roxo.png');
                 imagedestroy($image);
-
+*/
                 break;
             case 2:
 
@@ -133,7 +133,7 @@
                 imagefilter($image, IMG_FILTER_COLORIZE, 100, 50, 0);
                 imagepng($image, $novoarq.'.png-sp.png');
                 imagedestroy($image);
-
+/*
         //Vermelho
                 $image = imagecreatefromjpeg($novoarq.'.tmp');
                 imagefilter($image, IMG_FILTER_COLORIZE, 100, 0, 0);
@@ -163,7 +163,7 @@
                 imagefilter($image, IMG_FILTER_COLORIZE, 50, -50, 50);
                 imagepng($image, $novoarq.'.png-roxo.png');
                 imagedestroy($image);
-
+*/
 
                 break;
             case 3:
@@ -192,7 +192,7 @@
                 imagefilter($image, IMG_FILTER_COLORIZE, 100, 50, 0);
                 imagepng($image, $novoarq.'.png-sp.png');
                 imagedestroy($image);
-
+/*
         //Vermelho
                 $image = imagecreatefrompng($novoarq.'.tmp');
                 imagefilter($image, IMG_FILTER_COLORIZE, 100, 0, 0);
@@ -222,7 +222,7 @@
                 imagefilter($image, IMG_FILTER_COLORIZE, 50, -50, 50);
                 imagepng($image, $novoarq.'.png-roxo.png');
                 imagedestroy($image);
-
+*/
                 break;
 
             case 6:
@@ -251,7 +251,7 @@
                 imagefilter($image, IMG_FILTER_COLORIZE, 100, 50, 0);
                 imagepng($image, $novoarq.'.png-sp.png');
                 imagedestroy($image);
-
+/*
         //Vermelho
                 $image = imagecreatefrombmp($novoarq.'.tmp');
                 imagefilter($image, IMG_FILTER_COLORIZE, 100, 0, 0);
@@ -281,7 +281,7 @@
                 imagefilter($image, IMG_FILTER_COLORIZE, 50, -50, 50);
                 imagepng($image, $novoarq.'.png-roxo.png');
                 imagedestroy($image);
-
+*/
                 break;
 
         }
@@ -315,7 +315,12 @@ if (!$result) {
     die('Invalid query: ' . mysql_error());
 }
 else {
-    echo "OK";
+    ?>
+        <img src="http://case4you.com.br/case4you/imagesuso/<?php echo "$novoarq"; ?>.png">
+        <img src="http://case4you.com.br/case4you/imagesuso/<?php echo "$novoarq"; ?>.png-40.png">
+        <img src="http://case4you.com.br/case4you/imagesuso/<?php echo "$novoarq"; ?>.png-pb.png">
+        <img src="http://case4you.com.br/case4you/imagesuso/<?php echo "$novoarq"; ?>.png-sp.png">
+    <?php
 }
 
 

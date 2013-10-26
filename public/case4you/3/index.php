@@ -365,67 +365,6 @@ ondragover="allowDrop(event)"></div>
                 </div>
         </div>
 
-        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-                <div style="float: left; text-align: left">
-                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-red.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
-                </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
-                        <img style="width: 30px;" src="" alt="">
-                </div>
-                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
-                        Vermelho
-                </div>
-        </div>
-
-        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-                <div style="float: left; text-align: left">
-                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-verde.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
-                </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
-                        <img style="width: 30px;" src="" alt="">
-                </div>
-                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
-                        Verde
-                </div>
-        </div>
-
-        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-                <div style="float: left; text-align: left">
-                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-azul.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
-                </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
-                        <img style="width: 30px;" src="" alt="">
-                </div>
-                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
-                        Azul
-                </div>
-        </div>
-
-        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-                <div style="float: left; text-align: left">
-                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-amarelo.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
-                </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
-                        <img style="width: 30px;" src="" alt="">
-                </div>
-                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
-                        Amarelo
-                </div>
-        </div>
-
-        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-                <div style="float: left; text-align: left">
-                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-roxo.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
-                </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
-                        <img style="width: 30px;" src="" alt="">
-                </div>
-                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
-                        Roxo
-                </div>
-        </div>
-
-
 
 
 
