@@ -167,7 +167,10 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 			<ul class="menu">
 				<li>
 					<a class="" href="#">Crie Sua Capa</a>
-					<ul><li><a class="" href="#">teste1</a></li></ul>
+					<ul><li><a class="" href="#">Iphone 4</a></li></ul>
+					<ul><li><a class="" href="#">Iphone 5</a></li></ul>
+					<ul><li><a class="" href="#">Galaxy S3</a></li></ul>
+					<ul><li><a class="" href="#">Galaxy S4</a></li></ul>
 				</li>
 				<li><a class="" href="capas-prontas">Produtos</a></li>
 				<li><a class="" href="/quem-somos">Quem Somos</a></li>
