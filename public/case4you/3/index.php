@@ -331,11 +331,8 @@ ondragover="allowDrop(event)"></div>
                 <div style="float: left; text-align: left">
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
-                        <img style="width: 30px;" src="img/pic-n.png" style="width: 30px;" alt="">
-                </div>
-                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
-                        Normal
+                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
+                        <img src="img/pic-n.png" style="width: 70px;" alt="">
                 </div>
         </div>
 
@@ -343,11 +340,8 @@ ondragover="allowDrop(event)"></div>
                 <div style="float: left; text-align: left">
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-sp.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
-                        <img style="width: 30px;" src="img/pic-s.png" style="width: 30px;" alt="">
-                </div>
-                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
-                        Sepia
+                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
+                        <img src="img/pic-s.png" style="width: 70px;" alt="">
                 </div>
         </div>
 
@@ -355,11 +349,8 @@ ondragover="allowDrop(event)"></div>
                 <div style="float: left; text-align: left">
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-pb.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
-                        <img style="width: 30px;" src="img/pic-p.png" style="width: 30px;" alt="">
-                </div>
-                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
-                        Preto e Branco
+                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
+                        <img src="img/pic-p.png" style="width: 70px;" alt="">
                 </div>
         </div>
 
@@ -367,11 +358,8 @@ ondragover="allowDrop(event)"></div>
                 <div style="float: left; text-align: left">
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-40.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 30px;">
-                        <img style="width: 30px;" src="img/pic-c.png" style="width: 30px;" alt="">
-                </div>
-                <div class="fontc4y1" style="float: left; text-align: left; padding-left: 30px;margin-top: 5px;">
-                        Contraste
+                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
+                        <img src="img/pic-c.png" style="width: 70px;" alt="">
                 </div>
         </div>
 
