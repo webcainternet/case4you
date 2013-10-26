@@ -211,10 +211,10 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 					</ul>
 				</li>
 				<li>
-					<a class="" href="capas-prontas">Produtos</a>
+					<a class="" href="/capas-prontas">Produtos</a>
 					<ul style="position: absolute; z-index:1000;">
-						<li><a class="" href="#">Capas prontas</a></li>
-						<li><a class="" href="#">Acessórios</a></li>
+						<li><a class="" href="/capas-prontas">Capas prontas</a></li>
+						<li><a class="" href="/acessorios">Acessórios</a></li>
 					</ul>
 				</li>
 				<li><a class="" href="/quem-somos">Quem Somos</a></li>
