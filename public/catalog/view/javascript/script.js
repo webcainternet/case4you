@@ -126,12 +126,13 @@ $('.addToCart').click(function() {
    }
    }
    if (json['success']) {
-     $('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<span class="close"><img src="catalog/view/theme/theme254/image/close.png" alt="" class="close" /></span></div>');
+   //   $('#notification').html('<div class="success" style="display: none;">' + json['success'] + '<span class="close"><img src="catalog/view/theme/theme254/image/close.png" alt="" class="close" /></span></div>');
 
-       $('.success').fadeIn('slow');
-   $('#cart-total').html(json['total']);
-   $('#cart .content').html(json['output']);
-   animateProduct(tis.parents().find(".image2 img") , $("#cart"));
+   //     $('.success').fadeIn('slow');
+   // $('#cart-total').html(json['total']);
+   // $('#cart .content').html(json['output']);
+   // animateProduct(tis.parents().find(".image2 img") , $("#cart"));
+   window.location = 'index.php?route=checkout/cart';
    }
    }, this)
    });
