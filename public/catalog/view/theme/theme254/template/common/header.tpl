@@ -172,7 +172,11 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 					<ul><li><a class="" href="#">Galaxy S3</a></li></ul>
 					<ul><li><a class="" href="#">Galaxy S4</a></li></ul>
 				</li>
-				<li><a class="" href="capas-prontas">Produtos</a></li>
+				<li>
+					<a class="" href="capas-prontas">Produtos</a>
+					<ul><li><a class="" href="#">Capas prontas</a></li></ul>
+					<ul><li><a class="" href="#">Acessórios</a></li></ul>
+				</li>
 				<li><a class="" href="/quem-somos">Quem Somos</a></li>
 				<li><a class="" href="/duvidas">D&uacute;vidas</a></li>
 				<li><a class="" href="/fale-conosco">Fale Conosco</a></li>
