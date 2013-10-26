@@ -3,6 +3,35 @@
 <head>
 <meta charset="UTF-8" />
 
+	
+<style type="text/css">
+@font-face {
+  font-family: "c4y1";
+  src: url(http://capamaniacos.com.br/css/fontes/alrightsans-regularitalic-v3.ttf);
+}
+@font-face {
+  font-family: "c4y2";
+  src: url(http://capamaniacos.com.br/css/fontes/alrightsans-bolditalic-v3.ttf);
+}
+.fontc4y1 { 
+  font-family: "c4y1", Arial, Verdana;
+  font-size: 12px;
+}
+
+.fontc4y2 { 
+  font-family: "c4y2", Arial, Verdana;
+  font-size: 14px;
+  color: #6aa11a;
+}
+body, p {
+font-family: "c4y1", Arial, Verdana;
+margin:0px; padding:0px;
+background-color: transparent;
+}
+
+</style>
+
+
 <link rel="stylesheet" type="text/css" href="/catalog/view/theme/theme254/shadowbox/shadowbox.css">
 <script type="text/javascript" src="/catalog/view/theme/theme254/shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
@@ -142,7 +171,12 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" style="height: 120px;" /></a></div>
 	
 	
-	<div style="float: left;margin-top: 78px;margin-left: 144px;"><img src="/image/data/indique2.png" style="width: 220px;" alt="Indique!"></div>
+	<div style="float: left;margin-top: 78px;margin-left: 144px;"><img src="/image/data/indique2.png" style="width: 220px;" alt="Indique!">
+
+		<div class="fontc4y1">dwdwd</div>
+	</div>
+
+
 	
 	<?php } ?>
 	<div class="header-top1"> 
