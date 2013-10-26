@@ -142,7 +142,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" style="height: 120px;" /></a></div>
 	
 	
-	<div style="float: left;margin-top: 78px;margin-left: 144px;"><img src="/image/data/indique2.png" style="width: 220px;" alt="Indique!"><a rel="shadowbox[Mixed];width=780;height=690" href="http://case4you.com.br/case4you/0/">link temporario</a></div>
+	<div style="float: left;margin-top: 78px;margin-left: 144px;"><img src="/image/data/indique2.png" style="width: 220px;" alt="Indique!"><a rel="shadowbox[Mixed];width=800;height=700" href="http://case4you.com.br/case4you/0/">link temporario</a></div>
 	
 	<?php } ?>
 	<div class="header-top1"> 
