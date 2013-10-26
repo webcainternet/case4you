@@ -171,7 +171,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" style="height: 120px;" /></a></div>
 	
 	
-	<div style="float: left;margin-top: 78px;margin-left: 144px;width: 220px;">
+	<div style="float: left;margin-top: 86px;margin-left: 144px;width: 220px;">
 
 		<div class="fontc4y1" style="color: #606060; font-size: 24px;float: left;width: 200px; width: 220px;text-align: center;margin-bottom: 10px;">Quer novidades?</div>
 		<div class="fontc4y2" style="color: #6aa11a; font-size: 24px;float: left;width: 80px;">Assine</div>
@@ -205,7 +205,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 					<a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=0">Crie Sua Capa</a>
 					<ul style="position: absolute; z-index:1000;">
 						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=0">Iphone 4</a></li>
-						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=1">Iphone 5</a></li>
+						<li><a class="" rel="shadowbox;width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=1">Iphone 5</a></li>
 						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=2">Galaxy S3</a></li>
 						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=3">Galaxy S4</a></li>
 					</ul>
