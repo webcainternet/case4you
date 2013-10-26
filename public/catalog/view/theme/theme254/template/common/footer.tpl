@@ -66,7 +66,7 @@
 	  
 	  <div class="column col-4">
         <h3>Site Seguro</h3>
-        <img src="image/data/Selo-SSL-Grande.png" alt="Site Seguro" style="width: 90px; margin-top: -5px;">
+        <img src="image/data/Selo-SSL-grande.png" alt="Site Seguro" style="width: 90px; margin-top: -5px;">
       </div>
       
   </div>
