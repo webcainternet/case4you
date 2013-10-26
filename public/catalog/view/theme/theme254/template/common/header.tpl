@@ -165,7 +165,10 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 				<input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
 			</div>
 			<ul class="menu">
-				<li><a class="" href="#">Crie Sua Capa</a></li>
+				<li>
+					<a class="" href="#">Crie Sua Capa</a>
+					<ul><li><a class="" href="#">teste1</a></li></ul>
+				</li>
 				<li><a class="" href="capas-prontas">Produtos</a></li>
 				<li><a class="" href="/quem-somos">Quem Somos</a></li>
 				<li><a class="" href="/duvidas">D&uacute;vidas</a></li>
