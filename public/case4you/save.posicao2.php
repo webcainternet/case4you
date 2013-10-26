@@ -316,10 +316,10 @@ if (!$result) {
 }
 else {
     ?>
-        <img src="http://case4you.com.br/case4you/imagesuso/<?php echo "$novoarq"; ?>.png">
-        <img src="http://case4you.com.br/case4you/imagesuso/<?php echo "$novoarq"; ?>.png-40.png">
-        <img src="http://case4you.com.br/case4you/imagesuso/<?php echo "$novoarq"; ?>.png-pb.png">
-        <img src="http://case4you.com.br/case4you/imagesuso/<?php echo "$novoarq"; ?>.png-sp.png">
+        <img src="http://case4you.com.br/case4you/<?php echo "$novoarq"; ?>.png">
+        <img src="http://case4you.com.br/case4you/<?php echo "$novoarq"; ?>.png-40.png">
+        <img src="http://case4you.com.br/case4you/<?php echo "$novoarq"; ?>.png-pb.png">
+        <img src="http://case4you.com.br/case4you/<?php echo "$novoarq"; ?>.png-sp.png">
     <?php
 }
 
