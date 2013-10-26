@@ -87,7 +87,7 @@ background-color: transparent;
 
 
     function showfacebook() {
-      window.parent.document.getElementById("frcompupload").src = "http://case4you.com.br/casefouryou/1/index.php?m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
+      document.getElementById("frcompupload").src = "http://case4you.com.br/casefouryou/1/index.php?m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
 
       document.getElementById("imagensselecione").style.display = 'none';
       document.getElementById("p3desc").style.display = 'none';
@@ -97,7 +97,7 @@ background-color: transparent;
     }
 
     function showinstagram() {
-      window.parent.document.getElementById("frcompupload").src = "http://case4you.com.br/instagram4you/instagram/1/?m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
+      document.getElementById("frcompupload").src = "http://case4you.com.br/instagram4you/instagram/1/?m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
 
       document.getElementById("imagensselecione").style.display = 'none';
       document.getElementById("p3desc").style.display = 'none';
@@ -107,7 +107,7 @@ background-color: transparent;
     }
 
     function showcomputador() {
-      window.parent.document.getElementById("frcompupload").src = "http://case4you.com.br/case4you/1/?m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
+      document.getElementById("frcompupload").src = "http://case4you.com.br/case4you/1/?m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
 
       document.getElementById("imagensselecione").style.display = 'none';
       document.getElementById("p3desc").style.display = 'none';
