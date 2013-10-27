@@ -141,6 +141,50 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 <div class="row-1">
 <div id="header">
 	<div class="toprow">
+
+
+	<div class="topmenu">
+		<div class="topmenu2">
+			<div id="search">
+				<div class="button-search"></div>
+				<input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
+			</div>
+			<ul class="menu">
+				<li>
+					<a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=0">Crie Sua Capa</a>
+					<ul style="position: absolute; z-index:1000;">
+						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=0">Iphone 4</a></li>
+						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=1">Iphone 5</a></li>
+						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=2">Galaxy S3</a></li>
+						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=3">Galaxy S4</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="" href="/capas-prontas">Produtos</a>
+					<ul style="position: absolute; z-index:1000;">
+						<li><a class="" href="/capas-prontas">Capas prontas</a></li>
+						<li><a class="" href="/acessorios">Acessórios</a></li>
+					</ul>
+				</li>
+				<li><a class="" href="/quem-somos">Quem Somos</a></li>
+				<li><a class="" href="/duvidas">D&uacute;vidas</a></li>
+				<li><a class="" href="/fale-conosco">Fale Conosco</a></li>
+
+				<?php /*
+				<?php if (!isset($this->request->get['route'])) { $route='active'; }  else {$route='';}?> <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") {echo "active";} ?>" href="<?php echo $home; ?>"><span></span></a></li>
+				<?php $i=0; foreach ($informations as $information) {$i++ ?>
+				<li class="info info-<?php echo $i; ?>"><a class="<?php if ($this->request->get['route']=="information/information") {echo "active";} ?>" href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+				<?php } ?>
+				*/ ?>
+				<?php /* <li><a class="<?php if ($this->request->get['route']=="product/special") {echo "active";} ?>" href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li> */ ?>
+				<?php /* <li><a class="<?php if ($this->request->get['route']=="information/sitemap") {echo "active";} ?>" href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li> */ ?>
+				
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+		
 		<div class="outer">
 			<?php echo $language; ?>
 			<?php echo $currency; ?>
@@ -194,46 +238,11 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 </div>
 <div class="clear"></div>
 
-	<div class="topmenu">
-		<div class="topmenu2">
-			<div id="search">
-				<div class="button-search"></div>
-				<input type="text" name="search" placeholder="<?php echo $text_search; ?>" value="<?php echo $search; ?>" />
-			</div>
-			<ul class="menu">
-				<li>
-					<a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=0">Crie Sua Capa</a>
-					<ul style="position: absolute; z-index:1000;">
-						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=0">Iphone 4</a></li>
-						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=1">Iphone 5</a></li>
-						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=2">Galaxy S3</a></li>
-						<li><a class="" rel="shadowbox[Mixed];width=796;height=755"  href="http://case4you.com.br/case4you/0/?m=3">Galaxy S4</a></li>
-					</ul>
-				</li>
-				<li>
-					<a class="" href="/capas-prontas">Produtos</a>
-					<ul style="position: absolute; z-index:1000;">
-						<li><a class="" href="/capas-prontas">Capas prontas</a></li>
-						<li><a class="" href="/acessorios">Acessórios</a></li>
-					</ul>
-				</li>
-				<li><a class="" href="/quem-somos">Quem Somos</a></li>
-				<li><a class="" href="/duvidas">D&uacute;vidas</a></li>
-				<li><a class="" href="/fale-conosco">Fale Conosco</a></li>
 
-				<?php /*
-				<?php if (!isset($this->request->get['route'])) { $route='active'; }  else {$route='';}?> <li class="first"><a class="<?php echo $route; if (isset($this->request->get['route']) && $this->request->get['route']=="common/home") {echo "active";} ?>" href="<?php echo $home; ?>"><span></span></a></li>
-				<?php $i=0; foreach ($informations as $information) {$i++ ?>
-				<li class="info info-<?php echo $i; ?>"><a class="<?php if ($this->request->get['route']=="information/information") {echo "active";} ?>" href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
-				<?php } ?>
-				*/ ?>
-				<?php /* <li><a class="<?php if ($this->request->get['route']=="product/special") {echo "active";} ?>" href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li> */ ?>
-				<?php /* <li><a class="<?php if ($this->request->get['route']=="information/sitemap") {echo "active";} ?>" href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li> */ ?>
-				
-			</ul>
-			<div class="clear"></div>
-		</div>
-	</div>
+
+
+
+
 
 <div class="clear"></div>
 <?php if ($categories) { ?>
