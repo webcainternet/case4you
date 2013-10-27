@@ -219,7 +219,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" style="height: 120px;" /></a></div>
 	
 	
-	<div style="float: left;margin-top: 86px;margin-left: 144px;width: 220px;">
+	<div style="float: left;margin-top: 105px;margin-left: 144px;width: 220px;">
 
 		<div class="fontc4y1" style="color: #606060; font-size: 24px;float: left;width: 200px; width: 220px;text-align: center;margin-bottom: 10px;">Quer novidades?</div>
 		<div class="fontc4y2" style="color: #6aa11a; font-size: 24px;float: left;width: 80px;">Assine</div>

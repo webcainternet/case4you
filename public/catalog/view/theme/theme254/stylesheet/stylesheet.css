@@ -268,7 +268,7 @@ h2 {
 #header #logo a,#header #logo a img {display:block;}
 #header #logo {
 	float:left;
-	margin:41px 0 16px 0;
+	margin:75px 0 16px 0;
 }
 #language {
 	color: #999;
@@ -311,6 +311,7 @@ h2 {
 	width:100%;
 	margin:0 auto 10px ;
 	padding-top: 5px;
+	margin-top: 12px;
 	}
 .topmenu .menu li.info {display:none;}
 .topmenu .menu li.info.info-1 {display:block;}
@@ -411,7 +412,7 @@ h2 {
 }
 .cart-position {
 	float:right;
-	margin:80px 0 10px;
+	margin:100px 0 10px;
 	background:url(../image/cart-bg.png) repeat left top #3a4047;
 	position:relative;
 	border-radius:5px;
@@ -642,6 +643,7 @@ h2 {
 .toprow {
 	background-color:#3e454c;
 	padding:15px 0px;
+	height: 20px;
 	}
 #header #welcome {
 	color:#8a939c;
