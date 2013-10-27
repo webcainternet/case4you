@@ -6,7 +6,7 @@
 </div>
 
 <!-- border-top: solid 1px #6aa11a; C8E59C -->
-	<div class="wrapper" style="background-color: #9ac13a; background-size: 48px; padding-bottom: 10px;">
+	<div class="wrapper" style="background-color: #71B01A; background-size: 48px; padding-bottom: 10px; background-image: url('/image/data/rodapebg.png');">
 		<div style="margin: auto; width: 1024px;">
 			<a href="http://www.facebook.com/case4youoficial" target="_blank"><div class="footer-social fs-face">
 				&nbsp;
