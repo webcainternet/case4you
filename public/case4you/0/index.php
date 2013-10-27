@@ -199,7 +199,7 @@ progress:after { content: '%'; }
 
   <h3>&nbsp;
     <div style="float: left; width: 50%;">Passo 1 - Modelo do seu celular</div>
-    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100;"><u>Ir para escolha do modelo</u></div>
+    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100;"><u>Voltar - Passo 1</u></div>
   </h3>
   <div>
     <div style="float: left; width: 350px; height: 550px;">
@@ -312,7 +312,7 @@ progress:after { content: '%'; }
 
   <h3>&nbsp;
     <div style="float: left; width: 50%;">Passo 2 - Escolha de Layout</div>
-    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100;"><u>Ir para layout da capinha</u></div>
+    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100;"><u>Voltar - Passo 2</u></div>
   </h3>
   <div>
     <div style="float: left; width: 350px;">
@@ -364,7 +364,7 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
 
   <h3>&nbsp;
     <div style="float: left; width: 50%;">Passo 3 - Selecionar Fotos</div>
-    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100;"><u>Ir para seleção de fotos</u></div>
+    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100;"><u>Voltar - Passo 3</u></div>
   </h3>
   <div>
     <div id="imagensselecione" style="float: left; width: 348px;">
@@ -421,7 +421,7 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
 
   <h3>&nbsp;
     <div style="float: left; width: 50%;">Passo 4 - Aplicar filtros</div>
-    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100;"><u>Ir para aplicação de filtros</u></div>
+    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100;"><u>Voltar - Passo 4</u></div>
   </h3>
   <div>
     <div id="filtro1" style="display: block; float: left; width: 350px; height: 550px;">
