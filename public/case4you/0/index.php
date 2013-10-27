@@ -2,7 +2,7 @@
 
 <head>
 <meta charset="utf-8" />
-  
+	
 <style type="text/css">
 @font-face {
   font-family: "c4y1";
@@ -206,17 +206,17 @@ progress:after { content: '%'; }
       <p>
         Qual o modelo de seu celular? <br />&nbsp;<br />
         
-  <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-    <div style="float: left; text-align: left">
-      <input onChange="selecionarmodelo(this)" type="radio" name="modelo" id="miphone4" value="iphone4">
-    </div>
+	<div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+		<div style="float: left; text-align: left">
+			<input onChange="selecionarmodelo(this)" type="radio" name="modelo" id="miphone4" value="iphone4">
+		</div>
                 <div style="float: left; text-align: left;padding-left: 5px; height: 90px;">
-      <img style="width: 39px;" src="./img/iphone4.png" alt="">
+			<img style="width: 39px;" src="./img/iphone4.png" alt="">
                 </div>
                 <div class="fontc4y1" style="float: left; text-align: left; padding-left: 20px;margin-top: 5px;">
-      Iphone4/4S
-    </div>
-  </div>
+			Iphone4/4S
+		</div>
+	</div>
 
         <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
                 <div style="float: left; text-align: left">
@@ -255,10 +255,10 @@ progress:after { content: '%'; }
         </div>
 
 <!--
-  <div style="float: left; text-align: center;">
+	<div style="float: left; text-align: center;">
         <input onChange="selecionarmodelo(this)" type="radio" name="modelo" value="iphone4" style="display: inline; float: none;position: relative; top: -85px;">
           <img style="margin-left: 2px; margin-right: 5px; width: 45px; float: none;position: relative; top: -10px;" src="./img/iphone4.png" alt="">
-  <br />iphone4
+	<br />iphone4
         </div>
 
        <div style="float: left; text-align: center;">
@@ -275,7 +275,7 @@ progress:after { content: '%'; }
        <div style="float: left; text-align: center;">        <input onChange="selecionarmodelo(this)" type="radio" name="modelo" value="galaxy4" style="display: inline; float: none;position: relative; top: -85px;">
           <img style="margin-left: 2px; margin-right: 5px; width: 55px; float: none;position: relative; top: 1px;" src="./img/galaxys4.jpg" alt="">
         <br />iphone41
-  </div>
+	</div>
 -->
       </p>
     </div>
@@ -406,13 +406,13 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
                   font-weight: bold;">SELECIONE AS FOTOS QUE SERAM IMPRESSAS!</div>
       <div class="fontc4y1" style="float: left; width: 340px; margin-left: 20px; margin-top: 20px;">
         AJUDA: Agora escolha de onde deseja buscar suas fotos: De seu computador, Facebook ou Instagram.
-  </div>
+	</div>
     </div>
     <div id="compupload" style="display: none; float: right; width: 100%; yellow; height: 540px; text-align: center; background-repeat: no-repeat; background-position: 15px 10px;">
-  <iframe id="frcompupload" name="frcompupload" src="about:blank" scrolling="no" frameborder="0" style="width: 100%; height: 540px;"></iframe>
+	<iframe id="frcompupload" name="frcompupload" src="about:blank" scrolling="no" frameborder="0" style="width: 100%; height: 540px;"></iframe>
     </div>
     <div id="dvconcluir" style="display: none; float: left; width: 305px; height: 1px; margin-top: -55px; text-align: right;">
-  <a href="#" onclick="p4concluir()"><img src="/case4you/0/img/btconcluido.png" alt=""></a>
+	<a href="#" onclick="p4concluir()"><img src="/case4you/0/img/btconcluido.png" alt=""></a>
     </div>
 
   </div>
