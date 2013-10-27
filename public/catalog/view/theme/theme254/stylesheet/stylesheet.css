@@ -269,6 +269,7 @@ h2 {
 #header #logo {
 	float:left;
 	margin:75px 0 0px 0;
+	width: 415px;
 }
 #language {
 	color: #999;
