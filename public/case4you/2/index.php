@@ -73,9 +73,11 @@ ondragover="allowDrop(event)"></div>
                   width: 260px;
                   padding: 5px;
                   color: #6aa11a;
-                  font-size: 14px;
+                  font-size: 13px;
+                  margin-top: 3px;
+                  margin-left: 2px;
                   font-weight: bold;">ARRASTE AS FOTOS ESCOLHIDAS!</div>
-      <div class="fontc4y1" style="float: left; width: 340px; margin-top: 20px;">
+      <div class="fontc4y1" style="float: left; width: 295px; margin-top: 20px;">
         AJUDA: Arraste a foto abaixo para a capinha ao lado na posição em que será impressa!
       </div>
 
