@@ -5,7 +5,7 @@
 .prontas-title {width: 100%; text-align: center; }
 
 .passos { width: 100%; background-color: red; }
-.passositem { width: 334px; height: 175px; float: left; margin: 0px; border-radius: 20px; margin-bottom: 20px;
+.passositem { width: 334px; height: 175px; float: left; margin: 0px; border-radius: 10px; margin-bottom: 20px;
 
 background-image: -ms-linear-gradient(top, #65747A 0%, #39414A 100%);
 background-image: -moz-linear-gradient(top, #65747A 0%, #39414A 100%);
