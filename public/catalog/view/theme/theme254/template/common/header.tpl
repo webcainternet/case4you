@@ -143,6 +143,33 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 	<div class="toprow">
 
 
+
+
+		<div class="outer">
+			<?php echo $language; ?>
+			<?php echo $currency; ?>
+			<ul class="links">
+				<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/wishlist") {echo "active";} ?>" href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a></li>
+				<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/account") {echo "active";} ?>" href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+				<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/cart") {echo "active";} ?>" href="<?php echo $shopping_cart; ?>"><?php echo $text_shopcart; ?></a></li>
+				<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/checkout") {echo "active";} ?>" href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a></li>
+			</ul>
+
+			<div style="float: left; width: 95px; height: 20px;">
+				<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FCase4You%2F173492216171488%3Fref%3Dhl&amp;width=200&amp;height=20&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=true&amp;appId=363972257064181" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:20px;" allowTransparency="true"></iframe>
+			</div>
+			<div id="welcome">
+	
+				<?php if (!$logged) { ?>
+				<?php echo $text_welcome; ?>
+				<?php } else { ?>
+				<?php echo $text_logged; ?>
+				<?php } ?>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+
 	<div class="topmenu">
 		<div class="topmenu2">
 			<div id="search">
@@ -184,30 +211,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 		</div>
 	</div>
 
-		
-		<div class="outer">
-			<?php echo $language; ?>
-			<?php echo $currency; ?>
-			<ul class="links">
-				<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/wishlist") {echo "active";} ?>" href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a></li>
-				<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="account/account") {echo "active";} ?>" href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-				<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/cart") {echo "active";} ?>" href="<?php echo $shopping_cart; ?>"><?php echo $text_shopcart; ?></a></li>
-				<li><a class="<?php if (isset($this->request->get['route']) && $this->request->get['route']=="checkout/checkout") {echo "active";} ?>" href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a></li>
-			</ul>
 
-			<div style="float: left; width: 95px; height: 20px;">
-				<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FCase4You%2F173492216171488%3Fref%3Dhl&amp;width=200&amp;height=20&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=true&amp;appId=363972257064181" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:20px;" allowTransparency="true"></iframe>
-			</div>
-			<div id="welcome">
-	
-				<?php if (!$logged) { ?>
-				<?php echo $text_welcome; ?>
-				<?php } else { ?>
-				<?php echo $text_logged; ?>
-				<?php } ?>
-			</div>
-			<div class="clear"></div>
-		</div>
 	</div>
 	<div class="outer">
 	
