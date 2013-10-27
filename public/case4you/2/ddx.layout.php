@@ -6,10 +6,10 @@ switch ($ql) {
     case 0: ?>
 
 <!-- LAYOUT 1 -->
-    	<div id="divmask" style="padding: 0px; height: <?php echo $mh; ?>px; width: 340px; margin-left: 10px; background-size: 340px; background-image: url(http://case4you.com.br/case4you/0/img/<?php echo $mimage; ?>); background-repeat: no-repeat no-repeat;">
-    		<div id="divl1" ondrop="drop(event, '1')" ondragover="allowDrop(event)" style="width: 100%; height: 100%; overflow: hidden;text-align: center;
-	align: middle; border: solid 1px #6aa11a;"></div>
-  	</div>
+        <div id="divmask" style="padding: 0px; height: <?php echo $mh; ?>px; width: 340px; margin-left: 10px; background-size: 340px; background-image: url(http://case4you.com.br/case4you/0/img/<?php echo $mimage; ?>); background-repeat: no-repeat no-repeat;">
+            <div id="divl1" ondrop="drop(event, '1')" ondragover="allowDrop(event)" style="width: 100%; height: 100%; overflow: hidden;text-align: center;
+    align: middle; border: solid 1px #6aa11a;"></div>
+    </div>
 <!-- FIM LAYOUT 1 -->
 
     <?php break;
@@ -20,7 +20,7 @@ switch ($ql) {
                 <div id="divl2a" ondrop="dropl2(event, '1')" ondragover="allowDrop(event)" style="float: left; border: solid 1px #6aa11a; width: <?php echo $mw2; ?>px; height: <?php echo $mh2; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
 
-		<div id="divl2b" ondrop="dropl2(event, '2')" ondragover="allowDrop(event)" style="float: left; border: solid 1px #6aa11a; width: <?php echo $mw2; ?>px; height: <?php echo $mh2; ?>px; overflow: hidden;text-align: center;
+        <div id="divl2b" ondrop="dropl2(event, '2')" ondragover="allowDrop(event)" style="float: left; border: solid 1px #6aa11a; width: <?php echo $mw2; ?>px; height: <?php echo $mh2; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
         </div>
 <!-- FIM LAYOUT 2 -->
@@ -35,7 +35,7 @@ switch ($ql) {
                 <div id="divl15b1" ondrop="dropl15b(event, '1')" ondragover="allowDrop(event)" style="float: left; border: solid 1px #6aa11a; width: <?php echo $mw15b; ?>px; height: <?php echo $mh15b; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
 
-		        <div id="divl15b2" ondrop="dropl15b(event, '2')" ondragover="allowDrop(event)" style="float: left; border: solid 1px #6aa11a; width: <?php echo $mw15b; ?>px; height: <?php echo $mh15b; ?>px; overflow: hidden;text-align: center;
+                <div id="divl15b2" ondrop="dropl15b(event, '2')" ondragover="allowDrop(event)" style="float: left; border: solid 1px #6aa11a; width: <?php echo $mw15b; ?>px; height: <?php echo $mh15b; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
 
                 <div id="divl15a1" ondrop="dropl15a(event, '5')" ondragover="allowDrop(event)" style="float: right; border: solid 1px #6aa11a; width: <?php echo $mw15a; ?>px; height: <?php echo $mh15a; ?>px; overflow: hidden;text-align: center;
@@ -49,7 +49,7 @@ switch ($ql) {
 
 
 
-		        <div id="divl15a2" ondrop="dropl15a(event, '6')" ondragover="allowDrop(event)" style="float: left; border: solid 1px #6aa11a; width: <?php echo $mw15a; ?>px; height: <?php echo $mh15a; ?>px; overflow: hidden;text-align: center;
+                <div id="divl15a2" ondrop="dropl15a(event, '6')" ondragover="allowDrop(event)" style="float: left; border: solid 1px #6aa11a; width: <?php echo $mw15a; ?>px; height: <?php echo $mh15a; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
 
                 <div id="divl15b5" ondrop="dropl15b(event, '8')" ondragover="allowDrop(event)" style="float: right; border: solid 1px #6aa11a; width: <?php echo $mw15b; ?>px; height: <?php echo $mh15b; ?>px; overflow: hidden;text-align: center;
@@ -115,19 +115,8 @@ width: 320px;
 height: 55px;
 margin-top: -55px; text-align: right;">
 
-<div style="display: none; float: right; margin-right: 10px; width: 200px; height: 55px; margin: 0px; padding: 0px; text-align: left;" > 
+<div style="float: right; margin-right: 10px; width: 200px; height: 55px; margin: 0px; padding: 0px; text-align: left;" > 
         <img src="/case4you/0/img/btconcluido.png" alt="">
-</div>
-
-<script>
-function finalizacapa() {
-    parent.document.getElementById('filtro2').style.display = 'block'; 
-    parent.document.getElementById('frcompletar').src = "http://case4you.com.br/case4you/1/?m=<?php echo $_GET['m']; ?>&l=<?php echo $_GET['m']; ?>";
-    alert('dwd');
-}
-</script>
-<div style="display: block; float: right; margin-right: 10px; width: 200px; height: 55px; margin: 0px; padding: 0px; text-align: right; padding-right: 15px;" > 
-        <input style="margin-top: 20px;" type="submit" value="Finalizei a construção!">
 </div>
 
 
