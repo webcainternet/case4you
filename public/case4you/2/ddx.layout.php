@@ -123,6 +123,7 @@ margin-top: -55px; text-align: right;">
 function finalizacapa() {
     parent.document.getElementById('filtro2').style.display = 'block'; 
     parent.document.getElementById('frcompletar').src = "http://case4you.com.br/case4you/1/?m=<?php echo $_GET['m']; ?>&l=<?php echo $_GET['m']; ?>";
+    alert('dwd');
 }
 </script>
 <div style="display: block; float: right; margin-right: 10px; width: 200px; height: 55px; margin: 0px; padding: 0px; text-align: left;" > 
