@@ -62,7 +62,7 @@ background-color: transparent;
     }
 
     function p4concluir() {
-      goto4();
+      goto5();
       /* document.getElementById("filtro1").style.display = 'none';
       document.getElementById("filtro2").style.display = 'block';
       document.getElementById("frcompletar").src = "http://case4you.com.br/case4you/3/index.php?idcsession=2221&m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value; */
@@ -438,6 +438,16 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
      <div id="filtro2" style="display: none; float: right; width: 100%; height: 540px; text-align: center; background-repeat: no-repeat; background-position: 15px 10px;">
         <iframe id="frcompletar" name="frcompletar" src="about:blank" scrolling="no" frameborder="0" style="width: 100%; height: 540px;"></iframe>
     </div>
+
+
+   </div>
+
+  <h3>&nbsp;
+    <div style="float: left; width: 50%;">Teste</div>
+    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100; color: #6aa11a;"><u>Voltar - Teste</u></div>
+  </h3>
+  <div>
+    fewfewfew
 
 
    </div>
