@@ -443,8 +443,6 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
    </div>
 
 </div>
-</div>
-
 
 
 
