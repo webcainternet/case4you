@@ -70,6 +70,19 @@
       </div>
       
   </div>
+
+  <div style="height: 100px;">
+  <div style="width: 1024px; margin: auto;">
+    <div style="float: right; width: 624px; margin-top: 20px; text-align: right;">
+      <img src="image/data/selo-pagseguro1.png" alt="PagSeguro" />
+    </div>
+    
+    <div style="float: left; width: 370px; margin-top: 20px; margin-left: 15px; text-align: left;">
+      <img src="image/data/SVGlogoAI_verde3.png" alt="Case4You" style="width: 125px;" />
+    </div>
+  </div>
+  
+</div>
   
 </div>
 </div>
@@ -97,18 +110,7 @@ Please donate via PayPal to donate@opencart.com
 </div>
 </div>
 
-<div style="height: 100px;">
-	<div style="width: 1024px; margin: auto;">
-		<div style="float: right; width: 624px; margin-top: 20px; text-align: right;">
-			<img src="image/data/selo-pagseguro1.png" alt="PagSeguro" />
-		</div>
-		
-		<div style="float: left; width: 370px; margin-top: 20px; margin-left: 15px; text-align: left;">
-			<img src="image/data/SVGlogoAI_verde3.png" alt="Case4You" style="width: 125px;" />
-		</div>
-	</div>
-	
-</div>
+
 
 <div style="display: none;">
 <img src="http://case4you.com.br/catalog/view/theme/theme254/image/fs_instagram_hover.png">
