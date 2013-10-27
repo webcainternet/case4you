@@ -78,7 +78,7 @@
     </div>
     
     <div style="float: left; width: 250px; margin-top: 20px; margin-left: 15px; text-align: left;">
-      <img src="image/data/SVGlogoAI_verde3_footer.png" alt="Case4You" style="width: 200px; margin-top: 12px;" />
+      <img src="image/data/SVGlogoAI_verde3_footer.png" alt="Case4You" style="width: 100px;margin-top: 60px;margin-left: -10px;" />
     </div>
   </div>
   
