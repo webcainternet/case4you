@@ -413,7 +413,7 @@ h2 {
 }
 .cart-position {
 	float:right;
-	margin:100px 0 10px;
+	margin:85px 0 10px;
 	background:url(../image/cart-bg.png) repeat left top #3a4047;
 	position:relative;
 	border-radius:5px;
