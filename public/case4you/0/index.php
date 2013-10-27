@@ -65,7 +65,7 @@ background-color: transparent;
       document.getElementById("filtro1").style.display = 'none';
       document.getElementById("filtro2").style.display = 'block';
       document.getElementById("frcompletar").src = "http://case4you.com.br/case4you/3/index.php?idcsession=2221&m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
-      goto2();
+      goto4();
     }
 
 
@@ -442,20 +442,10 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
 
    </div>
 
-  <h3>&nbsp;
-    <div style="float: left; width: 50%;">Teste</div>
-    <div style="float: right; width: 40%; text-align: right; margin-right: 20px; font-weight: 100; color: #6aa11a;"><u>Voltar - Teste</u></div>
-  </h3>
-  <div>
-    fewfewfew
-
-
-   </div>
-
 </div>
 
 
-
+<input style="margin-top: 20px;" type="submit" onclick="p4concluir()" value="Finalizei a construção!">
 
 </form>
 </center></body>
