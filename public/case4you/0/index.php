@@ -411,8 +411,12 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
     <div id="compupload" style="display: none; float: right; width: 100%; yellow; height: 540px; text-align: center; background-repeat: no-repeat; background-position: 15px 10px;">
 	<iframe id="frcompupload" name="frcompupload" src="about:blank" scrolling="no" frameborder="0" style="width: 100%; height: 540px;"></iframe>
     </div>
+    <div id="dvconcluirload" style="background-color: red;display: block; float: left; width: 305px; height: 1px; margin-top: -55px; text-align: right;" onmousemove="document.getElementById("dvconcluir").style.display = 'block';">
+      &nbsp;
+    </div>
     <div id="dvconcluir" style="display: none; float: left; width: 305px; height: 1px; margin-top: -55px; text-align: right;">
-	<a href="#" onclick="p4concluir()"><img src="/case4you/0/img/btconcluido.png" alt=""></a>
+	   <!-- <a href="#" onclick="p4concluir()"><img src="/case4you/0/img/btconcluido.png" alt=""></a> -->
+        <input style="margin-top: 20px;" type="submit" onclick="p4concluir()" value="Finalizei a construção!">
     </div>
 
   </div>
