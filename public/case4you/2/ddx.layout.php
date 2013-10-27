@@ -127,7 +127,7 @@ function finalizacapa() {
 }
 </script>
 <div style="display: block; float: right; margin-right: 10px; width: 200px; height: 55px; margin: 0px; padding: 0px; text-align: right; padding-right: 15px;" > 
-        <input style="margin-top: 20px;" type="submit" onclick="finalizacapa()" value="Finalizei a construção!">
+        <input style="margin-top: 20px;" type="submit" value="Finalizei a construção!">
 </div>
 
 
