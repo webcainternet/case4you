@@ -3876,17 +3876,16 @@ tbody .total {
 .footer-wrap {
 	clear:both;
 	overflow:hidden;
-	margin:0px auto 10px;
+	margin:0px auto 0px;
 	/* width:1024px; */
 	background:url(../image/footer.png) repeat-x left top #3a4047;
 	/* border-radius:5px; */
-	padding-bottom: 30px;
 }
 #footer {
 	clear: both;
 	overflow: hidden;
 	min-height: 80px;
-	padding:43px 0px 5px 0px
+	padding:43px 0px 0px 0px
 }
 #footer h3 {
 	font-size:16px;
