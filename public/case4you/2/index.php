@@ -28,9 +28,35 @@ ondragover="allowDrop(event)"></div>
 
 <div style="height: 475px; float: left; width: 320px; overflow-x: hidden; border-bottom: solid 1px #CCC;">
 
-<div style="height: 125px; float: left; width: 320px; overflow-x: hidden; background-color: red;">
-Texto
-</div>
+  <div style="height: 125px; float: left; width: 320px; overflow-x: hidden;">
+  
+    <div style="float: left;
+                  width: 15px;
+                  height: 20px;
+                  margin-left: 20px;
+                  margin-top: 20px;
+                  background-color: #6aa11a;
+                  border-radius: 20px;
+                  padding: 5px;
+                  padding-left: 10px;
+                  padding-top: 5px;
+                  color: #FFFFFF;
+                  font-size: 14px;
+                  font-weight: bold;">?</div>
+
+      <div class="fontc4y2" style="float: left;
+                  width: 260px;
+                  margin-left: 10px;
+                  margin-top: 13px;
+                  padding: 5px;
+                  color: #6aa11a;
+                  font-size: 14px;
+                  font-weight: bold;">ARRASTE AS FOTOS ESCOLHIDAS!</div>
+      <div class="fontc4y1" style="float: left; width: 340px; margin-left: 20px; margin-top: 20px;">
+        AJUDA: Arraste a foto abaixo para a capinha ao lado na posição em que será impressa!
+      </div>
+
+  </div>
 
 
 
