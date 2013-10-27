@@ -74,11 +74,11 @@
   <div style="height: 100px;">
   <div style="width: 1024px; margin: auto;">
     <div style="float: right; width: 678px; margin-top: 20px; text-align: right;">
-      <img src="image/data/banner_pagseguro.png" alt="PagSeguro" />
+      <img src="image/data/banner_pagseguro.png" style="width: 500px;" alt="PagSeguro" />
     </div>
     
     <div style="float: left; width: 250px; margin-top: 20px; margin-left: 15px; text-align: left;">
-      <img src="image/data/SVGlogoAI_verde3_footer.png" alt="Case4You" style="width: 100px;margin-top: 60px;margin-left: -10px;" />
+      <img src="image/data/SVGlogoAI_verde3_footer.png" alt="Case4You" style="width: 100px;margin-top: 35px;margin-left: -10px;" />
     </div>
   </div>
   
