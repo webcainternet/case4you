@@ -65,8 +65,6 @@ background-color: transparent;
       goto4();
       document.getElementById("filtro1").style.display = 'none';
       document.getElementById("filtro2").style.display = 'block';
-      alert(document.getElementById("modelodocelular").value);
-      alert(document.getElementById("layoutdacapinha").value);
       document.getElementById("frcompletar").src = "http://case4you.com.br/case4you/3/index.php?idcsession=2221&m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
     }
 
