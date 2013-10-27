@@ -92,7 +92,7 @@ background-color: transparent;
       document.getElementById("imagensselecione").style.display = 'none';
       document.getElementById("p3desc").style.display = 'none';
       document.getElementById("compupload").style.display = 'block';
-      document.getElementById("dvconcluir").style.display = 'block';
+      //document.getElementById("dvconcluir").style.display = 'block';
       uncheckmodelo();unchecklayout();
     }
 
@@ -102,7 +102,7 @@ background-color: transparent;
       document.getElementById("imagensselecione").style.display = 'none';
       document.getElementById("p3desc").style.display = 'none';
       document.getElementById("compupload").style.display = 'block';
-      document.getElementById("dvconcluir").style.display = 'block';
+      //document.getElementById("dvconcluir").style.display = 'block';
       uncheckmodelo();unchecklayout();
     }
 
@@ -112,7 +112,7 @@ background-color: transparent;
       document.getElementById("imagensselecione").style.display = 'none';
       document.getElementById("p3desc").style.display = 'none';
       document.getElementById("compupload").style.display = 'block';
-      document.getElementById("dvconcluir").style.display = 'block';
+      //document.getElementById("dvconcluir").style.display = 'block';
       uncheckmodelo();unchecklayout();
     }
 
