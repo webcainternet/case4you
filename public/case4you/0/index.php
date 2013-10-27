@@ -411,7 +411,7 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
     <div id="compupload" style="display: none; float: right; width: 100%; yellow; height: 540px; text-align: center; background-repeat: no-repeat; background-position: 15px 10px;">
 	<iframe id="frcompupload" name="frcompupload" src="about:blank" scrolling="no" frameborder="0" style="width: 100%; height: 540px;"></iframe>
     </div>
-    <div id="dvconcluirload" style="background-color: red;display: block; float: left; width: 305px; height: 1px; margin-top: -55px; text-align: right;" onmouseover="document.getElementById("dvconcluir").style.display = 'block';">
+    <div id="dvconcluirload" style="background-color: red;display: block; float: left; width: 305px; height: 1px; margin-top: -55px; text-align: right;" onmouseover="document.getElementById('dvconcluir').style.display = 'block';">
       <a href="#" onclick="p4concluir()"><img src="/case4you/0/img/btconcluido.png" alt=""></a>
     </div>
     <div id="dvconcluir" style="display: none; float: left; width: 305px; height: 1px; margin-top: -55px; text-align: right;">
