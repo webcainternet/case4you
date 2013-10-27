@@ -268,7 +268,7 @@ h2 {
 #header #logo a,#header #logo a img {display:block;}
 #header #logo {
 	float:left;
-	margin:75px 0 16px 0;
+	margin:75px 0 0px 0;
 }
 #language {
 	color: #999;
