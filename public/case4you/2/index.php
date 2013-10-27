@@ -25,12 +25,12 @@
 ondragover="allowDrop(event)"></div>
 
 
+
+<div style="height: 475px; float: left; width: 320px; overflow-x: hidden; border-bottom: solid 1px #CCC;">
+
 <div style="height: 125px; float: left; width: 320px; overflow-x: hidden; background-color: red;">
 Texto
 </div>
-
-<div style="height: 350px; float: left; width: 320px; overflow-x: hidden; border-bottom: solid 1px #CCC;">
-
 
 
 
