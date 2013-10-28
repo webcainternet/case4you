@@ -225,7 +225,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 		<div class="fontc4y1" style="color: #606060; font-size: 12px;float: left;width: 200px; width: 220px;text-align: center;margin-bottom: 10px;">Receba nossas ofertas por email:</div>
 		<div class="fontc4y1" style="color: #606060; float: left;width: 200px; width: 220px;text-align: center;margin-bottom: 10px;"><input type="text" value="EMAIL" style="width: 200px;border-radius: 5px;
 height: 25px;
-margin-top: -10px;"><input type="buttom" style="width: 30px;"></div>
+margin-top: -10px;"><input type="submit" style="width: 30px;"></div>
 
 		
 	</div>
