@@ -400,7 +400,7 @@ ondragover="allowDrop(event)"></div>
 
 
 	<div style="text-align: left; float: right;">
-		<input style="margin-top: 20px;" type="submit" value="Finalizar">
+		<input style="margin-top: 20px;" type="submit" value="Finalizar" onclick="window.parent.parent.window.location = 'http://case4you.com.br/minhacapinha';">
 	</div>
 
     </div>
