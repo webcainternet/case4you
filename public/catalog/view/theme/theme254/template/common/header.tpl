@@ -243,6 +243,7 @@ background-color: transparent;
 				$.fancybox.open({
 					href : 'iframe.html',
 					type : 'iframe',
+					scrolling   : 'no',
 					padding : 5,
 					width: 785,
 					height: 740
