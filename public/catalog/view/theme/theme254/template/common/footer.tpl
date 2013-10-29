@@ -81,6 +81,10 @@
       <img src="image/data/SVGlogoAI_verde3_footer.png" alt="Case4You" style="width: 100px;margin-top: 35px;margin-left: -10px;" />
     </div>
   </div>
+
+  <div style="width: 1024px; margin: auto; text-align: center;">
+    Texto direitos reservados
+  </div>
   
 </div>
   
