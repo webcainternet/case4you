@@ -246,7 +246,7 @@ background-color: transparent;
 					scrolling   : 'no',
 					padding : 5,
 					width: 785,
-					height: 740
+					height: 770
 				});
 			});
 
