@@ -53,6 +53,12 @@ background-color: transparent;
 <?php foreach ($styles as $style) { ?>
 <link rel="<?php echo $style['rel']; ?>" type="text/css" href="<?php echo $style['href']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
+
+<!-- FANCYBOX -->
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="catalog/view/theme/theme254/fancybox/lib/jquery-1.10.1.min.js"></script>
+<!-- FIM FANCYBOX -->
+
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/jquery-ui-1.8.16.custom.min.js"></script> 
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/ui/themes/ui-lightness/jquery-ui-1.8.16.custom.css" />
 <script type="text/javascript" src="catalog/view/javascript/jquery/ui/external/jquery.cookie.js"></script>
