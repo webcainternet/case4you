@@ -245,7 +245,7 @@ background-color: transparent;
 					type : 'iframe',
 					padding : 5,
 					width: 785,
-					height: 750
+					height: 740
 				});
 			});
 
