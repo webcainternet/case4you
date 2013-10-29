@@ -73,6 +73,8 @@ background-color: transparent;
 <!-- FANCYBOX -->
 	<!-- Add jQuery library -->
 	<script type="text/javascript" src="catalog/view/theme/theme254/fancybox/lib/jquery-1.10.1.min.js"></script>
+	<?php /* <script type="text/javascript" src="catalog/view/theme/theme254/fancybox/lib/jquery-1.10.1.min.js"></script> */ ?>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
 
 
 	<!-- Add mousewheel plugin (this is optional) -->
