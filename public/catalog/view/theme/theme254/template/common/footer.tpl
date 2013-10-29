@@ -82,8 +82,8 @@
     </div>
   </div>
 
-  <div style="width: 1024px; margin: auto; text-align: center;">
-    Texto direitos reservados
+  <div style="width: 1024px; margin: auto; text-align: center; float: left; color: #9da9b6;">
+    Case4You &copy; Texto direitos reservados - Sob CNPJ XX.XXX.XXX/XXXX-XX - Desenvolvido por <a href="http://webca.com.br/">WebCA Internet</a> 
   </div>
   
 </div>
