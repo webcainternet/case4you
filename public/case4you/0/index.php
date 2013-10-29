@@ -188,7 +188,7 @@ progress:after { content: '%'; }
 .hidden { display: none !important;}
 </style>
 
-<body  class="fonte_personalizada"><center>
+<body  class="fonte_personalizada">
 <input type="hidden" name="modelodocelular" id="modelodocelular" value="">
 <input type="hidden" name="layoutdacapinha" id="layoutdacapinha" value="">
 <form name="form1" method="post" action="">
@@ -447,7 +447,7 @@ Layout 1: 1 foto; <br />Layout 2: 2 fotos; <br />Layout 3: 15 fotos
 
 
 </form>
-</center></body>
+</body>
 
 
 
