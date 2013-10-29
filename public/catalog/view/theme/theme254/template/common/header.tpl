@@ -34,11 +34,11 @@ background-color: transparent;
 
 <!-- FANCYBOX -->
 <!-- Add mousewheel plugin (this is optional) -->
-<script type="text/javascript" src="catalog/view/theme/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="catalog/view/theme/theme254/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 
 <!-- Add fancyBox main JS and CSS files -->
-<script type="text/javascript" src="catalog/view/theme/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
-<link rel="stylesheet" type="text/css" href="catalog/view/theme/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript" src="catalog/view/theme/theme254/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/theme254/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
 
 	<script type="text/javascript">
 		$(document).ready(function() {
