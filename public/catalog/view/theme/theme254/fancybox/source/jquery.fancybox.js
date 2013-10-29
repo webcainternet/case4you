@@ -54,10 +54,10 @@
 
 		defaults: {
 			padding : 0,
-			margin  : 0,
+			margin  : 20,
 
-			width     : 1300,
-			height    : 600,
+			width     : 800,
+			height    : 800,
 			minWidth  : 800,
 			minHeight : 800,
 			maxWidth  : 9999,
