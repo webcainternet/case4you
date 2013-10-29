@@ -244,8 +244,8 @@ background-color: transparent;
 					href : 'iframe.html',
 					type : 'iframe',
 					padding : 5,
-					width: 800,
-					height: 800
+					width: 785,
+					height: 750
 				});
 			});
 
