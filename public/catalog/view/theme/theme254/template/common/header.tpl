@@ -392,7 +392,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 			</div>
 			<ul class="menu">
 				<li>
-					<a class="" href="http://case4you.com.br/case4you/0/?m=0">Crie Sua Capa</a>
+					<a class="fancybox fancybox.iframe" href="http://case4you.com.br/case4you/0/?m=0">Crie Sua Capa</a>
 					<ul style="position: absolute; z-index:1000;">
 						<li><a class="fancybox fancybox.iframe" href="http://case4you.com.br/case4you/0/?m=0">Iphone 4</a></li>
 						<li><a class="fancybox fancybox.iframe" href="http://case4you.com.br/case4you/0/?m=1">Iphone 5</a></li>
