@@ -56,9 +56,9 @@
 			padding : 0,
 			margin  : 20,
 
-			width     : 800,
+			width     : 785,
 			height    : 800,
-			minWidth  : 800,
+			minWidth  : 785,
 			minHeight : 800,
 			maxWidth  : 9999,
 			maxHeight : 9999,
