@@ -225,7 +225,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 
 		<div class="fontc4y1" style="color: #606060; float: left; width: 220px;text-align: center;margin-bottom: 5px;"><input type="text" value="" style="float: left;width: 155px;border-radius: 5px;
 height: 25px;
-margin-top: 5px;"><input type="image" src="/catalog/view/theme/theme254/image/button-search.png" style="width: 51px;
+margin-top: 5px;"><input type="image" src="/catalog/view/theme/theme254/image/button-email.png" style="width: 51px;
 float: left;
 margin-left: 5px;
 border-radius: 5px;
