@@ -1,4 +1,9 @@
 <?php
+session_start();
+$session_id='1'; //$session id
+?>
+
+<?php
     $idcsession = 2221;
     $gmodelo = $_GET["m"];
     $glayout = $_GET["l"];
@@ -38,24 +43,69 @@ background-color: transparent;
 
 </style>
 
-  <link rel="stylesheet" href="../0/jquery-ui.css" />
-  <script src="../0/jquery-1.9.1.js"></script>
-  <script src="../0/jquery-ui.js"></script>
-  <link rel="stylesheet" href="../0/style.css" />
-
   <?php include 'ddx.jscript.php'; ?>
+
 </head>
 
-<body style="margin: 0px; padding: 0px;font-family: Arial, Helvetica, sans-serif; color: #222222;line-height: 1.3;font-size: 12px; ">
+<script type="text/javascript" src="scripts/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.wallform.js"></script>
 
-<div id="div1" ondrop="drop(event)"
-ondragover="allowDrop(event)"></div>
+<script type="text/javascript" >
+ $(document).ready(function() { 
+		
+            $('#photoimg').die('click').live('change', function()			{ 
+			           //$("#preview").html('');
+			    
+				$("#imageform").ajaxForm({target: '#preview', 
+				     beforeSubmit:function(){ 
+					
+					console.log('v');
+					$("#imageloadstatus").show();
+					 $("#imageloadbutton").hide();
+					 }, 
+					success:function(){ 
+					console.log('z');
+					 $("#imageloadstatus").hide();
+					 $("#imageloadbutton").show();
+					}, 
+					error:function(){ 
+							console.log('d');
+					 $("#imageloadstatus").hide();
+					$("#imageloadbutton").show();
+					} }).submit();
+					
+		
+			});
+        }); 
+</script>
+
+<style>
+
+body
+{
+margin: 0px; padding: 0px;font-family: Arial, Helvetica, sans-serif; color: #222222;line-height: 1.3;font-size: 12px; 
+}
+.preview
+{
+width:200px;
+border:solid 1px #dedede;
+padding:10px;
+}
+#preview
+{
+color:#cc0000;
+font-size:12px
+}
+
+</style>
+
+<body>
 
 
+<!-- DIREITA -->
+<div style="float: left;width: 350px;height: 550px;">
 
-<div style="height: 475px; float: left; width: 320px; overflow-x: hidden; border-bottom: solid 1px #CCC;">
-
-  <div style="height: 95px; float: left; width: 320px; overflow-x: hidden;">
+<div style="height: 85px;float: left; width: 320px; overflow-x: hidden;">
   
     <div style="float: left;
                   width: 15px;
@@ -67,7 +117,7 @@ ondragover="allowDrop(event)"></div>
                   padding-top: 5px;
                   color: #FFFFFF;
                   font-size: 14px;
-                  font-weight: bold;">?</div>
+                  font-weight: bold;">3</div>
 
       <div class="fontc4y2" style="float: left;
                   width: 260px;
@@ -76,46 +126,32 @@ ondragover="allowDrop(event)"></div>
                   font-size: 13px;
                   margin-top: 3px;
                   margin-left: 2px;
-                  font-weight: bold;">ARRASTE AS FOTOS ESCOLHIDAS!</div>
+                  font-weight: bold;">SELECIONE SUAS FOTOS!</div>
       <div class="fontc4y1" style="float: left; width: 295px; margin-top: 20px;">
-        AJUDA: Arraste a foto abaixo para a capinha ao lado na posição em que será impressa!
+        AJUDA: Clique no botão abaixo para selecionar as fotos de seu computador!
       </div>
 
-  </div>
+</div>
 
 
 
-<?php
-    $ic = 0;
-    $path    = '/var/www/case4you.com.br/public/case4you/1/uploads';
-    if ($handle = opendir($path)) {
-        while (false !== ($entry = readdir($handle))) {
-            if ($entry != "." && $entry != "..") { 
-		$ic++; ?>
-		<div id="divdrag<?php echo $ic; ?>" style="background-color: #FFFFFF; width: 50px; float: left; overflow: hidden; height: 50px;
+<div class="fontc4y1" style="float: left; width: 320px; margin-left: 20px; margin-top: 0px;">
+	<form id="imageform" method="post" enctype="multipart/form-data" action='ajaximage.php'>
+	<div id='imageloadstatus' style='display:none'>
+		<img src="loader.gif" alt="Uploading...."/>
+	</div>
+	<div id='imageloadbutton'>
+		<input type="file" name="photoimg" id="photoimg" />
+	</div>
+	</form>
+</div>
 
-background: rgba(255,255,255,0.8);
-position: relative;
-display: inline-block;
-margin: 5px;
-vertical-align: top;
-border: 1px solid #acacac;
-padding: 6px 6px 6px 6px;
--webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.16);
-box-shadow: 1px 1px 4px rgba(0,0,0,0.16);
-font-size: 14px;
-">
-			<img id="drag<?php echo $ic; ?>" src="http://case4you.com.br/case4you/1/uploads/<?php echo "$entry";?>" draggable="true"
-			ondragstart="drag(event)" style="max-width:100%; max-height:100%;">
-		</div>
 
-            <?php }
-        }
-        closedir($handle);
-   }
-?>
+<div style="height: 475px; float: left; width: 320px; overflow-x: hidden; margin-top: 10px;">
+	<div id='preview'>
+	</div>
+</div>
 
-&nbsp;
 </div>
 
 
@@ -125,9 +161,15 @@ font-size: 14px;
 
 
 
+<!-- ESQUERDA -->
+
+
+
 <!-- ddx.layoyt -->
     <?php include 'ddx.layout.php'; ?>
 <!-- ddx.layout fim -->
+
+
 
 
 

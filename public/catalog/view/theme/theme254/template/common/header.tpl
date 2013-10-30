@@ -445,7 +445,7 @@ margin-left: 5px;
 border-radius: 5px;
 margin-top: 5px;"></div>
 
-		<div class="fontc4y1" style="color: #606060; font-size: 12px;float: left;width: 200px; width: 220px;text-align: center;margin-bottom: 10px;">Receba nossas ofertas por email:</div>
+		<div class="fontc4y1" style="color: #606060; font-size: 12px;float: left;width: 200px; width: 220px;text-align: center;margin-bottom: 10px;">Receba nossas ofertas por email!</div>
 
 		
 	</div>
