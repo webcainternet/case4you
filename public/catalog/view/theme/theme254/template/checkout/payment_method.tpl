@@ -30,21 +30,19 @@
     <?php } else { ?>
     <input type="checkbox" name="agree" value="1" />
     <?php } ?>
-    <div class="mt">
-      <a id="button-payment-method" class="button" ><span><?php echo $button_continue; ?></span></a>
-    </div>
+    <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-method" class="button" />
   </div>
 </div>
 <?php } else { ?>
 <div class="buttons">
   <div class="right">
-    <a id="button-payment-method" class="button"><span><?php echo $button_continue; ?></span></a>
+    <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-method" class="button" />
   </div>
 </div>
 <?php } ?>
 <script type="text/javascript"><!--
 $('.colorbox').colorbox({
-	width: 560,
-	height: 560
+	width: 640,
+	height: 480
 });
 //--></script> 

@@ -31,24 +31,14 @@
       <td><?php echo $entry_company; ?></td>
       <td><input type="text" name="company" value="" class="large-field" /></td>
     </tr>
-    <?php if ($company_id_display) { ?>
-    <tr>
-      <td><?php if ($company_id_required) { ?>
-        <span class="required">*</span>
-        <?php } ?>
-        <?php echo $entry_company_id; ?></td>
+    <tr style="display: <?php echo ($company_id_display ? 'table-row' : 'none'); ?>;">
+      <td><span style="display: <?php echo ($company_id_required ? 'table-row' : 'none'); ?>;" class="required">*</span> <?php echo $entry_company_id; ?></td>
       <td><input type="text" name="company_id" value="" class="large-field" /></td>
     </tr>
-    <?php } ?>
-    <?php if ($tax_id_display) { ?>
-    <tr>
-      <td><?php if ($tax_id_required) { ?>
-        <span class="required">*</span>
-        <?php } ?>
-        <?php echo $entry_tax_id; ?></td>
+    <tr style="display: <?php echo ($tax_id_display ? 'table-row' : 'none'); ?>;">
+      <td><span style="display: <?php echo ($tax_id_required ? 'table-row' : 'none'); ?>;" class="required">*</span> <?php echo $entry_tax_id; ?></td>
       <td><input type="text" name="tax_id" value="" class="large-field" /></td>
     </tr>
-    <?php } ?>
     <tr>
       <td><span class="required">*</span> <?php echo $entry_address_1; ?></td>
       <td><input type="text" name="address_1" value="" class="large-field" /></td>
@@ -88,7 +78,7 @@
 <br />
 <div class="buttons">
   <div class="right">
-    <a id="button-payment-address" class="button" ><span><?php echo $button_continue; ?></span></a>
+    <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-address" class="button" />
   </div>
 </div>
 <script type="text/javascript"><!--
@@ -104,12 +94,11 @@ $('#payment-address input[name=\'payment_address\']').live('change', function() 
 //--></script> 
 <script type="text/javascript"><!--
 $('#payment-address select[name=\'country_id\']').bind('change', function() {
-    if (this.value == '') return;
 	$.ajax({
 		url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
 		dataType: 'json',
 		beforeSend: function() {
-			$('#payment-address select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/theme254/image/loading.gif" alt="" /></span>');
+			$('#payment-address select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
 		},
 		complete: function() {
 			$('.wait').remove();
@@ -146,4 +135,4 @@ $('#payment-address select[name=\'country_id\']').bind('change', function() {
 });
 
 $('#payment-address select[name=\'country_id\']').trigger('change');
-//--></scri
+//--></script>

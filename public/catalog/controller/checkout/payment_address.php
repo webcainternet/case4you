@@ -100,7 +100,7 @@ class ControllerCheckoutPaymentAddress extends Controller {
 		// Validate cart has products and has stock.
 		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
 			$json['redirect'] = $this->url->link('checkout/cart');
-		}	
+		}
 		
 		// Validate minimum quantity requirments.			
 		$products = $this->cart->getProducts();
@@ -122,39 +122,23 @@ class ControllerCheckoutPaymentAddress extends Controller {
 		}
 				
 		if (!$json) {
-			if (isset($this->request->post['payment_address']) && $this->request->post['payment_address'] == 'existing') {
+			if ($this->request->post['payment_address'] == 'existing') {
 				$this->load->model('account/address');
 				
 				if (empty($this->request->post['address_id'])) {
 					$json['error']['warning'] = $this->language->get('error_address');
 				} elseif (!in_array($this->request->post['address_id'], array_keys($this->model_account_address->getAddresses()))) {
 					$json['error']['warning'] = $this->language->get('error_address');
-				} else {
-					// Default Payment Address
-					$this->load->model('account/address');
-	
-					$address_info = $this->model_account_address->getAddress($this->request->post['address_id']);
-										
-					if ($address_info) {				
-						$this->load->model('account/customer_group');
-				
-						$customer_group_info = $this->model_account_customer_group->getCustomerGroup($this->customer->getCustomerGroupId());
-					
-						// Company ID
-						if ($customer_group_info['company_id_display'] && $customer_group_info['company_id_required'] && !$address_info['company_id']) {
-							$json['error']['warning'] = $this->language->get('error_company_id');
-						}					
-						
-						// Tax ID
-						if ($customer_group_info['tax_id_display'] && $customer_group_info['tax_id_required'] && !$address_info['tax_id']) {
-							$json['error']['warning'] = $this->language->get('error_tax_id');
-						}						
-					}					
 				}
-					
+				
 				if (!$json) {			
 					$this->session->data['payment_address_id'] = $this->request->post['address_id'];
 					
+					// Default Payment Address
+					$this->load->model('account/address');
+
+					$address_info = $this->model_account_address->getAddress($this->request->post['address_id']);
+										
 					if ($address_info) {
 						$this->session->data['payment_country_id'] = $address_info['country_id'];
 						$this->session->data['payment_zone_id'] = $address_info['zone_id'];
@@ -166,7 +150,9 @@ class ControllerCheckoutPaymentAddress extends Controller {
 					unset($this->session->data['payment_method']);	
 					unset($this->session->data['payment_methods']);
 				}
-			} else {
+			} 
+			
+			if ($this->request->post['payment_address'] == 'new') {
 				if ((utf8_strlen($this->request->post['firstname']) < 1) || (utf8_strlen($this->request->post['firstname']) > 32)) {
 					$json['error']['firstname'] = $this->language->get('error_firstname');
 				}
@@ -178,21 +164,27 @@ class ControllerCheckoutPaymentAddress extends Controller {
 				// Customer Group
 				$this->load->model('account/customer_group');
 				
-				$customer_group_info = $this->model_account_customer_group->getCustomerGroup($this->customer->getCustomerGroupId());
+				if (isset($this->request->post['customer_group_id']) && is_array($this->config->get('config_customer_group_display')) && in_array($this->request->post['customer_group_id'], $this->config->get('config_customer_group_display'))) {
+					$customer_group_id = $this->request->post['customer_group_id'];
+				} else {
+					$customer_group_id = $this->config->get('config_customer_group_id');
+				}
+				
+				$customer_group = $this->model_account_customer_group->getCustomerGroup($customer_group_id);
 					
-				if ($customer_group_info) {	
+				if ($customer_group) {	
 					// Company ID
-					if ($customer_group_info['company_id_display'] && $customer_group_info['company_id_required'] && empty($this->request->post['company_id'])) {
+					if ($customer_group['company_id_display'] && $customer_group['company_id_required'] && !$this->request->post['company_id']) {
 						$json['error']['company_id'] = $this->language->get('error_company_id');
 					}
 					
 					// Tax ID
-					if ($customer_group_info['tax_id_display'] && $customer_group_info['tax_id_required'] && empty($this->request->post['tax_id'])) {
+					if ($customer_group['tax_id_display'] && $customer_group['tax_id_required'] && !$this->request->post['tax_id']) {
 						$json['error']['tax_id'] = $this->language->get('error_tax_id');
 					}						
 				}
 					
-				if ((utf8_strlen($this->request->post['address_1']) < 3) || (utf8_strlen($this->request->post['address_1']) > 128)) {
+				if ((utf8_strlen($this->request->post['address_1']) < 3) || (utf8_strlen($this->request->post['address_1']) > 64)) {
 					$json['error']['address_1'] = $this->language->get('error_address_1');
 				}
 		
@@ -212,33 +204,36 @@ class ControllerCheckoutPaymentAddress extends Controller {
 					// VAT Validation
 					$this->load->helper('vat');
 					
-					if ($this->config->get('config_vat') && !empty($this->request->post['tax_id']) && (vat_validation($country_info['iso_code_2'], $this->request->post['tax_id']) == 'invalid')) {
+					if ($this->config->get('config_vat') && $this->request->post['tax_id'] && (vat_validation($country_info['iso_code_2'], $this->request->post['tax_id']) != 'invalid')) {
 						$json['error']['tax_id'] = $this->language->get('error_vat');
-					}						
+					}
 				}
-				
+
 				if ($this->request->post['country_id'] == '') {
 					$json['error']['country'] = $this->language->get('error_country');
 				}
-				
-				if (!isset($this->request->post['zone_id']) || $this->request->post['zone_id'] == '') {
+
+				if ($this->request->post['zone_id'] == '') {
 					$json['error']['zone'] = $this->language->get('error_zone');
 				}
-				
+
 				if (!$json) {
 					// Default Payment Address
 					$this->load->model('account/address');
-					
+
 					$this->session->data['payment_address_id'] = $this->model_account_address->addAddress($this->request->post);
+                                        $this->session->data['end_' . ($this->request->post["ref"])] = $this->session->data["payment_address_id"];
+                                        $this->session->data[($this->request->post["ref"])."_address_id"] = $this->session->data["payment_address_id"];
+
 					$this->session->data['payment_country_id'] = $this->request->post['country_id'];
 					$this->session->data['payment_zone_id'] = $this->request->post['zone_id'];
-															
-					unset($this->session->data['payment_method']);	
+
+					unset($this->session->data['payment_method']);
 					unset($this->session->data['payment_methods']);
-				}		
-			}		
+				}
+                        }
 		}
-		
+
 		$this->response->setOutput(json_encode($json));
 	}
 }

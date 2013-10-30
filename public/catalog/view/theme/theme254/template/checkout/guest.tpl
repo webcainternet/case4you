@@ -27,18 +27,17 @@
   <input type="text" name="company" value="<?php echo $company; ?>" class="large-field" />
   <br />
   <br />
-  <div style="display: <?php echo (count($customer_groups) > 1 ? 'table-row' : 'none'); ?>;"> <?php echo $entry_customer_group; ?><br />
-    <?php foreach ($customer_groups as $customer_group) { ?>
-    <?php if ($customer_group['customer_group_id'] == $customer_group_id) { ?>
-    <input type="radio" name="customer_group_id" value="<?php echo $customer_group['customer_group_id']; ?>" id="customer_group_id<?php echo $customer_group['customer_group_id']; ?>" checked="checked" />
-    <label for="customer_group_id<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></label>
+  <div style="display: <?php echo (count($customer_groups) > 1 ? 'block' : 'none'); ?>;"><?php echo $entry_account; ?><br />
+    <select name="customer_group_id" class="large-field">
+      <?php foreach ($customer_groups as $customer_group) { ?>
+      <?php if ($customer_group['customer_group_id'] == $customer_group_id) { ?>
+      <option value="<?php echo $customer_group['customer_group_id']; ?>" selected="selected"><?php echo $customer_group['name']; ?></option>
+      <?php } else { ?>
+      <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>
+      <?php } ?>
+      <?php } ?>
+    </select>
     <br />
-    <?php } else { ?>
-    <input type="radio" name="customer_group_id" value="<?php echo $customer_group['customer_group_id']; ?>" id="customer_group_id<?php echo $customer_group['customer_group_id']; ?>" />
-    <label for="customer_group_id<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></label>
-    <br />
-    <?php } ?>
-    <?php } ?>
     <br />
   </div>
   <div id="company-id-display"><span id="company-id-required" class="required">*</span> <?php echo $entry_company_id; ?><br />
@@ -102,11 +101,11 @@
 <?php } ?>
 <div class="buttons">
   <div class="right">
-    <a id="button-guest" class="button"><span><?php echo $button_continue; ?></span></a>
+    <input type="button" value="<?php echo $button_continue; ?>" id="button-guest" class="button" />
   </div>
 </div>
 <script type="text/javascript"><!--
-$('#payment-address input[name=\'customer_group_id\']:checked').live('change', function() {
+$('#payment-address select[name=\'customer_group_id\']').live('change', function() {
 	var customer_group = [];
 	
 <?php foreach ($customer_groups as $customer_group) { ?>
@@ -144,16 +143,15 @@ $('#payment-address input[name=\'customer_group_id\']:checked').live('change', f
 	}
 });
 
-$('#payment-address input[name=\'customer_group_id\']:checked').trigger('change');
-//--></script> 
+$('#payment-address select[name=\'customer_group_id\']').trigger('change');
+//--></script>  
 <script type="text/javascript"><!--
 $('#payment-address select[name=\'country_id\']').bind('change', function() {
-    if (this.value == '') return;
 	$.ajax({
 		url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
 		dataType: 'json',
 		beforeSend: function() {
-			$('#payment-address select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/theme254/image/loading.gif" alt="" /></span>');
+			$('#payment-address select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
 		},
 		complete: function() {
 			$('.wait').remove();

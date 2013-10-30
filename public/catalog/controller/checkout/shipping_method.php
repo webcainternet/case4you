@@ -11,6 +11,32 @@ class ControllerCheckoutShippingMethod extends Controller {
 			$shipping_address = $this->session->data['guest']['shipping'];
 		}
 		
+
+		if(isset($this->session->data['coupon'])){
+
+					 $this->load->model('checkout/coupon');
+
+		 $coupon_info = $this->model_checkout_coupon->getCoupon($this->session->data['coupon']);
+	
+		 $this->data['coupon_info'] = $coupon_info;	
+
+	
+		}
+		
+		if(!isset($shipping_address)){
+			$shipping_address['postcode'] = "09330-720";
+			$shipping_address['country_id'] = "30";
+		}else{
+/*
+					echo "<pre>";
+		print_r($shipping_address);
+		die;	
+*/
+			
+		}	
+		//echo "dsadsad";
+		//die;
+
 		if (!empty($shipping_address)) {
 			// Shipping Methods
 			$quote_data = array();

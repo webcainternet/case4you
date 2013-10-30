@@ -48,16 +48,15 @@
 </table>
 <br />
 <div class="buttons">
-  <div class="right"><a id="button-guest-shipping" class="button"><span><?php echo $button_continue; ?></span></a></div>
+  <div class="right"><input type="button" value="<?php echo $button_continue; ?>" id="button-guest-shipping" class="button" /></div>
 </div>
 <script type="text/javascript"><!--
 $('#shipping-address select[name=\'country_id\']').bind('change', function() {
-	if (this.value == '') return;
 	$.ajax({
 		url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
 		dataType: 'json',
 		beforeSend: function() {
-			$('#shipping-address select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/theme254/image/loading.gif" alt="" /></span>');
+			$('#shipping-address select[name=\'country_id\']').after('<span class="wait">&nbsp;<img src="catalog/view/theme/default/image/loading.gif" alt="" /></span>');
 		},
 		complete: function() {
 			$('.wait').remove();

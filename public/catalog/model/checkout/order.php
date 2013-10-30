@@ -22,10 +22,21 @@ class ModelCheckoutOrder extends Model {
 		foreach ($data['vouchers'] as $voucher) {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "order_voucher SET order_id = '" . (int)$order_id . "', description = '" . $this->db->escape($voucher['description']) . "', code = '" . $this->db->escape($voucher['code']) . "', from_name = '" . $this->db->escape($voucher['from_name']) . "', from_email = '" . $this->db->escape($voucher['from_email']) . "', to_name = '" . $this->db->escape($voucher['to_name']) . "', to_email = '" . $this->db->escape($voucher['to_email']) . "', voucher_theme_id = '" . (int)$voucher['voucher_theme_id'] . "', message = '" . $this->db->escape($voucher['message']) . "', amount = '" . (float)$voucher['amount'] . "'");
 		}
-			
+
+                $valor = 0;
 		foreach ($data['totals'] as $total) {
+                    if($total["code"] != "total") {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "order_total SET order_id = '" . (int)$order_id . "', code = '" . $this->db->escape($total['code']) . "', title = '" . $this->db->escape($total['title']) . "', text = '" . $this->db->escape($total['text']) . "', `value` = '" . (float)$total['value'] . "', sort_order = '" . (int)$total['sort_order'] . "'");
-		}	
+                        
+                        $valor += $total["value"];
+                        
+                        
+                    }
+		}
+                $this->db->query("INSERT INTO " . DB_PREFIX . "order_total SET order_id = '" . (int)$order_id . "', code = 'total', title = 'TOTAL', text = 'R$".  number_format($valor, 2, ",", ".")."', `value` = '" . (float)$valor . "', sort_order = '4'");
+
+                $sql = "UPDATE `" . DB_PREFIX . "order` SET total = '" . $valor . "' WHERE order_id = '" . (int)$order_id . "'";
+                $this->db->query($sql);
 
 		return $order_id;
 	}
@@ -100,8 +111,6 @@ class ModelCheckoutOrder extends Model {
 				'payment_firstname'       => $order_query->row['payment_firstname'],
 				'payment_lastname'        => $order_query->row['payment_lastname'],				
 				'payment_company'         => $order_query->row['payment_company'],
-				'payment_company_id'      => $order_query->row['payment_company_id'],
-				'payment_tax_id'          => $order_query->row['payment_tax_id'],
 				'payment_address_1'       => $order_query->row['payment_address_1'],
 				'payment_address_2'       => $order_query->row['payment_address_2'],
 				'payment_postcode'        => $order_query->row['payment_postcode'],
@@ -171,7 +180,7 @@ class ModelCheckoutOrder extends Model {
 				}
 			}
 
-			// Ban IP
+			// Blacklist
 			$status = false;
 			
 			$this->load->model('account/customer');
@@ -180,14 +189,14 @@ class ModelCheckoutOrder extends Model {
 				$results = $this->model_account_customer->getIps($order_info['customer_id']);
 				
 				foreach ($results as $result) {
-					if ($this->model_account_customer->isBanIp($result['ip'])) {
+					if ($this->model_account_customer->isBlacklisted($result['ip'])) {
 						$status = true;
 						
 						break;
 					}
 				}
 			} else {
-				$status = $this->model_account_customer->isBanIp($order_info['ip']);
+				$status = $this->model_account_customer->isBlacklisted($order_info['ip']);
 			}
 			
 			if ($status) {
@@ -284,7 +293,7 @@ class ModelCheckoutOrder extends Model {
 			$template->data['text_footer'] = $language->get('text_new_footer');
 			$template->data['text_powered'] = $language->get('text_new_powered');
 			
-			$template->data['logo'] = $this->config->get('config_url') . 'image/' . $this->config->get('config_logo');		
+			$template->data['logo'] = HTTP_IMAGE . $this->config->get('config_logo');		
 			$template->data['store_name'] = $order_info['store_name'];
 			$template->data['store_url'] = $order_info['store_url'];
 			$template->data['customer_id'] = $order_info['customer_id'];
@@ -420,6 +429,16 @@ class ModelCheckoutOrder extends Model {
 			}
 	
 			$template->data['totals'] = $order_total_query->rows;
+
+                        $order_total = 0;
+
+                        foreach($order_total_query->rows as $total) {
+                            if($total["code"] == "sub_total" || $total["code"] == "shipping") {
+                                $order_total += $total["value"];
+                            }
+                        }
+                        
+                        $template->data['order_total'] = $order_total;
 			
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/mail/order.tpl')) {
 				$html = $template->fetch($this->config->get('config_template') . '/template/mail/order.tpl');
@@ -475,12 +494,11 @@ class ModelCheckoutOrder extends Model {
 				$text .= $order_info['store_url'] . 'index.php?route=account/download' . "\n\n";
 			}
 			
-			// Comment
 			if ($order_info['comment']) {
 				$text .= $language->get('text_new_comment') . "\n\n";
 				$text .= $order_info['comment'] . "\n\n";
 			}
-
+			
 			$text .= $language->get('text_new_footer') . "\n\n";
 		
 			$mail = new Mail(); 
@@ -588,7 +606,7 @@ class ModelCheckoutOrder extends Model {
 				}
 			}			
 
-			// Ban IP
+			// Blacklist
 			$status = false;
 			
 			$this->load->model('account/customer');
@@ -598,14 +616,14 @@ class ModelCheckoutOrder extends Model {
 				$results = $this->model_account_customer->getIps($order_info['customer_id']);
 				
 				foreach ($results as $result) {
-					if ($this->model_account_customer->isBanIp($result['ip'])) {
+					if ($this->model_account_customer->isBlacklisted($result['ip'])) {
 						$status = true;
 						
 						break;
 					}
 				}
 			} else {
-				$status = $this->model_account_customer->isBanIp($order_info['ip']);
+				$status = $this->model_account_customer->isBlacklisted($order_info['ip']);
 			}
 			
 			if ($status) {

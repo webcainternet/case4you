@@ -4,7 +4,7 @@ class ControllerCheckoutCheckout extends Controller {
 		// Validate cart has products and has stock.
 		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
 	  		$this->redirect($this->url->link('checkout/cart'));
-    	}	
+                }	
 		
 		// Validate minimum quantity requirments.			
 		$products = $this->cart->getProducts();
@@ -25,31 +25,29 @@ class ControllerCheckoutCheckout extends Controller {
 				
 		$this->language->load('checkout/checkout');
 		
-		$this->document->setTitle($this->language->get('heading_title'));
-		$this->document->addScript('catalog/view/javascript/jquery/colorbox/jquery.colorbox-min.js');
-		$this->document->addStyle('catalog/view/javascript/jquery/colorbox/colorbox.css');
+		$this->document->setTitle($this->language->get('heading_title')); 
 		
 		$this->data['breadcrumbs'] = array();
 
-      	$this->data['breadcrumbs'][] = array(
-        	'text'      => $this->language->get('text_home'),
-			'href'      => $this->url->link('common/home'),
-        	'separator' => false
-      	); 
+                $this->data['breadcrumbs'][] = array(
+                        'text'      => $this->language->get('text_home'),
+                                'href'      => $this->url->link('common/home'),
+                        'separator' => false
+                ); 
 
-      	$this->data['breadcrumbs'][] = array(
-        	'text'      => $this->language->get('text_cart'),
-			'href'      => $this->url->link('checkout/cart'),
-        	'separator' => $this->language->get('text_separator')
-      	);
-		
-      	$this->data['breadcrumbs'][] = array(
-        	'text'      => $this->language->get('heading_title'),
-			'href'      => $this->url->link('checkout/checkout', '', 'SSL'),
-        	'separator' => $this->language->get('text_separator')
-      	);
+                $this->data['breadcrumbs'][] = array(
+                        'text'      => $this->language->get('text_cart'),
+                                'href'      => $this->url->link('checkout/cart'),
+                        'separator' => $this->language->get('text_separator')
+                );
+
+                $this->data['breadcrumbs'][] = array(
+                        'text'      => $this->language->get('heading_title'),
+                                'href'      => $this->url->link('checkout/checkout', '', 'SSL'),
+                        'separator' => $this->language->get('text_separator')
+                );
 					
-	    $this->data['heading_title'] = $this->language->get('heading_title');
+                $this->data['heading_title'] = $this->language->get('heading_title');
 		
 		$this->data['text_checkout_option'] = $this->language->get('text_checkout_option');
 		$this->data['text_checkout_account'] = $this->language->get('text_checkout_account');

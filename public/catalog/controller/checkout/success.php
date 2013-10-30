@@ -1,9 +1,9 @@
-<?php
+<?php 
 class ControllerCheckoutSuccess extends Controller { 
-	public function index() { 	
+	public function index() { 
 		if (isset($this->session->data['order_id'])) {
 			$this->cart->clear();
-
+			
 			unset($this->session->data['shipping_method']);
 			unset($this->session->data['shipping_methods']);
 			unset($this->session->data['payment_method']);
@@ -46,9 +46,9 @@ class ControllerCheckoutSuccess extends Controller {
         	'text'      => $this->language->get('text_success'),
         	'separator' => $this->language->get('text_separator')
       	);
-
-		$this->data['heading_title'] = $this->language->get('heading_title');
 		
+    	$this->data['heading_title'] = $this->language->get('heading_title');
+
 		if ($this->customer->isLogged()) {
     		$this->data['text_message'] = sprintf($this->language->get('text_customer'), $this->url->link('account/account', '', 'SSL'), $this->url->link('account/order', '', 'SSL'), $this->url->link('account/download', '', 'SSL'), $this->url->link('information/contact'));
 		} else {
