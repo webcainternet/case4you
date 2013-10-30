@@ -103,7 +103,7 @@ font-size:12px
 
 
 <!-- DIREITA -->
-<div style="float: left;width: 350px;height: 550px;">
+<div style="float: left;width: 347px;height: 550px;">
 
 <div style="height: 85px;float: left; width: 320px; overflow-x: hidden;">
   
