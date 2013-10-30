@@ -107,7 +107,7 @@ background-color: transparent;
     }
 
     function showcomputador() {
-      document.getElementById("frcompupload").src = "http://case4you.com.br/case4you/1/?m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
+      document.getElementById("frcompupload").src = "http://case4you.com.br/case4you/4/?m="+document.getElementById("modelodocelular").value+"&l="+document.getElementById("layoutdacapinha").value;
 
       document.getElementById("imagensselecione").style.display = 'none';
       document.getElementById("p3desc").style.display = 'none';

@@ -1,18 +1,5 @@
-<?php
-session_start();
-$session_id='1'; //$session id
-?>
-
-<?php
-    $idcsession = 2221;
-    $gmodelo = $_GET["m"];
-    $glayout = $_GET["l"];
-?>
-
-<?php include 'var.tamanhos.php'; ?>
-
-<!DOCTYPE HTML>
 <html>
+ 
 <head>
 <meta charset="utf-8" />
 
@@ -37,79 +24,32 @@ $session_id='1'; //$session id
 }
 body, p {
 font-family: "c4y1", Arial, Verdana;
-margin:0px; padding:0px;
-background-color: transparent;
 }
 
 </style>
 
-  <?php include 'ddx.jscript.php'; ?>
-
+  <link rel="stylesheet" href="../0/jquery-ui.css" />
+  <script src="../0/jquery-1.9.1.js"></script>
+  <script src="../0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="../0/style.css" />
+ 
+	<link href="css/dropzone.css" type="text/css" rel="stylesheet" />
+	<script src="dropzone.min.js"></script>>
 </head>
-
-<script type="text/javascript" src="scripts/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.wallform.js"></script>
-
-<script type="text/javascript" >
- $(document).ready(function() { 
-		
-            $('#photoimg').die('click').live('change', function()			{ 
-			           //$("#preview").html('');
-			    
-				$("#imageform").ajaxForm({target: '#preview', 
-				     beforeSubmit:function(){ 
-					
-					console.log('v');
-					$("#imageloadstatus").show();
-					 $("#imageloadbutton").hide();
-					 }, 
-					success:function(){ 
-					console.log('z');
-					 $("#imageloadstatus").hide();
-					 $("#imageloadbutton").show();
-					}, 
-					error:function(){ 
-							console.log('d');
-					 $("#imageloadstatus").hide();
-					$("#imageloadbutton").show();
-					} }).submit();
-					
-		
-			});
-        }); 
-</script>
-
-<style>
-
-body
-{
-margin: 0px; padding: 0px;font-family: Arial, Helvetica, sans-serif; color: #222222;line-height: 1.3;font-size: 12px; 
-}
-.preview
-{
-width:200px;
-border:solid 1px #dedede;
-padding:10px;
-}
-#preview
-{
-color:#cc0000;
-font-size:12px
-}
-
-</style>
-
-<body>
+ 
+<body style="margin: 0px; padding: 0px;font-family: Arial, Helvetica, sans-serif; color: #222222;line-height: 1.3;font-size: 12px; ">
+<div style="float: left; width: 350px; height: 550px;">
+	<form action="upload.php" class="dropzone">
+	</form> 
+</div>
 
 
-<!-- DIREITA -->
-<div style="float: left;width: 347px;height: 550px;">
-
-<div style="height: 85px;float: left; width: 320px; overflow-x: hidden;">
-  
-    <div style="float: left;
+<div id="p1-dvfoto-img" style="float: left; width: 348px; border-left: solid 1px #CCC; height: 540px; text-align: left; background-repeat: no-repeat; background-position: 15px 10px;">
+      <div style="float: left;
                   width: 15px;
                   height: 20px;
+                  margin-left: 20px;
+                  margin-top: 20px;
                   background-color: #6aa11a;
                   border-radius: 20px;
                   padding: 5px;
@@ -121,58 +61,33 @@ font-size:12px
 
       <div class="fontc4y2" style="float: left;
                   width: 260px;
+                  margin-left: 10px;
+                  margin-top: 19px;
                   padding: 5px;
                   color: #6aa11a;
-                  font-size: 13px;
-                  margin-top: 3px;
-                  margin-left: 2px;
-                  font-weight: bold;">SELECIONE SUAS FOTOS!</div>
-      <div class="fontc4y1" style="float: left; width: 295px; margin-top: 20px;">
-        AJUDA: Clique no botão abaixo para selecionar as fotos de seu computador!
+                  font-size: 14px;
+                  font-weight: bold;">
+<?php
+if ($_GET["l"] == "0") { echo "SELECIONE AO MENOS 1 IMAGEM!"; }
+if ($_GET["l"] == "1") { echo "SELECIONE AO MENOS 2 IMAGENS!"; }
+if ($_GET["l"] == "2") { echo "SELECIONE AO MENOS 15 IMAGENS!"; }
+?>
+	</div>
+      <div class="fontc4y1" style="float: left; width: 320px; margin-left: 20px; margin-top: 20px;">
+        AJUDA: Clique no quadrado ao lado para selecionar as fotos de seu computador. Você pode clicar quantas vezes quiser para adicionar mais fotos.
+	<br /><br />
+	OBS: Para obter qualidade na impressão é importante o upload de imagens em alta qualidade. Recomendamos fotos com pelo menos 1900x1200 pixels e 300dpi.
       </div>
 
-</div>
-
-
-
-<div class="fontc4y1" style="float: left; width: 320px; margin-left: 20px; margin-top: 0px;">
-	<form id="imageform" method="post" enctype="multipart/form-data" action='ajaximage.php'>
-	<div id='imageloadstatus' style='display:none'>
-		<img src="loader.gif" alt="Uploading...."/>
+	<div style="text-align: left; float: right;">
+		<input style="margin-top: 20px;" type="submit" onclick="window.location='http://case4you.com.br/case4you/2/?m=<?php echo $_GET["m"]; ?>&l=<?php echo $_GET["l"]; ?>';" value="Terminei, próximo passo!">
 	</div>
-	<div id='imageloadbutton'>
-		<input type="file" name="photoimg" id="photoimg" />
-	</div>
-	</form>
-</div>
 
-
-<div style="height: 475px; float: left; width: 320px; overflow-x: hidden; margin-top: 10px;">
-	<div id='preview'>
-	</div>
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-<!-- ESQUERDA -->
-
-
-
-<!-- ddx.layoyt -->
-    <?php include 'ddx.layout.php'; ?>
-<!-- ddx.layout fim -->
-
-
-
+    </div>
 
 
 
 </body>
+ 
 </html>
+
