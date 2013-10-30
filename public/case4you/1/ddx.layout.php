@@ -110,17 +110,4 @@ switch ($ql) {
 
 
 
-<div style="float: left;;
-width: 320px;
-height: 55px;
-margin-top: -55px; text-align: right;">
-
-<div style="float: right; margin-right: 10px; width: 200px; height: 55px; margin: 0px; padding: 0px; text-align: left;" > 
-        <img src="/case4you/0/img/btconcluido.png" alt="">
-</div>
-
-
-    <div id="divlixeira" ondrop="droplixeira(event)" ondragover="allowDrop(event)" style="float: right; margin-right: 10px; border: 0px; width: 40px; height: 40px; margin-top: 5px; overflow: hidden;text-align: center;
-            align: middle; background-image: url('http://case4you.com.br/image/data/Full_Trash.png'); background-size: 40px;">
-    </div>
 
