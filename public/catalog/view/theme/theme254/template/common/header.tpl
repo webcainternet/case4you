@@ -65,7 +65,7 @@ background-color: transparent;
 <?php /* <script type="text/javascript" src="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.4.pack.js"></script> 
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/fancybox/jquery.fancybox-1.3.4.css" media="screen" /> */ ?>
 <script type="text/javascript" src="catalog/view/javascript/jquery/colorbox/jquery.colorbox.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/jquery/jquery.jcarousel.min.js"></script>
+
 <script type="text/javascript" src="catalog/view/javascript/jquery/jquery.cycle.js"></script>
 
 
@@ -74,7 +74,7 @@ background-color: transparent;
 	<!-- Add jQuery library -->
 	<script type="text/javascript" src="catalog/view/theme/theme254/fancybox/lib/jquery-1.10.1.min.js"></script>
 	<?php /* <script type="text/javascript" src="catalog/view/theme/theme254/fancybox/lib/jquery-1.10.1.min.js"></script> */ ?>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="/catalog/view/javascript/jquery-1.8.0.min.js"></script>
 
 
 	<!-- Add mousewheel plugin (this is optional) -->
@@ -281,7 +281,7 @@ background-color: transparent;
 	</style>
 <!-- FIM FANCYBOX -->
 
-
+<script type="text/javascript" src="catalog/view/javascript/jquery/jquery.jcarousel.min.js"></script>
 
 <link href="catalog/view/theme/<?php echo $this->config->get('config_template'); ?>/stylesheet/skin.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/colorbox/colorbox.css" media="screen" />
