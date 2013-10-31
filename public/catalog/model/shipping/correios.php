@@ -15,7 +15,6 @@ class ModelShippingCorreios extends Model {
 	
 	private $peso_max = 30; 		// em kg
 	private $peso_min = 0.300;
-	private $peso_limite = 5; 		// produto com peso cúbico menor que o limite usa-se o peso da balança, senão usa-se o maior peso entre o da balança e o cúbico
 	
 	private $nCdServico = array();
 	
@@ -27,7 +26,9 @@ class ModelShippingCorreios extends Model {
 	private $cep_origem;
 	
 	private $contrato_codigo = '';
-	private $contrato_senha = '';	
+	private $contrato_senha = '';
+
+	private $mensagem_erro = array();	
 	
 	private $correios = array(
 		'SEDEX'				=> '40010',
@@ -90,7 +91,7 @@ class ModelShippingCorreios extends Model {
 		
 		$this->load->language('shipping/correios');
 		
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int)$this->config->get('correios_geo_zone_id') . "' AND country_id = '" . (int)$address['country_id'] . "' AND (zone_id = '" . (int)$this->config->get('correios_geo_zone_id') . "' OR zone_id = '0')");
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int)$this->config->get('correios_geo_zone_id') . "' AND country_id = '" . (int)$address['country_id'] . "' AND (zone_id = '" . (int)$address['zone_id'] . "' OR zone_id = '0')");
 		
 		if (!$this->config->get('correios_geo_zone_id')) {
 			$status = true;
@@ -174,7 +175,7 @@ class ModelShippingCorreios extends Model {
 			
 			// 'empacotando' o carrinho em caixas
 			$caixas = $this->organizarEmCaixas($produtos);
-		
+			// file_put_contents('filename.txt', print_r($caixas, true));
 			// obtém o frete de cada caixa
 			foreach ($caixas as $caixa) {
 				$this->setQuoteData($caixa);
@@ -206,138 +207,20 @@ class ModelShippingCorreios extends Model {
 					'sort_order' => $this->config->get('correios_sort_order'),
 					'error'      => false
 				);
+			}
+			else if(!empty($this->mensagem_erro)){
+				$method_data = array(
+					'code'         => 'correios',
+					'title'      => $this->language->get('text_title'),
+					'quote'      => $this->quote_data,
+					'sort_order' => $this->config->get('correios_sort_order'),
+					'error'      => implode('<br />', $this->mensagem_erro)
+				);				
 			}			
 		}
 		return $method_data;
 	}
 	
-        // função responsável pelo retorno à loja dos valores finais dos valores dos fretes
-	public function getQuoteByCep($address, $type) {
-		
-		$this->load->language('shipping/correios');
-		
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int)$this->config->get('correios_geo_zone_id') . "'");
-		
-		if (!$this->config->get('correios_geo_zone_id')) {
-			$status = true;
-		} elseif ($query->num_rows) {
-			$status = true;
-		} else {
-			$status = false;
-		}		
-		
-		$method_data = array();
-
-		if ($status) {
-			
-			$produtos = $this->cart->getProducts();
-			
-			// obtém só a parte numérica do CEP
-			$this->cep_origem = preg_replace ("/[^0-9]/", '', $this->config->get('correios_postcode'));
-			$this->cep_destino = preg_replace ("/[^0-9]/", '', $address['postcode']);			
-			
-			// serviços sem contrato
-			if($this->config->get('correios_' . $this->correios['PAC']) && $type == "pac"){
-				$this->nCdServico[] = $this->correios['PAC'];
-			}			
-			if($this->config->get('correios_' . $this->correios['SEDEX']) && $type == "sedex"){
-				$this->nCdServico[] = $this->correios['SEDEX'];
-			}
-			if($this->config->get('correios_' . $this->correios['SEDEX a Cobrar']) && $type == "sedex"){
-				$this->nCdServico[] = $this->correios['SEDEX a Cobrar'];
-			}
-			if($this->config->get('correios_' . $this->correios['SEDEX 10']) && $type == "sedex"){
-				$this->nCdServico[] = $this->correios['SEDEX 10'];
-			}
-			if($this->config->get('correios_' . $this->correios['SEDEX Hoje']) && $type == "sedex"){
-				$this->nCdServico[] = $this->correios['SEDEX Hoje'];
-			}
-			// serviços com contrato			
-			if(trim($this->config->get('correios_contrato_codigo')) != "" && trim($this->config->get('correios_contrato_senha')) != ""){
-				$this->contrato_codigo = $this->config->get('correios_contrato_codigo');
-				$this->contrato_senha = $this->config->get('correios_contrato_senha');
-				
-				if($this->config->get('correios_' . $this->correios['SEDEX a Cobrar - contrato'])){
-					$this->nCdServico[] = $this->correios['SEDEX a Cobrar - contrato'];
-				}
-				if($this->config->get('correios_' . $this->correios['SEDEX - contrato 1'])){
-					$this->nCdServico[] = $this->correios['SEDEX - contrato 1'];
-				}
-				if($this->config->get('correios_' . $this->correios['SEDEX - contrato 2'])){
-					$this->nCdServico[] = $this->correios['SEDEX - contrato 2'];
-				}
-				if($this->config->get('correios_' . $this->correios['SEDEX - contrato 3'])){
-					$this->nCdServico[] = $this->correios['SEDEX - contrato 3'];
-				}
-				if($this->config->get('correios_' . $this->correios['SEDEX - contrato 4'])){
-					$this->nCdServico[] = $this->correios['SEDEX - contrato 4'];
-				}
-				if($this->config->get('correios_' . $this->correios['SEDEX - contrato 5'])){
-					$this->nCdServico[] = $this->correios['SEDEX - contrato 5'];
-				}
-				if($this->config->get('correios_' . $this->correios['PAC - contrato']) && $type == "pac"){
-					$this->nCdServico[] = $this->correios['PAC - contrato'];
-				}
-				if($this->config->get('correios_' . $this->correios['e-SEDEX'])){
-					$this->nCdServico[] = $this->correios['e-SEDEX'];
-				}
-				if($this->config->get('correios_' . $this->correios['e-SEDEX Prioritario'])){
-					$this->nCdServico[] = $this->correios['e-SEDEX Prioritario'];
-				}
-				if($this->config->get('correios_' . $this->correios['e-SEDEX Express'])){
-					$this->nCdServico[] = $this->correios['e-SEDEX Express'];
-				}
-				if($this->config->get('correios_' . $this->correios['e-SEDEX grupo 1'])){
-					$this->nCdServico[] = $this->correios['e-SEDEX grupo 1'];
-				}
-				if($this->config->get('correios_' . $this->correios['e-SEDEX grupo 2'])){
-					$this->nCdServico[] = $this->correios['e-SEDEX grupo 2'];
-				}
-				if($this->config->get('correios_' . $this->correios['e-SEDEX grupo 3'])){
-					$this->nCdServico[] = $this->correios['e-SEDEX grupo 3'];
-				}
-			}			
-			
-			// 'empacotando' o carrinho em caixas
-			$caixas = $this->organizarEmCaixas($produtos);
-		
-			// obtém o frete de cada caixa
-			foreach ($caixas as $caixa) {
-				$this->setQuoteData($caixa);
-			}
-			
-			// ajustes finais
-			if ($this->quote_data) {
-				$valor_adicional = (is_numeric($this->config->get('correios_adicional'))) ? $this->config->get('correios_adicional') : 0 ;
-
-				foreach ($this->quote_data as $codigo=>$data) {
-					
-					// soma o valor adicional ao valor final do frete - não aplicado ao Sedex a Cobrar
-					if($codigo != $this->correios['SEDEX a Cobrar'] || $codigo != $this->correios['SEDEX a Cobrar - contrato']) {
-						$new_cost = $this->quote_data[$codigo]['cost'] + ($this->quote_data[$codigo]['cost'] * ($valor_adicional/100));
-						// novo custo
-						$this->quote_data[$codigo]['cost'] = $new_cost;
-						// novo texto
-						$this->quote_data[$codigo]['text'] = $this->currency->format($this->tax->calculate($new_cost, $this->config->get('correios_tax_class_id'), $this->config->get('config_tax')));
-					}
-					else{
-						// zera o valor do frete do Sedex a Cobrar para evitar de ser adiconado ao valor do carrinho
-						$this->quote_data[$codigo]['cost'] = 0;
-					}
-				}				
-				$method_data = array(
-					'code'         => 'correios',
-					'title'      => $this->language->get('text_title'),
-					'quote'      => $this->quote_data,
-					'sort_order' => $this->config->get('correios_sort_order'),
-					'error'      => false
-				);
-			}			
-		}
-		return $method_data;
-	}
-	        
-        
 	// obtém os dados dos fretes para os produtos da caixa
 	private function setQuoteData($caixa){
 
@@ -385,6 +268,7 @@ class ModelShippingCorreios extends Model {
 			}
 			// grava no log de erros do OpenCart a mensagem de erro retornado pelos Correios
 			else{
+				$this->mensagem_erro[] = $this->correios[$servico['Codigo']].': '.$servico['MsgErro'];
 				$this->log->write($this->correios[$servico['Codigo']].': '.$servico['MsgErro']);
 			}
 		}
@@ -394,6 +278,7 @@ class ModelShippingCorreios extends Model {
 	private function setUrl($peso, $valor, $comp, $larg, $alt){
 		
 		$url = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?";
+		//$url = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx/CalcPrecoPrazo?"; // url alternativa disponibilizada pelos Correios.
 		$url .=	"nCdEmpresa=".$this->contrato_codigo;
 		$url .=	"&sDsSenha=".$this->contrato_senha;
 		$url .=	"&sCepOrigem=%s";
@@ -421,7 +306,24 @@ class ModelShippingCorreios extends Model {
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 30);			
+		
 		$result = curl_exec($ch);
+		
+		if(!$result){
+			$this->log->write(curl_error($ch));
+			$this->log->write($this->language->get('error_conexao'));
+			$result = curl_exec($ch);
+			
+			if($result){
+				$this->log->write($this->language->get('text_sucesso'));
+			}
+			else{
+				$this->log->write(curl_error($ch));
+				$this->log->write($this->language->get('error_reconexao'));				
+			}
+		}
 		
 		curl_close($ch);
 		
@@ -451,10 +353,10 @@ class ModelShippingCorreios extends Model {
 		
 		// ajusta a url de chamada
 		$this->setUrl($peso, $valor, $comp, $larg, $alt);
-		
+
 		// faz a chamada e retorna o xml com os dados
 		$xml = $this->getXML($this->url);
-	
+
 		// lendo o xml
 		if ($xml) {
 			$dom = new DOMDocument('1.0', 'ISO-8859-1');
@@ -517,17 +419,6 @@ class ModelShippingCorreios extends Model {
 		}
 		return $peso;
 	}	
-	
-	// seleciona o maior peso entre o da balança e o cúbico com base na regra dos Correios
-	private function getMaiorPeso($pesoNormal, $pesoCubico){
-
-		if($pesoCubico <= $this->peso_limite){
-			return $pesoNormal;
-		}
-		else {
-			return ($pesoNormal >= $pesoCubico) ? $pesoNormal : $pesoCubico; 
-		}
-	}
 	
 	// pré-validação das dimensões e peso do produto 
   	private function validar($produto){
@@ -603,14 +494,14 @@ class ModelShippingCorreios extends Model {
   					$new_length = $caixas[$cx_num]['length'] + $prod_copy['length'];
   					$new_weight = $caixas[$cx_num]['weight'] + $prod_copy['weight'];
   					
-  					$cabe_do_lado = ($new_width < $this->largura_max) && ($new_width + $caixas[$cx_num]['height'] + $caixas[$cx_num]['length'] < $this->soma_dim_max);
+  					$cabe_do_lado = ($new_width <= $this->largura_max) && $this->somaDimDentroLimite($caixas, $prod_copy, $cx_num, 'lado');
   	
-  					$cabe_no_fundo = ($new_length < $this->comprimento_max) && ($new_length + $caixas[$cx_num]['width'] + $caixas[$cx_num]['height'] < $this->soma_dim_max);
+  					$cabe_no_fundo = ($new_length <= $this->comprimento_max) && $this->somaDimDentroLimite($caixas, $prod_copy, $cx_num, 'fundo');
   	
-  					$cabe_em_cima = ($new_height < $this->altura_max) && ($new_height + $caixas[$cx_num]['width'] + $caixas[$cx_num]['length'] < $this->soma_dim_max);
+  					$cabe_em_cima = ($new_height <= $this->altura_max) && $this->somaDimDentroLimite($caixas, $prod_copy, $cx_num, 'cima');
   					
- 					$peso_dentro_limite = ($new_weight <= $this->peso_max) ? true : false;
-
+ 					$peso_dentro_limite = ($new_weight <= $this->peso_max);
+					
   					// o produto cabe na caixa
   					if (($cabe_do_lado || $cabe_no_fundo || $cabe_em_cima) && $peso_dentro_limite) {
   	
@@ -710,5 +601,31 @@ class ModelShippingCorreios extends Model {
   		
   		return array($weight, $height, $width, $length);  	
   	}
+	private function somaDimDentroLimite($caixas, $prod_copy, $cx_num, $orientacao){
+			
+		if($orientacao == 'lado') {
+			$width = $caixas[$cx_num]['width'] + $prod_copy['width'];
+			$height = max($caixas[$cx_num]['height'], $prod_copy['height']);
+			$length = max($caixas[$cx_num]['length'], $prod_copy['length']);
+		}
+		elseif($orientacao == 'fundo') {
+			$length = $caixas[$cx_num]['length'] + $prod_copy['length'];
+			$height = max($caixas[$cx_num]['height'], $prod_copy['height']);
+			$width = max($caixas[$cx_num]['width'], $prod_copy['width']);
+		}
+		elseif($orientacao == 'cima') {
+			$height = $caixas[$cx_num]['height'] + $prod_copy['height'];
+			$width = max($caixas[$cx_num]['width'], $prod_copy['width']);
+			$length = max($caixas[$cx_num]['length'], $prod_copy['length']);
+		}
+		else{
+			$width = $caixas[$cx_num]['width'];
+			$height = $caixas[$cx_num]['height'];
+			$length = $caixas[$cx_num]['length'];
+		}
+		$dentroLimite = ($width + $height + $length) <= $this->soma_dim_max;
+		
+		return $dentroLimite;
+	}
 }
 ?>

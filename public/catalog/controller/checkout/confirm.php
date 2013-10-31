@@ -1,32 +1,32 @@
 <?php 
 class ControllerCheckoutConfirm extends Controller { 
 	public function index() {
-            $redirect = '';
+		$redirect = '';
 		
-            if ($this->cart->hasShipping()) {
-                // Validate if shipping address has been set.		
-                $this->load->model('account/address');
-
-                if ($this->customer->isLogged() && isset($this->session->data['shipping_address_id'])) {					
-                    $shipping_address = $this->model_account_address->getAddress($this->session->data['shipping_address_id']);		
-                } elseif (isset($this->session->data['guest'])) {
-                    $shipping_address = $this->session->data['guest']['shipping'];
-                }
-
-                if (empty($shipping_address)) {								
-                    $redirect = $this->url->link('checkout/checkout', '', 'SSL');
-                }
-
-                // Validate if shipping method has been set.	
-                if (!isset($this->session->data['shipping_method'])) {
-                        $redirect = $this->url->link('checkout/checkout', '', 'SSL');
-                }
-            } else {
-                unset($this->session->data['shipping_method']);
-                unset($this->session->data['shipping_methods']);
-            }
-
-            // Validate if payment address has been set.
+		if ($this->cart->hasShipping()) {
+			// Validate if shipping address has been set.		
+			$this->load->model('account/address');
+	
+			if ($this->customer->isLogged() && isset($this->session->data['shipping_address_id'])) {					
+				$shipping_address = $this->model_account_address->getAddress($this->session->data['shipping_address_id']);		
+			} elseif (isset($this->session->data['guest'])) {
+				$shipping_address = $this->session->data['guest']['shipping'];
+			}
+			
+			if (empty($shipping_address)) {								
+				$redirect = $this->url->link('checkout/checkout', '', 'SSL');
+			}
+			
+			// Validate if shipping method has been set.	
+			if (!isset($this->session->data['shipping_method'])) {
+				$redirect = $this->url->link('checkout/checkout', '', 'SSL');
+			}
+		} else {
+			unset($this->session->data['shipping_method']);
+			unset($this->session->data['shipping_methods']);
+		}
+		
+		// Validate if payment address has been set.
 		$this->load->model('account/address');
 		
 		if ($this->customer->isLogged() && isset($this->session->data['payment_address_id'])) {
@@ -77,25 +77,7 @@ class ControllerCheckoutConfirm extends Controller {
 			
 			$sort_order = array(); 
 			
-			$results_old = $this->model_setting_extension->getExtensions('total');
-                        
-                        $results = array();
-                        $shipping = reset($this->session->data['shipping_methods']['correios']['quote']);
-                        foreach($results_old as $result) {
-                            
-                            if($result["code"] != "shipping") {
-                                $results[] = $result;
-                            } else {                                
-                                $results[] = array(
-                                    "code" => "shipping",
-                                    "title" => $shipping["title"],
-                                    "text" => $shipping["text"],
-                                    "value" => $shipping["cost"],
-                                    "sort_order" => 3
-                                );
-                            }
-                        }
-                        
+			$results = $this->model_setting_extension->getExtensions('total');
 			
 			foreach ($results as $key => $value) {
 				$sort_order[$key] = $this->config->get($value['code'] . '_sort_order');
@@ -113,24 +95,6 @@ class ControllerCheckoutConfirm extends Controller {
 			
 			$sort_order = array(); 
 		  
-                        $tot = $total_data;
-                        $total_data = array();
-                        $shipping = reset($this->session->data['shipping_methods']['correios']['quote']);
-                        
-                        foreach($tot as $total) {                                                    
-                            if($total["code"] != "shipping") {
-                                $total_data[] = $total;
-                            } else {                                
-                                $total_data[] = array(
-                                    "code" => "shipping",
-                                    "title" => $shipping["title"],
-                                    "text" => $shipping["text"],
-                                    "value" => $shipping["cost"],
-                                    "sort_order" => 3
-                                );
-                            }                        
-                        }
-                        
 			foreach ($total_data as $key => $value) {
 				$sort_order[$key] = $value['sort_order'];
 			}
@@ -224,22 +188,16 @@ class ControllerCheckoutConfirm extends Controller {
 				$data['shipping_country_id'] = $shipping_address['country_id'];
 				$data['shipping_address_format'] = $shipping_address['address_format'];
 			
-                                if(isset($this->session->data['shipping_methods']['correios']['quote'])) {
-                                    $shipping = reset($this->session->data['shipping_methods']['correios']['quote']);
-                                    $data['shipping_method'] = $shipping['title'];
-                                } elseif (isset($this->session->data['shipping_method']['title'])) {					
+				if (isset($this->session->data['shipping_method']['title'])) {
 					$data['shipping_method'] = $this->session->data['shipping_method']['title'];
 				} else {
 					$data['shipping_method'] = '';
 				}
-
-                                if(isset($this->session->data['shipping_methods']['correios']['quote'])) {
-                                    $shipping = reset($this->session->data['shipping_methods']['correios']['quote']);
-                                    $data['shipping_code'] = $shipping['code'];
-                                }elseif (isset($this->session->data['shipping_method']['code'])) {
-                                    $data['shipping_code'] = $this->session->data['shipping_method']['code'];
+				
+				if (isset($this->session->data['shipping_method']['code'])) {
+					$data['shipping_code'] = $this->session->data['shipping_method']['code'];
 				} else {
-                                    $data['shipping_code'] = '';
+					$data['shipping_code'] = '';
 				}				
 			} else {
 				$data['shipping_firstname'] = '';
@@ -325,10 +283,11 @@ class ControllerCheckoutConfirm extends Controller {
 				$this->load->model('affiliate/affiliate');
 				
 				$affiliate_info = $this->model_affiliate_affiliate->getAffiliateByCode($this->request->cookie['tracking']);
+				$subtotal = $this->cart->getSubTotal();
 				
 				if ($affiliate_info) {
 					$data['affiliate_id'] = $affiliate_info['affiliate_id']; 
-					$data['commission'] = ($total / 100) * $affiliate_info['commission']; 
+					$data['commission'] = ($subtotal / 100) * $affiliate_info['commission']; 
 				} else {
 					$data['affiliate_id'] = 0;
 					$data['commission'] = 0;
@@ -365,11 +324,7 @@ class ControllerCheckoutConfirm extends Controller {
 			}
 						
 			$this->load->model('checkout/order');
-                        
-                        if(!empty($data["total"]["value"])) { 
-                            $data["total"] = $data["total"]["value"];
-                        }
-
+			
 			$this->session->data['order_id'] = $this->model_checkout_order->addOrder($data);
 			
 			$this->data['column_name'] = $this->language->get('column_name');
@@ -406,7 +361,7 @@ class ControllerCheckoutConfirm extends Controller {
 					'quantity'   => $product['quantity'],
 					'subtract'   => $product['subtract'],
 					'price'      => $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax'))),
-					'total'      => $this->currency->format($this->tax->calculate($product['total'], $product['tax_class_id'], $this->config->get('config_tax'))),
+					'total'      => $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')) * $product['quantity']),
 					'href'       => $this->url->link('product/product', 'product_id=' . $product['product_id'])
 				); 
 			} 
@@ -424,7 +379,7 @@ class ControllerCheckoutConfirm extends Controller {
 			}  
 						
 			$this->data['totals'] = $total_data;
-                        
+	
 			$this->data['payment'] = $this->getChild('payment/' . $this->session->data['payment_method']['code']);
 		} else {
 			$this->data['redirect'] = $redirect;
