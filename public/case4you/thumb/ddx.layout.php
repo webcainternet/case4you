@@ -4,7 +4,7 @@ switch ($ql) {
     case 0: ?>
 
 <!-- LAYOUT 1 -->
-        <div id="divmask" style="padding: 0px; height: <?php echo $mh; ?>px; width: 42px; background-size: 42px; background-image: url(http://case4you.com.br/case4you/0/img/<?php echo $mimage; ?>); background-repeat: no-repeat no-repeat;">
+        <div id="divmask" style="padding: 0px; height: <?php echo $mh; ?>px; width: 84px; background-size: 42px; background-image: url(http://case4you.com.br/case4you/0/img/<?php echo $mimage; ?>); background-repeat: no-repeat no-repeat;">
             <div id="divl1" ondrop="drop(event, '1')" ondragover="allowDrop(event)" style="width: 100%; height: 100%; overflow: hidden;text-align: center;
     align: middle; "></div>
     </div>
