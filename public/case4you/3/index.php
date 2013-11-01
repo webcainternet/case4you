@@ -66,8 +66,7 @@ background-color: transparent;
 
 <script>
     function finalizacompra() {
-
-        window.parent.parent.window.location = 'http://case4you.com.br/case4you/save.product.php?idcsession=<?php echo $idcsession; ?>&m=<?php echo $_GET["m"]; ?>&l=<?php echo $_GET["l"]; ?>&f='+document.getElementById('filtrocapi').value;
+        window.parent.parent.window.location = 'http://case4you.com.br/case4you/save.product.php?idcsession=<?php echo $idcsession; ?>&m=<?php echo $_GET["m"]; ?>&l=<?php echo $_GET["l"]; ?>&f='+$("#filtrocapi").val();
     }
 
 	function selecionarfiltro(meutemplate, minhaext) {
