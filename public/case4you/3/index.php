@@ -65,17 +65,20 @@ background-color: transparent;
   <?php include 'ddx.jscript.php'; ?>
 
 <script>
+
+    var meufiltro = 0;
+
     function finalizacompra() {
-        alert($("#filtrocapi").val());
+        alert(meufiltro);
         //window.parent.parent.window.location = 'http://case4you.com.br/case4you/save.product.php?idcsession=<?php echo $idcsession; ?>&m=<?php echo $_GET["m"]; ?>&l=<?php echo $_GET["l"]; ?>&f='+$("#fsepia").val();
     }
 
 	function selecionarfiltro(meutemplate, minhaext) {
 
-        if (minhaext == "") { $("#filtrocapi").html('value','0'); alert('a'); }
-        if (minhaext == "-pb.png") { $("#filtrocapi").html('value','1');alert('b'); }
-        if (minhaext == "-sp.png") { $("#filtrocapi").html('value','2');alert('v'); }
-        if (minhaext == "-40.png") { $("#filtrocapi").html('value','3');alert('d'); } 
+        if (minhaext == "") { meufiltro = 0; }
+        if (minhaext == "-pb.png") { meufiltro = 1;  }
+        if (minhaext == "-sp.png") { meufiltro = 2;  }
+        if (minhaext == "-40.png") { meufiltro = 3;  } 
 
 
                 if (meutemplate == '0') {
