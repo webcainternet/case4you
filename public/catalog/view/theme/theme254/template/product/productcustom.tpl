@@ -219,7 +219,7 @@
       <?php if ($review_status) { ?>
       <div class="review">
                     <div><img src="catalog/view/theme/theme254/image/stars-<?php echo $rating; ?>.png" alt="<?php echo $reviews; ?>" />&nbsp;&nbsp;<div class="btn-rew"><a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $reviews; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<a onclick="$('a[href=\'#tab-review\']').trigger('click');"><?php echo $text_write; ?></a></div></div>
-                    <div class="share"><!-- AddThis Button BEGIN -->
+                    <div class="share" style="padding: 20px; width: 100%;"><!-- AddThis Button BEGIN -->
              <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style ">
             <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
