@@ -74,7 +74,7 @@ if (isset($novoid)) {
 			`meta_keyword` ,
 			`tag`
 			)
-			VALUES ('".$novoid."',  '2',  'Customizada',  'A capinha com a sua cara',  '',  '',  '')";
+			VALUES ('".$novoid."',  '2',  'Capinha 3D Personalizada',  'A capinha com a sua cara',  '',  '',  '')";
 
 		$rquery2 = mysql_query($iquery2,$dblink);
 
