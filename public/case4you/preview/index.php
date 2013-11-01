@@ -340,90 +340,6 @@ ondragover="allowDrop(event)"></div>
 </div>
 
 
-<div id="p1-dvfoto-img" style="float: left; width: 348px; border-left: solid 1px #CCC; height: 540px; text-align: left; background-repeat: no-repeat; background-position: 15px 10px;">
-      <div style="float: left;
-                  width: 15px;
-                  height: 20px;
-                  margin-left: 20px;
-                  margin-top: 20px;
-                  background-color: #6aa11a;
-                  border-radius: 20px;
-                  padding: 5px;
-                  padding-left: 10px;
-                  padding-top: 5px;
-                  color: #FFFFFF;
-                  font-size: 14px;
-                  font-weight: bold;">4</div>
-
-      <div class="fontc4y2" style="float: left;
-                  width: 260px;
-                  margin-left: 10px;
-                  margin-top: 19px;
-                  padding: 5px;
-                  color: #6aa11a;
-                  font-size: 14px;
-                  font-weight: bold;">
-		APLICAR FILTRO DE CORES!
-	</div>
-      <div class="fontc4y1" style="float: left; width: 320px; margin-left: 20px; margin-top: 20px;">
-        AJUDA: Clique no filtro para selecionar o efeito desejado!
-	<br><br>
-	OBS: Para obter qualidade na impressão é importante o upload de imagens em alta qualidade. Recomendamos fotos com pelo menos 1900x1200 pixels e 300dpi.
-      </div>
-
-      <div class="fontc4y1" style="float: left; width: 320px; margin-left: 20px; margin-top: 20px;">
-
-      <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-                <div style="float: left; text-align: left">
-                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '')" type="radio" name="filtro" id="fsepia" value="-sp.png">
-                </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
-                        <img src="img/pic-n.png" style="width: 65px;border:" alt="">
-                </div>
-        </div>
-
-      <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-                <div style="float: left; text-align: left">
-                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-sp.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
-                </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
-                        <img src="img/pic-s.png" style="width: 65px;border:" alt="">
-                </div>
-        </div>
-
-        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-                <div style="float: left; text-align: left">
-                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-pb.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
-                </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
-                        <img src="img/pic-p.png" style="width: 65px;border:" alt="">
-                </div>
-        </div>
-
-    <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
-                <div style="float: left; text-align: left">
-                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-40.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
-                </div>
-                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
-                        <img src="img/pic-c.png" style="width: 65px;border:" alt="">
-                </div>
-        </div>
-
-
-
-
-      </div>
-
-
-	<div style="text-align: left; float: right;">
-		<input style="margin-top: 20px;" type="submit" value="Finalizar" onclick="window.parent.parent.window.location = 'http://case4you.com.br/minhacapinha';">
-	</div>
-
-    </div>
-
-
-
-
 
 
 <?php
@@ -455,6 +371,14 @@ ondragover="allowDrop(event)"></div>
 				$nwidth[1] 		= $row1["nwidth"];
 				$nleft[1] 		= $row1["nleft"];
 				$ntop[1] 		= $row1["ntop"];
+
+                $imagemurl[1]   = $imagemurl[1]*2;
+                $nheight[1]     = $nheight[1]*2;
+                $nwidth[1]      = $nwidth[1]*2;
+                $nleft[1]       = $nleft[1]*2;
+                $ntop[1]        = $ntop[1]*2;
+
+
 			?>
 				<script>
 				        document.getElementById('divl1').style.backgroundImage = "url('<?php echo $imagemurl[1]; ?>')";
@@ -489,6 +413,12 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[1]              = $row1["nwidth"];
                                 $nleft[1]               = $row1["nleft"];
                                 $ntop[1]                = $row1["ntop"];
+
+                                $imagemurl[1]   = $imagemurl[1]*2;
+                                $nheight[1]     = $nheight[1]*2;
+                                $nwidth[1]      = $nwidth[1]*2;
+                                $nleft[1]       = $nleft[1]*2;
+                                $ntop[1]        = $ntop[1]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl2a').style.backgroundImage = "url('<?php echo $imagemurl[1]; ?>')";
@@ -511,6 +441,12 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[2]              = $row2["nwidth"];
                                 $nleft[2]               = $row2["nleft"];
                                 $ntop[2]                = $row2["ntop"];
+
+                                $imagemurl[1]   = $imagemurl[1]*2;
+                                $nheight[1]     = $nheight[1]*2;
+                                $nwidth[1]      = $nwidth[1]*2;
+                                $nleft[1]       = $nleft[1]*2;
+                                $ntop[1]        = $ntop[1]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl2b').style.backgroundImage = "url('<?php echo $imagemurl[2]; ?>')";
