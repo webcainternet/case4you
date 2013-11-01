@@ -23,12 +23,6 @@
   font-size: 14px;
   color: #6aa11a;
 }
-body, p {
-font-family: "c4y1", Arial, Verdana;
-margin:0px; padding:0px;
-background-color: transparent;
-background-image: url('/catalog/view/theme/theme254/image/bg-c4y.png');
-}
 
 </style>
 
@@ -442,7 +436,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 
 
 	</div>
-	<div class="outer" style="border-bottom: dotted 1px; margin-bottom: 20px; padding-top: 40px;">
+	<div class="outer" style="margin-bottom: 20px; padding-top: 40px;">
 	
 	<?php if ($logo) { ?>
 	<div id="logo"><a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" style="height: 120px;" /></a></div>
