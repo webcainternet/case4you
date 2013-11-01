@@ -19,7 +19,7 @@ else {
 
     include '../config.php';
 
-    $gidcsession = $_GET["idcsession"];
+    $gidcsession = $idcsession;
     $gmodelo = $_GET["modelo"];
     $glayout = $_GET["layout"];
     $gposicao = $_GET["posicao"];
