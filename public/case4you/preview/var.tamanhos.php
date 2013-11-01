@@ -131,14 +131,14 @@ switch ($ql) {
 
     if ($ql == 2 && $qm == 2) {
         $mw15a = $mw15a*2;
-        $mh15a = $mh15a*2;
+        $mh15a = ($mh15a*2)-6;
         $mw15b = $mw15b*2;
         $mh15b = $mh15b*2;
     }
 
     if ($ql == 2 && $qm == 3) {
         $mw15a = $mw15a*2;
-        $mh15a = $mh15a*2;
+        $mh15a = ($mh15a*2)-6;
         $mw15b = $mw15b*2;
         $mh15b = $mh15b*2;
     }
