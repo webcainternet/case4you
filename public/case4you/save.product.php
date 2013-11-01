@@ -97,7 +97,8 @@ if (isset($novoid)) {
 			    die('Invalid query: ' . mysql_error());
 			}
 			else {
-				header('Location: ');
+				//header('Location: ');
+				echo "ok";
 			}
 		}
 	}
