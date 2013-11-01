@@ -17,8 +17,11 @@ while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 
 mysql_free_result($result);
 
-echo $ultimoid;
 
+
+$novoid = $ultimoid+1;
+
+echo $novoid;
 
 
 
