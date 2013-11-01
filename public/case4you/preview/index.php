@@ -919,7 +919,7 @@ ondragover="allowDrop(event)"></div>
                 </div>
         </div>
 
-        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+        <div style="float: left; text-align: left; width: 210px; margin-bottom: 20px; margin-left: 15px;">
         <a href="#" onclick="document.getElementById('mascarasp').style.display = 'block'">Coloca mascara</a> | <a href="#" onclick="document.getElementById('mascarasp').style.display = 'none'">Remove mascara</a>
 
         </div>
