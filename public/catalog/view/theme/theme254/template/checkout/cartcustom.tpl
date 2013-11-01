@@ -47,7 +47,7 @@
               $dblink = mysql_connect(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD);
               mysql_select_db(DB_DATABASE,$dblink);
 
-              $result = mysql_query("select mpn from oc_product WHERE product_id = ".$_GET["product_id"]);
+              $result = mysql_query("select mpn from oc_product WHERE product_id = ".$product['id']);
 
               while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
                   $urlcapinha = $row["mpn"];
@@ -57,6 +57,7 @@
             ?>
 
             <iframe src="http://case4you.com.br/case4you/thumb/index.php?<?php echo $urlcapinha; ?>" style="border: 0px; width: 80px; height: 115px;" scrolling="no"></iframe>
+
             <?php if ($product['thumb']) { ?>
 
             
