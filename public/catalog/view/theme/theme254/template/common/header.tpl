@@ -24,6 +24,21 @@
   color: #6aa11a;
 }
 
+body {
+	color: #7f7f7f;
+	/* font-family: Arial, Helvetica, sans-serif; */
+	font-family: "c4y1", Arial, Verdana;
+	margin: 0px;
+	padding: 0px;
+	/* background:url(../image/bg.jpg) repeat-x left top #fff; */
+	font-size:12px;
+	line-height:18px;
+	min-width:1024px;
+	background-position-y: -10px;
+	background-image: url('/catalog/view/theme/theme254/image/bg-c4y.png');
+	background-repeat: repeat-x;
+}
+
 </style>
 
 <title><?php echo $title; ?></title>
