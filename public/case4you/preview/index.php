@@ -945,6 +945,24 @@ ondragover="allowDrop(event)"></div>
 
 
 
+<script>
+<?php if ($_GET["f"] == "0") { ?>
+    selecionarfiltro('<?php echo $_GET['l']; ?>', '');
+<? } ?>
+
+<?php if ($_GET["f"] == "1") { ?>
+    selecionarfiltro('<?php echo $_GET['l']; ?>', '-pb.png');
+<? } ?>
+
+<?php if ($_GET["f"] == "2") { ?>
+    selecionarfiltro('<?php echo $_GET['l']; ?>', '-sp.png');
+<? } ?>
+
+<?php if ($_GET["f"] == "3") { ?>
+    selecionarfiltro('<?php echo $_GET['l']; ?>', '-40.png');
+<? } ?>
+
+</script>
 
 </body>
 </html>

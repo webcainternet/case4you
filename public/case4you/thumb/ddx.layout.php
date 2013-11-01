@@ -29,7 +29,7 @@ switch ($ql) {
     ?>
 
 <!-- LAYOUT 3 -->
-        <div id="divmask" style="padding: 0px; height: <?php echo $mh; ?>px; width: 332px; background-size: 42px; background-image: url(http://case4you.com.br/case4you/0/img/<?php echo $mimage; ?>); background-repeat: no-repeat no-repeat;">
+        <div id="divmask" style="padding: 0px; height: <?php echo $mh; ?>px; width: 83px; background-size: 42px; background-image: url(http://case4you.com.br/case4you/0/img/<?php echo $mimage; ?>); background-repeat: no-repeat no-repeat;">
 
 
                 <div id="divl15b1" ondrop="dropl15b(event, '1')" ondragover="allowDrop(event)" style="float: left;  width: <?php echo $mw15b; ?>px; height: <?php echo $mh15b; ?>px; overflow: hidden;text-align: center;
