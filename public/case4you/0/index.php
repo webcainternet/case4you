@@ -11,9 +11,14 @@ else {
   $ramdomico4 = rand(1000,9999);
   $idsession = $timestamp1."".$ramdomico4;
   $_SESSION["userid"] = $idsession;
-
+  $idcsession = $idsession;
   //echo "Nao logado:" . $_SESSION["userid"];
 }
+
+    $gmodelo = $_GET["m"];
+    $glayout = $_GET["l"];
+    $qm = $_GET["m"];
+    $ql = $_GET["l"];
 
 ?>
 
