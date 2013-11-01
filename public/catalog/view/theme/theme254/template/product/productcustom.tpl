@@ -11,8 +11,22 @@
     
         <div class="fleft left spacing" style="">
 
+          <?php    
+            include '../config.php';
 
-          <iframe src="http://case4you.com.br/case4you/product/index.php?idcsession=13832939676577&m=0&l=0&f=0" style="border: 0px; width: 370px; height: 470px;" scrolling="no"></iframe>
+            $dblink = mysql_connect(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD);
+            mysql_select_db(DB_DATABASE,$dblink);
+
+            $result = mysql_query("select mpn from oc_product WHERE product_id = ".$_GET["product_id"]);
+
+            while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                $urlcapinha = $row["mpn"];
+            }
+
+            mysql_free_result($result);
+          ?>
+
+          <iframe src="http://case4you.com.br/case4you/product/index.php?<?php echo $urlcapinha; ?>" style="border: 0px; width: 370px; height: 470px;" scrolling="no"></iframe>
           
                
         </div>
