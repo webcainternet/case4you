@@ -97,7 +97,21 @@ if (isset($novoid)) {
 			    die('Invalid query: ' . mysql_error());
 			}
 			else {
-				header('Location: http://case4you.com.br/index.php?route=product/productcustom&product_id='.$novoid);
+				$iquery4 = "INSERT INTO  `case4you2`.`oc_product_to_store` (
+					`product_id` ,
+					`store_id`
+					)
+					VALUES (
+					'".$novoid."',  '0'
+					)";
+				$rquery4 = mysql_query($iquery4,$dblink);
+
+				if (!$rquery4) {
+				    die('Invalid query: ' . mysql_error());
+				}
+				else {
+					header('Location: http://case4you.com.br/index.php?route=product/productcustom&product_id='.$novoid);
+				}
 			}
 		}
 	}
