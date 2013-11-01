@@ -97,8 +97,7 @@ if (isset($novoid)) {
 			    die('Invalid query: ' . mysql_error());
 			}
 			else {
-				//header('Location: ');
-				echo "ok";
+				header('Location: http://case4you.com.br/index.php?route=product/productcustom&product_id='.$novoid);
 			}
 		}
 	}
