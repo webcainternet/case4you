@@ -35,6 +35,11 @@ body {
 	line-height:18px;
 	min-width:1024px;
 	
+	/*
+	background-position-y: -10px;
+	background-image: url('/catalog/view/theme/theme254/image/bg-c4y.png');
+	background-repeat: repeat-x;
+	*/
 }
 
 </style>
