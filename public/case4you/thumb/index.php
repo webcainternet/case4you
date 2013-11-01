@@ -881,7 +881,7 @@ ondragover="allowDrop(event)"></div>
 
 ?>
 
-      <div class="fontc4y1" style="float: left; width: 320px; margin-left: 20px; margin-top: 20px;">
+      <div class="fontc4y1" style="float: left; width: 320px; margin-left: 20px; margin-top: 20px; display: none;">
 
       <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
                 <div style="float: left; text-align: left">
