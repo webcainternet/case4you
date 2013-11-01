@@ -40,7 +40,23 @@
           <?php foreach ($products as $product) { ?>
           <tr>
             <td class="image">
-            <iframe src="http://case4you.com.br/case4you/thumb/index.php?idcsession=13832939676577&m=0&l=0&f=0" style="border: 0px; width: 80px; height: 115px;" scrolling="no"></iframe>
+
+            <?php    
+              include '../config.php';
+
+              $dblink = mysql_connect(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD);
+              mysql_select_db(DB_DATABASE,$dblink);
+
+              $result = mysql_query("select mpn from oc_product WHERE product_id = ".$_GET["product_id"]);
+
+              while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                  $urlcapinha = $row["mpn"];
+              }
+
+              mysql_free_result($result);
+            ?>
+
+            <iframe src="http://case4you.com.br/case4you/thumb/index.php?<?php echo $urlcapinha; ?>" style="border: 0px; width: 80px; height: 115px;" scrolling="no"></iframe>
             <?php if ($product['thumb']) { ?>
 
             
