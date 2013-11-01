@@ -378,6 +378,8 @@ ondragover="allowDrop(event)"></div>
                 $nleft[1]       = $nleft[1]/4;
                 $ntop[1]        = $ntop[1]/4;
 
+                echo "$imagemurl[1]";
+
 
 			?>
 				<script>
