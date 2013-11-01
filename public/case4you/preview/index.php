@@ -331,7 +331,7 @@ ondragover="allowDrop(event)"></div>
 
 
 
-<div style="display: block; float: left; width: 350px; border-left-style: solid; border-left-width: 0px; border-left-color: rgb(204, 204, 204); height: 540px; text-align: center; background-position: 15px 10px; background-repeat: no-repeat no-repeat;">
+<div style="display: block; float: left; width: 700px; border-left-style: solid; border-left-width: 0px; border-left-color: rgb(204, 204, 204); height: 1080px; text-align: center; background-position: 15px 10px; background-repeat: no-repeat no-repeat;">
 
 <!-- ddx.layout -->
     <?php include 'ddx.layout.php'; ?>
@@ -414,7 +414,6 @@ ondragover="allowDrop(event)"></div>
                                 $nleft[1]               = $row1["nleft"];
                                 $ntop[1]                = $row1["ntop"];
 
-                                $imagemurl[1]   = $imagemurl[1]*2;
                                 $nheight[1]     = $nheight[1]*2;
                                 $nwidth[1]      = $nwidth[1]*2;
                                 $nleft[1]       = $nleft[1]*2;
@@ -442,11 +441,10 @@ ondragover="allowDrop(event)"></div>
                                 $nleft[2]               = $row2["nleft"];
                                 $ntop[2]                = $row2["ntop"];
 
-                                $imagemurl[1]   = $imagemurl[1]*2;
-                                $nheight[1]     = $nheight[1]*2;
-                                $nwidth[1]      = $nwidth[1]*2;
-                                $nleft[1]       = $nleft[1]*2;
-                                $ntop[1]        = $ntop[1]*2;
+                                $nheight[2]     = $nheight[2]*2;
+                                $nwidth[2]      = $nwidth[2]*2;
+                                $nleft[2]       = $nleft[2]*2;
+                                $ntop[2]        = $ntop[2]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl2b').style.backgroundImage = "url('<?php echo $imagemurl[2]; ?>')";
@@ -483,6 +481,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[1]              = $row1["nwidth"];
                                 $nleft[1]               = $row1["nleft"];
                                 $ntop[1]                = $row1["ntop"];
+
+                                $nheight[1]     = $nheight[1]*2;
+                                $nwidth[1]      = $nwidth[1]*2;
+                                $nleft[1]       = $nleft[1]*2;
+                                $ntop[1]        = $ntop[1]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b1').style.backgroundImage = "url('<?php echo $imagemurl[1]; ?>')";
@@ -505,6 +508,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[2]              = $row2["nwidth"];
                                 $nleft[2]               = $row2["nleft"];
                                 $ntop[2]                = $row2["ntop"];
+                                
+                                $nheight[2]     = $nheight[2]*2;
+                                $nwidth[2]      = $nwidth[2]*2;
+                                $nleft[2]       = $nleft[2]*2;
+                                $ntop[2]        = $ntop[2]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b2').style.backgroundImage = "url('<?php echo $imagemurl[2]; ?>')";
@@ -527,6 +535,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[3]              = $row3["nwidth"];
                                 $nleft[3]               = $row3["nleft"];
                                 $ntop[3]                = $row3["ntop"];
+
+                                $nheight[3]     = $nheight[3]*2;
+                                $nwidth[3]      = $nwidth[3]*2;
+                                $nleft[3]       = $nleft[3]*2;
+                                $ntop[3]        = $ntop[3]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b3').style.backgroundImage = "url('<?php echo $imagemurl[3]; ?>')";
@@ -549,6 +562,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[4]              = $row4["nwidth"];
                                 $nleft[4]               = $row4["nleft"];
                                 $ntop[4]                = $row4["ntop"];
+
+                                $nheight[4]     = $nheight[4]*2;
+                                $nwidth[4]      = $nwidth[4]*2;
+                                $nleft[4]       = $nleft[4]*2;
+                                $ntop[4]        = $ntop[4]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b4').style.backgroundImage = "url('<?php echo $imagemurl[4]; ?>')";
@@ -571,6 +589,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[5]              = $row5["nwidth"];
                                 $nleft[5]               = $row5["nleft"];
                                 $ntop[5]                = $row5["ntop"];
+
+                                $nheight[5]     = $nheight[5]*2;
+                                $nwidth[5]      = $nwidth[5]*2;
+                                $nleft[5]       = $nleft[5]*2;
+                                $ntop[5]        = $ntop[5]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15a1').style.backgroundImage = "url('<?php echo $imagemurl[5]; ?>')";
@@ -593,6 +616,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[6]              = $row6["nwidth"];
                                 $nleft[6]               = $row6["nleft"];
                                 $ntop[6]                = $row6["ntop"];
+
+                                $nheight[6]     = $nheight[6]*2;
+                                $nwidth[6]      = $nwidth[6]*2;
+                                $nleft[6]       = $nleft[6]*2;
+                                $ntop[6]        = $ntop[6]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15a2').style.backgroundImage = "url('<?php echo $imagemurl[6]; ?>')";
@@ -615,6 +643,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[7]              = $row7["nwidth"];
                                 $nleft[7]               = $row7["nleft"];
                                 $ntop[7]                = $row7["ntop"];
+
+                                $nheight[7]     = $nheight[7]*2;
+                                $nwidth[7]      = $nwidth[7]*2;
+                                $nleft[7]       = $nleft[7]*2;
+                                $ntop[7]        = $ntop[7]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b6').style.backgroundImage = "url('<?php echo $imagemurl[7]; ?>')";
@@ -637,6 +670,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[8]              = $row8["nwidth"];
                                 $nleft[8]               = $row8["nleft"];
                                 $ntop[8]                = $row8["ntop"];
+
+                                $nheight[8]     = $nheight[8]*2;
+                                $nwidth[8]      = $nwidth[8]*2;
+                                $nleft[8]       = $nleft[8]*2;
+                                $ntop[8]        = $ntop[8]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b5').style.backgroundImage = "url('<?php echo $imagemurl[8]; ?>')";
@@ -659,6 +697,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[9]              = $row9["nwidth"];
                                 $nleft[9]               = $row9["nleft"];
                                 $ntop[9]                = $row9["ntop"];
+
+                                $nheight[9]     = $nheight[9]*2;
+                                $nwidth[9]      = $nwidth[9]*2;
+                                $nleft[9]       = $nleft[9]*2;
+                                $ntop[9]        = $ntop[9]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b8').style.backgroundImage = "url('<?php echo $imagemurl[9]; ?>')";
@@ -681,6 +724,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[10]              = $row10["nwidth"];
                                 $nleft[10]               = $row10["nleft"];
                                 $ntop[10]                = $row10["ntop"];
+
+                                $nheight[10]     = $nheight[10]*2;
+                                $nwidth[10]      = $nwidth[10]*2;
+                                $nleft[10]       = $nleft[10]*2;
+                                $ntop[10]        = $ntop[10]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b7').style.backgroundImage = "url('<?php echo $imagemurl[10]; ?>')";
@@ -703,6 +751,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[11]              = $row11["nwidth"];
                                 $nleft[11]               = $row11["nleft"];
                                 $ntop[11]                = $row11["ntop"];
+
+                                $nheight[11]     = $nheight[11]*2;
+                                $nwidth[11]      = $nwidth[11]*2;
+                                $nleft[11]       = $nleft[11]*2;
+                                $ntop[11]        = $ntop[11]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b9').style.backgroundImage = "url('<?php echo $imagemurl[11]; ?>')";
@@ -725,6 +778,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[12]              = $row12["nwidth"];
                                 $nleft[12]               = $row12["nleft"];
                                 $ntop[12]                = $row12["ntop"];
+
+                                $nheight[12]     = $nheight[12]*2;
+                                $nwidth[12]      = $nwidth[12]*2;
+                                $nleft[12]       = $nleft[12]*2;
+                                $ntop[12]        = $ntop[12]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b10').style.backgroundImage = "url('<?php echo $imagemurl[12]; ?>')";
@@ -747,6 +805,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[13]              = $row13["nwidth"];
                                 $nleft[13]               = $row13["nleft"];
                                 $ntop[13]                = $row13["ntop"];
+
+                                $nheight[13]     = $nheight[13]*2;
+                                $nwidth[13]      = $nwidth[13]*2;
+                                $nleft[13]       = $nleft[13]*2;
+                                $ntop[13]        = $ntop[13]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b11').style.backgroundImage = "url('<?php echo $imagemurl[13]; ?>')";
@@ -769,6 +832,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[14]              = $row14["nwidth"];
                                 $nleft[14]               = $row14["nleft"];
                                 $ntop[14]                = $row14["ntop"];
+
+                                $nheight[14]     = $nheight[14]*2;
+                                $nwidth[14]      = $nwidth[14]*2;
+                                $nleft[14]       = $nleft[14]*2;
+                                $ntop[14]        = $ntop[14]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15b12').style.backgroundImage = "url('<?php echo $imagemurl[14]; ?>')";
@@ -791,6 +859,11 @@ ondragover="allowDrop(event)"></div>
                                 $nwidth[15]              = $row15["nwidth"];
                                 $nleft[15]               = $row15["nleft"];
                                 $ntop[15]                = $row15["ntop"];
+
+                                $nheight[15]     = $nheight[15]*2;
+                                $nwidth[15]      = $nwidth[15]*2;
+                                $nleft[15]       = $nleft[15]*2;
+                                $ntop[15]        = $ntop[15]*2;
                         ?>
                                 <script>
                                         document.getElementById('divl15a3').style.backgroundImage = "url('<?php echo $imagemurl[15]; ?>')";
@@ -809,19 +882,19 @@ ondragover="allowDrop(event)"></div>
 ?>
 
 <?php if ($_GET["m"] == "0") { ?>
-<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 490px; width: 340px; background-size: 340px; background-image: url(http://case4you.com.br/case4you/0/img/mask-iphone4-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
+<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 980px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-iphone4-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
 <? } ?>
 
 <?php if ($_GET["m"] == "1") { ?>
-<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 538px; width: 340px; background-size: 340px; background-image: url(http://case4you.com.br/case4you/0/img/mask-iphone5-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
+<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 1076px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-iphone5-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
 <? } ?>
 
 <?php if ($_GET["m"] == "2") { ?>
-<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 527px; width: 340px; background-size: 340px; background-image: url(http://case4you.com.br/case4you/0/img/mask-galaxy3-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
+<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 1054px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-galaxy3-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
 <? } ?>
 
 <?php if ($_GET["m"] == "3") { ?>
-<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 499px; width: 340px; background-size: 340px; background-image: url(http://case4you.com.br/case4you/0/img/mask-galaxy4-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
+<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 998px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-galaxy4-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
 <? } ?>
 
 
