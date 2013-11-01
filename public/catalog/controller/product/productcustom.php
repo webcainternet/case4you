@@ -3,7 +3,7 @@ class ControllerProductProductcustom extends Controller {
 	private $error = array(); 
 	
 	public function index() { 
-		$this->language->load('product/productcustom');
+		$this->language->load('product/product');
 	
 		$this->data['breadcrumbs'] = array();
 
@@ -162,7 +162,7 @@ class ControllerProductProductcustom extends Controller {
 			$product_id = 0;
 		}
 		
-		$this->load->model('catalog/productcustom');
+		$this->load->model('catalog/product');
 		
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 		
@@ -221,14 +221,14 @@ class ControllerProductProductcustom extends Controller {
 												
 			$this->data['breadcrumbs'][] = array(
 				'text'      => $product_info['name'],
-				'href'      => $this->url->link('product/productcustom', $url . '&product_id=' . $this->request->get['product_id']),
+				'href'      => $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id']),
 				'separator' => $this->language->get('text_separator')
 			);			
 			
 			$this->document->setTitle($product_info['name']);
 			$this->document->setDescription($product_info['meta_description']);
 			$this->document->setKeywords($product_info['meta_keyword']);
-			$this->document->addLink($this->url->link('product/productcustom', 'product_id=' . $this->request->get['product_id']), 'canonical');
+			$this->document->addLink($this->url->link('product/product', 'product_id=' . $this->request->get['product_id']), 'canonical');
 			$this->document->addScript('catalog/view/javascript/jquery/tabs.js');
 			$this->document->addScript('catalog/view/javascript/jquery/colorbox/jquery.colorbox-min.js');
 			$this->document->addStyle('catalog/view/javascript/jquery/colorbox/colorbox.css');
@@ -439,7 +439,7 @@ class ControllerProductProductcustom extends Controller {
 					'special' 	 => $special,
 					'rating'     => $rating,
 					'reviews'    => sprintf($this->language->get('text_reviews'), (int)$result['reviews']),
-					'href'    	 => $this->url->link('product/productcustom', 'product_id=' . $result['product_id'])
+					'href'    	 => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
 			}	
 			
@@ -456,10 +456,10 @@ class ControllerProductProductcustom extends Controller {
 			}
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
 			
-			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/productcustom.tpl')) {
-				$this->template = $this->config->get('config_template') . '/template/product/productcustom.tpl';
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
+				$this->template = $this->config->get('config_template') . '/template/product/product.tpl';
 			} else {
-				$this->template = 'default/template/product/productcustom.tpl';
+				$this->template = 'default/template/product/product.tpl';
 			}
 			
 			$this->children = array(
@@ -525,7 +525,7 @@ class ControllerProductProductcustom extends Controller {
 								
       		$this->data['breadcrumbs'][] = array(
         		'text'      => $this->language->get('text_error'),
-				'href'      => $this->url->link('product/productcustom', $url . '&product_id=' . $product_id),
+				'href'      => $this->url->link('product/product', $url . '&product_id=' . $product_id),
         		'separator' => $this->language->get('text_separator')
       		);			
 		
@@ -559,7 +559,7 @@ class ControllerProductProductcustom extends Controller {
   	}
 	
 	public function review() {
-    	$this->language->load('product/productcustom');
+    	$this->language->load('product/product');
 		
 		$this->load->model('catalog/review');
 
@@ -593,21 +593,21 @@ class ControllerProductProductcustom extends Controller {
 		$pagination->page = $page;
 		$pagination->limit = 5; 
 		$pagination->text = $this->language->get('text_pagination');
-		$pagination->url = $this->url->link('product/productcustom/review', 'product_id=' . $this->request->get['product_id'] . '&page={page}');
+		$pagination->url = $this->url->link('product/product/review', 'product_id=' . $this->request->get['product_id'] . '&page={page}');
 			
 		$this->data['pagination'] = $pagination->render();
 		
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/productcustom/review.tpl')) {
-			$this->template = $this->config->get('config_template') . '/template/productcustom/review.tpl';
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/review.tpl')) {
+			$this->template = $this->config->get('config_template') . '/template/product/review.tpl';
 		} else {
-			$this->template = 'default/template/productcustom/review.tpl';
+			$this->template = 'default/template/product/review.tpl';
 		}
 		
 		$this->response->setOutput($this->render());
 	}
 	
 	public function write() {
-		$this->language->load('product/productcustom');
+		$this->language->load('product/product');
 		
 		$this->load->model('catalog/review');
 		
@@ -651,7 +651,7 @@ class ControllerProductProductcustom extends Controller {
 	}
 	
 	public function upload() {
-		$this->language->load('product/productcustom');
+		$this->language->load('product/product');
 		
 		$json = array();
 		
