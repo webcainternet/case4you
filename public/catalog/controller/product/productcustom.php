@@ -1,9 +1,9 @@
 <?php  
-class ControllerProductProductCustom extends Controller {
+class ControllerProductProductcustom extends Controller {
 	private $error = array(); 
 	
 	public function index() { 
-		$this->language->load('product/product');
+		$this->language->load('product/productcustom');
 	
 		$this->data['breadcrumbs'] = array();
 
