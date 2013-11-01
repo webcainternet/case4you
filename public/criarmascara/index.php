@@ -18,7 +18,7 @@ padding-bottom: 40px;
 
 <div>
 <form method="get">
-URL: <input type="text" name="imagem" style="width: 300px;">
+URL da imagem: <input type="text" name="imagem" style="width: 300px;">
 <input type="submit">
 </form>
 </div>
