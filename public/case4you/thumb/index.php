@@ -962,6 +962,6 @@ ondragover="allowDrop(event)"></div>
 <? } ?>
 
 </script>
-
+<?php echo $sql_statement1; ?>
 </body>
 </html>
