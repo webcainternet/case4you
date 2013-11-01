@@ -15,7 +15,7 @@ padding-bottom: 40px;
 
 <body style="margin: 20px; padding: 20px;">
 
-			<div style="margin: auto; width: 400px;">
+			<div style="margin: auto; width: 400px; background-color: red; float: left;">
 				Iphone4/4S<br />&nbsp;
 				<div style="width:240px;">
                     <div class="image">
