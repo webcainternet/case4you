@@ -332,7 +332,7 @@ background-color: transparent;
 
 <body style="margin: 0px; padding: 0px;font-family: Arial, Helvetica, sans-serif; color: #222222;line-height: 1.3;font-size: 12px; ">
 
-<input type="hidden" value="filtrocapi">
+<input type="hidden" id="filtrocapi" value="0">
 
 <div id="div1" ondrop="drop(event)"
 ondragover="allowDrop(event)"></div>
