@@ -30,7 +30,7 @@ switch ($ql) {
 
 <!-- LAYOUT 3 -->
         <div id="divmask" style="padding: 0px; height: <?php echo $mh; ?>px; width: 83px; background-size: 42px; background-image: url(http://case4you.com.br/case4you/0/img/<?php echo $mimage; ?>); background-repeat: no-repeat no-repeat;">
-    <?php if ($ql == 2 && $qm == 3) { $mh15a = $mh15a+1; } ?>
+<?php if ($ql == 2 && $qm == 3) { $mh15a = $mh15a+1; } ?>
 
                 <div id="divl15b1" ondrop="dropl15b(event, '1')" ondragover="allowDrop(event)" style="float: left;  width: <?php echo $mw15b; ?>px; height: <?php echo $mh15b; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
@@ -47,7 +47,7 @@ switch ($ql) {
                 <div id="divl15b4" ondrop="dropl15b(event, '4')" ondragover="allowDrop(event)" style="float: left;  width: <?php echo $mw15b; ?>px; height: <?php echo $mh15b; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
 
-<?php if ($ql == 2 && $qm == 3) { $mh15a = $mh15a+1; } ?>
+<?php if ($ql == 2 && $qm == 3) { $mh15a = $mh15a-1; } ?>
 
                 <div id="divl15a2" ondrop="dropl15a(event, '6')" ondragover="allowDrop(event)" style="float: left;  width: <?php echo $mw15a; ?>px; height: <?php echo $mh15a; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
