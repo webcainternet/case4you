@@ -39,10 +39,10 @@ $(document).ready(function() {
 
 <div id='coin-slider'>
 
-	<a class="fancybox fancybox.iframe"  href="http://case4you.com.br/case4you/0/"><img src='image/data/c4y_banner8.png' ></a>
-	<a href="http://case4you.com.br/capas-prontas"><img src='image/data/c4y_banner5b.png' ></a>
-	<a class="fancybox fancybox.iframe"  href="http://case4you.com.br/case4you/0/"><img src='image/data/c4y_banner11.png' ></a>
-	<a href="http://case4you.com.br/acessorios"><img src='image/data/c4y_banner6c.png' ></a>
+	<a class="fancybox fancybox.iframe"  href="http://case4you.com.br/case4you/0/"><img src='image/data/banner/banner3.png' ></a>
+	<a href="http://case4you.com.br/capas-prontas"><img src='image/data/banner/banner2.png' ></a>
+	<a class="fancybox fancybox.iframe"  href="http://case4you.com.br/case4you/0/"><img src='image/data/banner/banner4.png' ></a>
+	<a href="http://case4you.com.br/acessorios"><img src='image/data/banner/banner1.png' ></a>
 	
 </div>
 
