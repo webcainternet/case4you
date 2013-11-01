@@ -456,10 +456,10 @@ class ControllerProductProductcustom extends Controller {
 			}
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
 			
-			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
-				$this->template = $this->config->get('config_template') . '/template/product/product.tpl';
+			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/productcustom.tpl')) {
+				$this->template = $this->config->get('config_template') . '/template/product/productcustom.tpl';
 			} else {
-				$this->template = 'default/template/product/product.tpl';
+				$this->template = 'default/template/product/productcustom.tpl';
 			}
 			
 			$this->children = array(
