@@ -47,7 +47,7 @@
               $dblink = mysql_connect(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD);
               mysql_select_db(DB_DATABASE,$dblink);
 
-              $result = mysql_query("select mpn from oc_product WHERE product_id = ".$product['id']);
+              $result = mysql_query("select mpn from oc_product WHERE product_id = ".$product['product_id']);
 
               while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
                   $urlcapinha = $row["mpn"];
