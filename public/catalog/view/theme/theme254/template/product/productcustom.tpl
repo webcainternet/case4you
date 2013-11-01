@@ -8,7 +8,7 @@
   
   <div class="product-info">
     <div class="wrapper indent-bot">
-    <?php if ($thumb || $images) { ?>
+    
         <div class="fleft left spacing" style="">
 
 
@@ -16,7 +16,7 @@
           
                
         </div>
-        <?php } ?>
+    
     <div class="extra-wrap">
       <h1><?php echo $heading_title; ?></h1>
       <div class="description">
