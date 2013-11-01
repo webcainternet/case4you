@@ -26,7 +26,7 @@ $(document).ready(function() {
  });
 </script>
 <div class="box category">
-	<div class="box-heading"><span>Modelos Prontos</span></div>
+	<div class="box-heading"><span>Categorias</span></div>
   <div class="box-content">
   
     <div class="box-category">
