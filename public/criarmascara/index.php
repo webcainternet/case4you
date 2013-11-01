@@ -19,7 +19,7 @@ padding-bottom: 40px;
 
 				<div style="width:240px;">
                     <div class="image">
-                        <div style="background: url(<?php echo $imagem; ?>) top center;height: 468px; width: 240px;border-radius: 46px;"></div>
+                        <div style="background: url(<?php echo $imagem; ?>) top center; height: 468px; background-size: 468px; width: 240px;border-radius: 46px;"></div>
                     </div>
 
                     <img src="mascara_iphone_4s.png" style="height: 468px;width: 240px;position: relative;top: -508px;margin: 0 0 -254px;   border-radius: 44px!important;" alt="">
