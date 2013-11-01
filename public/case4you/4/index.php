@@ -1,10 +1,22 @@
 <?php
 session_start();
-$session_id='1'; //$session id
-?>
 
-<?php
-    $idcsession = 2221;
+if (isset($_SESSION["userid"])) {
+  //echo "Logado como:" . $_SESSION["userid"];
+  $idcsession = $_SESSION["userid"];
+}
+else {
+  //Randomiza nome do arquivo
+  $date1 = date_create();
+  $timestamp1 = date_timestamp_get($date1);
+  $ramdomico4 = rand(1000,9999);
+  $idsession = $timestamp1."".$ramdomico4;
+  $_SESSION["userid"] = $idsession;
+
+  header('location: /case4you/0/');
+  //echo "Nao logado:" . $_SESSION["userid"];
+}
+
     $gmodelo = $_GET["m"];
     $glayout = $_GET["l"];
 ?>

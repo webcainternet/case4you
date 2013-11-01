@@ -1,9 +1,25 @@
 <?php
+session_start();
+
+if (isset($_SESSION["userid"])) {
+  $idcsession = $_SESSION["userid"];
+}
+else {
+  //Randomiza nome do arquivo
+  $date1 = date_create();
+  $timestamp1 = date_timestamp_get($date1);
+  $ramdomico4 = rand(1000,9999);
+  $idsession = $timestamp1."".$ramdomico4;
+  $_SESSION["userid"] = $idsession;
+
+  //echo "Nao logado:" . $_SESSION["userid"];
+}
+
         //Recebe imagem do cliente
         $clienteimagem = 'http://upload.wikimedia.org/wikipedia/commons/3/36/Sunflower_as_GIF.gif';
 
         //Randomiza nome do arquivo
-        $idsession = '2221';
+        $idsession = $idcsession;
         $date1 = date_create();
         $timestamp1 = date_timestamp_get($date1);
         $ramdomico4 = rand(1000,9999);

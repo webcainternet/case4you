@@ -1,4 +1,22 @@
 <?php
+session_start();
+
+if (isset($_SESSION["userid"])) {
+  //echo "Logado como:" . $_SESSION["userid"];
+  $idcsession = $_SESSION["userid"];
+}
+else {
+  //Randomiza nome do arquivo
+  $date1 = date_create();
+  $timestamp1 = date_timestamp_get($date1);
+  $ramdomico4 = rand(1000,9999);
+  $idsession = $timestamp1."".$ramdomico4;
+  $_SESSION["userid"] = $idsession;
+  
+  header('location: /case4you/0/');
+  //echo "Nao logado:" . $_SESSION["userid"];
+}
+
     include '../config.php';
 
     $gidcsession = $_GET["idcsession"];
@@ -19,7 +37,7 @@
         $clienteimagem = $gimagem;
 
         //Randomiza nome do arquivo
-        $idsession = '2221';
+        $idsession = $idcsession;
         $date1 = date_create();
         $timestamp1 = date_timestamp_get($date1);
         $ramdomico4 = rand(1000,9999);
