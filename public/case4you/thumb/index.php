@@ -944,7 +944,9 @@ ondragover="allowDrop(event)"></div>
 <? } ?>
 
 
-
+<script>
+    selecionarfiltro('<?php echo $_GET['l']; ?>', '-sp.png');
+</script>
 
 </body>
 </html>
