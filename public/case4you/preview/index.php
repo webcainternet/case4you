@@ -881,6 +881,49 @@ ondragover="allowDrop(event)"></div>
 
 ?>
 
+      <div class="fontc4y1" style="float: left; width: 320px; margin-left: 20px; margin-top: 20px;">
+
+      <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+                <div style="float: left; text-align: left">
+                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '')" type="radio" name="filtro" id="fsepia" value="-sp.png">
+                </div>
+                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
+                        <img src="img/pic-n.png" style="width: 65px;border:" alt="">
+                </div>
+        </div>
+
+      <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+                <div style="float: left; text-align: left">
+                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-sp.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
+                </div>
+                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
+                        <img src="img/pic-s.png" style="width: 65px;border:" alt="">
+                </div>
+        </div>
+
+        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+                <div style="float: left; text-align: left">
+                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-pb.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
+                </div>
+                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
+                        <img src="img/pic-p.png" style="width: 65px;border:" alt="">
+                </div>
+        </div>
+
+    <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+                <div style="float: left; text-align: left">
+                        <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-40.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
+                </div>
+                <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
+                        <img src="img/pic-c.png" style="width: 65px;border:" alt="">
+                </div>
+        </div>
+
+
+
+
+      </div>
+
 <?php if ($_GET["m"] == "0") { ?>
 <div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 980px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-iphone4-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
 <? } ?>
