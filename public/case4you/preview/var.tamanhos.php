@@ -114,9 +114,19 @@ switch ($ql) {
     $mw2 = $mw2*2;
     $mh2 = $mh2*2;
 
-    $mw15a = $mw15a*2;
-    $mh15a = $mh15a*2;
-    $mw15b = $mw15b*2;
-    $mh15b = ($mh15b*2)+3;
+
+    if ($ql == 2 && $qm == 0) {
+        $mw15a = $mw15a*2;
+        $mh15a = $mh15a*2;
+        $mw15b = $mw15b*2;
+        $mh15b = ($mh15b*2)+3;
+    }
+
+    if ($ql == 2 && $qm == 1) {
+        $mw15a = $mw15a*2;
+        $mh15a = $mh15a*2;
+        $mw15b = $mw15b*2;
+        $mh15b = ($mh15b*2)+3;
+    }
 
 ?>
