@@ -126,7 +126,7 @@ switch ($ql) {
         $mw15a = $mw15a*2;
         $mh15a = $mh15a*2;
         $mw15b = $mw15b*2;
-        $mh15b = ($mh15b*2)+3;
+        $mh15b = $mh15b*2;
     }
 
 ?>
