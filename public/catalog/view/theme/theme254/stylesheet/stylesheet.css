@@ -58,6 +58,7 @@ html {
 }
 body {
 	width:100%;
+
 }
 html, body {
 	margin:0;
@@ -74,9 +75,6 @@ body {
 	font-size:12px;
 	line-height:18px;
 	min-width:1024px;
-	background-position-y: -10px;
-	background-image: url('/catalog/view/theme/theme254/image/bg-c4y.png');
-	background-repeat: repeat-x;
 }
 td, th, input, textarea, select, a {
 	font-size: 12px;
@@ -248,7 +246,9 @@ h2 {
 .common-home #content {
 	padding:0px;
 	margin:0;
-	background:none;
+	background-position-y: -10px;
+	background-image: url('/catalog/view/theme/theme254/image/bg-c4y.png');
+	background-repeat: repeat-x;
 	border:0
 	}
 #column-right + #content {
