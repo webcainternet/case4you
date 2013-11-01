@@ -910,7 +910,7 @@ ondragover="allowDrop(event)"></div>
                 </div>
         </div>
 
-    <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
                 <div style="float: left; text-align: left">
                         <input onchange="selecionarfiltro('<?php echo $_GET['l']; ?>', '-40.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
                 </div>
@@ -919,25 +919,28 @@ ondragover="allowDrop(event)"></div>
                 </div>
         </div>
 
+        <div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
+        <a href="#" onclick="document.getElementById('mascarasp').style.display = 'block'">Coloca mascara</a> | <a href="#" onclick="document.getElementById('mascarasp').style.display = 'none'">Remove mascara</a>
 
+        </div>
 
 
       </div>
 
 <?php if ($_GET["m"] == "0") { ?>
-<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 980px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-iphone4-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
+<div id="mascarasp" style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 980px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-iphone4-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
 <? } ?>
 
 <?php if ($_GET["m"] == "1") { ?>
-<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 1076px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-iphone5-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
+<div id="mascarasp" style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 1076px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-iphone5-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
 <? } ?>
 
 <?php if ($_GET["m"] == "2") { ?>
-<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 1054px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-galaxy3-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
+<div id="mascarasp" style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 1054px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-galaxy3-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
 <? } ?>
 
 <?php if ($_GET["m"] == "3") { ?>
-<div style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 998px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-galaxy4-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
+<div id="mascarasp" style="position: absolute; top: 0px; left: 0px; padding: 0px; height: 998px; width: 680px; background-size: 680px; background-image: url(http://case4you.com.br/case4you/0/img/mask-galaxy4-b.png); background-repeat: no-repeat no-repeat;">&nbsp;</div>
 <? } ?>
 
 
