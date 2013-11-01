@@ -69,8 +69,7 @@ background-color: transparent;
     var meufiltro = 0;
 
     function finalizacompra() {
-        alert(meufiltro);
-        //window.parent.parent.window.location = 'http://case4you.com.br/case4you/save.product.php?idcsession=<?php echo $idcsession; ?>&m=<?php echo $_GET["m"]; ?>&l=<?php echo $_GET["l"]; ?>&f='+$("#fsepia").val();
+        window.parent.parent.window.location = 'http://case4you.com.br/case4you/save.product.php?idcsession=<?php echo $idcsession; ?>&m=<?php echo $_GET["m"]; ?>&l=<?php echo $_GET["l"]; ?>&f='+meufiltro;
     }
 
 	function selecionarfiltro(meutemplate, minhaext) {
