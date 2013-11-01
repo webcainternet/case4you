@@ -65,7 +65,17 @@ background-color: transparent;
   <?php include 'ddx.jscript.php'; ?>
 
 <script>
+    function finalizacompra() {
+
+        window.parent.parent.window.location = 'http://case4you.com.br/case4you/save.product.php?idcsession=<?php echo $idcsession; ?>&m=<?php echo $_GET["m"]; ?>&l=<?php echo $_GET["l"]; ?>&f='+document.getElementById('filtrocapi').value;
+    }
+
 	function selecionarfiltro(meutemplate, minhaext) {
+
+        if (minhaext == "") { document.getElementById('filtrocapi').value = '0'; }
+        if (minhaext == "-pb.png") { document.getElementById('filtrocapi').value = '1'; }
+        if (minhaext == "-sp.png") { document.getElementById('filtrocapi').value = '2'; }
+        if (minhaext == "-40.png") { document.getElementById('filtrocapi').value = '3'; }
 
                 if (meutemplate == '0') {
                         varbg = document.getElementById("divl1").style.backgroundImage;
@@ -321,6 +331,8 @@ background-color: transparent;
 
 <body style="margin: 0px; padding: 0px;font-family: Arial, Helvetica, sans-serif; color: #222222;line-height: 1.3;font-size: 12px; ">
 
+<input type="hidden" value="filtrocapi">
+
 <div id="div1" ondrop="drop(event)"
 ondragover="allowDrop(event)"></div>
 
@@ -416,7 +428,7 @@ ondragover="allowDrop(event)"></div>
 
 
 	<div style="text-align: left; float: right;">
-		<input style="margin-top: 20px;" type="submit" value="Finalizar" onclick="window.parent.parent.window.location = 'http://case4you.com.br/minhacapinha';">
+		<input style="margin-top: 20px;" type="submit" value="Finalizar" onclick="finalizacompra()">
 	</div>
 
     </div>
