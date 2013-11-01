@@ -72,10 +72,10 @@ background-color: transparent;
 
 	function selecionarfiltro(meutemplate, minhaext) {
 
-        if (minhaext == "") { $("#filtrocapi").html('value','0'); }
-        if (minhaext == "-pb.png") { $("#filtrocapi").html('value','1'); }
-        if (minhaext == "-sp.png") { $("#filtrocapi").html('value','2'); }
-        if (minhaext == "-40.png") { $("#filtrocapi").html('value','3'); } 
+        if (minhaext == "") { $("#filtrocapi").html('value','0'); alert('a'); }
+        if (minhaext == "-pb.png") { $("#filtrocapi").html('value','1');alert('b'); }
+        if (minhaext == "-sp.png") { $("#filtrocapi").html('value','2');alert('v'); }
+        if (minhaext == "-40.png") { $("#filtrocapi").html('value','3');alert('d'); } 
 
 
                 if (meutemplate == '0') {
