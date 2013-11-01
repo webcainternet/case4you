@@ -40,7 +40,7 @@
           <?php foreach ($products as $product) { ?>
           <tr>
             <td class="image">
-            <iframe src="http://case4you.com.br/case4you/thumb/index.php?<?php echo $product['thumb']; ?>" style="border: 0px; width: 80px; height: 115px;" scrolling="no"></iframe>
+            <iframe src="http://case4you.com.br/case4you/thumb/index.php?<?php echo $product['mpn']; ?>" style="border: 0px; width: 80px; height: 115px;" scrolling="no"></iframe>
             <?php if ($product['thumb']) { ?>
 
             
