@@ -16,6 +16,13 @@ padding-bottom: 40px;
 
 <body style="margin: 20px; padding: 20px;">
 
+<div>
+<form method="post">
+URL: <input type="text" name="imagem" style="width: 300px;">
+<input type="submit">
+</form>
+</div>
+
 			<div style="width: 280px; float: left;">
 				Iphone4/4S<br /><a href="mascara_iphone_4s.png">mascara</a><br />&nbsp;
 				<div style="width:240px;">
