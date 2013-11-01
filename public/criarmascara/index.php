@@ -17,7 +17,7 @@ padding-bottom: 40px;
 <body style="margin: 20px; padding: 20px;">
 
 <div>
-<form method="post">
+<form method="get">
 URL: <input type="text" name="imagem" style="width: 300px;">
 <input type="submit">
 </form>
