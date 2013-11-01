@@ -27,6 +27,7 @@ body, p {
 font-family: "c4y1", Arial, Verdana;
 margin:0px; padding:0px;
 background-color: transparent;
+background-image: url('/catalog/view/theme/theme254/image/bg-c4y.png');
 }
 
 </style>
