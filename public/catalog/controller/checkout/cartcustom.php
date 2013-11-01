@@ -232,6 +232,7 @@ class ControllerCheckoutCartcustom extends Controller {
 				}
 				
         		$this->data['products'][] = array(
+        			'product_id'	   => $product['product_id'],
           			'key'      => $product['key'],
           			'thumb'    => $image,
 					'name'     => $product['name'],
