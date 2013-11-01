@@ -141,7 +141,7 @@ switch ($ql) {
         $mw15a = ($mw15a/4)+1;
         $mh15a = ($mh15a/4);
         $mw15b = $mw15b/4;
-        $mh15b = $mh15b/4;
+        $mh15b = ($mh15b/4)+1;
     }
 
 ?>
