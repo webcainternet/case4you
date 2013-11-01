@@ -16,7 +16,7 @@ padding-bottom: 40px;
 <body style="margin: 20px; padding: 20px;">
 
 			<div style="margin: auto; width: 400px;">
-				Iphone4/4S<br />
+				Iphone4/4S<br />&nbsp;
 				<div style="width:240px;">
                     <div class="image">
                         <div style="background: url(<?php echo $imagem; ?>) top center; height: 468px; background-size: 468px; width: 240px;border-radius: 46px;"></div>
