@@ -66,7 +66,7 @@ background-color: transparent;
 
 <script>
     function finalizacompra() {
-        alert($("#fsepia").val());
+        alert($("#filtrocapi").val());
         //window.parent.parent.window.location = 'http://case4you.com.br/case4you/save.product.php?idcsession=<?php echo $idcsession; ?>&m=<?php echo $_GET["m"]; ?>&l=<?php echo $_GET["l"]; ?>&f='+$("#fsepia").val();
     }
 
