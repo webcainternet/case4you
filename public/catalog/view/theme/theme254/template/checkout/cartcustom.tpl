@@ -39,9 +39,11 @@
         <tbody>
           <?php foreach ($products as $product) { ?>
           <tr>
-            <td class="image"><?php if ($product['thumb']) { ?>
+            <td class="image">ww
+              <iframe src="http://case4you.com.br/case4you/thumb/index.php?idcsession=13832939676577&m=0&l=0&f=0" style="border: 0px; width: 170px; height: 170px;" scrolling="no"></iframe>
+            <?php if ($product['thumb']) { ?>
 
-            <iframe src="http://case4you.com.br/case4you/thumb/index.php?idcsession=13832939676577&m=0&l=0&f=0" style="border: 0px; width: 170px; height: 170px;" scrolling="no"></iframe>
+            
             
 
               <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" /></a>
