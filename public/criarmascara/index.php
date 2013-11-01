@@ -15,8 +15,41 @@ padding-bottom: 40px;
 
 <body style="margin: 20px; padding: 20px;">
 
-			<div style="width: 400px; background-color: red; float: left;">
+			<div style="width: 280px; float: left;">
 				Iphone4/4S<br />&nbsp;
+				<div style="width:240px;">
+                    <div class="image">
+                        <div style="background: url(<?php echo $imagem; ?>) top center; height: 468px; background-size: 468px; width: 240px;border-radius: 46px;"></div>
+                    </div>
+                    <img src="mascara_iphone_4s.png" style="height: 468px;width: 240px;position: relative;top: -508px;margin: 0 0 -254px;   border-radius: 44px!important;" alt="">
+                </div>
+            </div>
+
+
+			<div style="width: 280px; float: left;">
+				Iphone5/5S<br />&nbsp;
+				<div style="width:240px;">
+                    <div class="image">
+                        <div style="background: url(<?php echo $imagem; ?>) top center; height: 468px; background-size: 468px; width: 240px;border-radius: 46px;"></div>
+                    </div>
+                    <img src="mascara_iphone_4s.png" style="height: 468px;width: 240px;position: relative;top: -508px;margin: 0 0 -254px;   border-radius: 44px!important;" alt="">
+                </div>
+            </div>
+
+
+            <div style="width: 280px; float: left;">
+				GalaxyS3<br />&nbsp;
+				<div style="width:240px;">
+                    <div class="image">
+                        <div style="background: url(<?php echo $imagem; ?>) top center; height: 468px; background-size: 468px; width: 240px;border-radius: 46px;"></div>
+                    </div>
+                    <img src="mascara_iphone_4s.png" style="height: 468px;width: 240px;position: relative;top: -508px;margin: 0 0 -254px;   border-radius: 44px!important;" alt="">
+                </div>
+            </div>
+
+
+            <div style="width: 280px; float: left;">
+				GalaxyS4<br />&nbsp;
 				<div style="width:240px;">
                     <div class="image">
                         <div style="background: url(<?php echo $imagem; ?>) top center; height: 468px; background-size: 468px; width: 240px;border-radius: 46px;"></div>
