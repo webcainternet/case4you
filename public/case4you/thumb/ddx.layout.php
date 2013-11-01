@@ -64,7 +64,7 @@ switch ($ql) {
                 <div id="divl15b8" ondrop="dropl15b(event, '9')" ondragover="allowDrop(event)" style="float: right;  width: <?php echo $mw15b; ?>px; height: <?php echo $mh15b; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
 
-
+<?php if ($ql == 2 && $qm == 3) { $mh15a = $mh15a-1; } ?>
 
                 <div id="divl15b9" ondrop="dropl15b(event, '11')" ondragover="allowDrop(event)" style="float: left;  width: <?php echo $mw15b; ?>px; height: <?php echo $mh15b; ?>px; overflow: hidden;text-align: center;
         align: middle;"></div>
