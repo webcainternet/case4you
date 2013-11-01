@@ -372,13 +372,10 @@ ondragover="allowDrop(event)"></div>
 				$nleft[1] 		= $row1["nleft"];
 				$ntop[1] 		= $row1["ntop"];
 
-                $imagemurl[1]   = $imagemurl[1]/4;
                 $nheight[1]     = $nheight[1]/4;
                 $nwidth[1]      = $nwidth[1]/4;
                 $nleft[1]       = $nleft[1]/4;
                 $ntop[1]        = $ntop[1]/4;
-
-                echo "$imagemurl[1]";
 
 
 			?>
@@ -964,6 +961,6 @@ ondragover="allowDrop(event)"></div>
 <? } ?>
 
 </script>
-<?php echo $sql_statement1; ?>
+
 </body>
 </html>

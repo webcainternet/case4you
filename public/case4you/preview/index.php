@@ -372,7 +372,6 @@ ondragover="allowDrop(event)"></div>
 				$nleft[1] 		= $row1["nleft"];
 				$ntop[1] 		= $row1["ntop"];
 
-                $imagemurl[1]   = $imagemurl[1]*2;
                 $nheight[1]     = $nheight[1]*2;
                 $nwidth[1]      = $nwidth[1]*2;
                 $nleft[1]       = $nleft[1]*2;
