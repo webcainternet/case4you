@@ -54,6 +54,8 @@
               }
 
               mysql_free_result($result);
+
+              echo $product['mpn'];
             ?>
 
             <iframe src="http://case4you.com.br/case4you/thumb/index.php?<?php echo $urlcapinha; ?>" style="border: 0px; width: 80px; height: 115px;" scrolling="no"></iframe>
