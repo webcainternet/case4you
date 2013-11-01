@@ -66,17 +66,6 @@ URL da imagem: <input type="text" name="imagem" style="width: 300px;">
                 </div>
             </div>
 
-
-            <div style="width: 280px; float: left;">
-                GalaxyS4<br /><a href="mascara_galaxy_s4.png">mascara</a><br />&nbsp;
-                <div style="width:240px;">
-                    <div class="image">
-                        <div style="background: url('<?php echo $imagem; ?>') center; background-size: auto 100%; height: 468px; width: 240px;border-radius: 46px;"></div>
-                    </div>
-                    <img src="teste.png" style="height: 468px;width: 240px;position: relative;top: -508px;margin: 0 0 -254px;   border-radius: 44px!important;" alt="">
-                </div>
-            </div>
-
 </body>
 
 
