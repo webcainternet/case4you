@@ -114,6 +114,9 @@ Please donate via PayPal to donate@opencart.com
 </div>
 </div>
 
+<div style="position: absolut; top: 30px; left: 30px; width: 200px; height: 20px; border: solid 10px #FF6060; border-radius: 22px; padding: 20px; font-family: c4y1, Arial, Verdana; font-size: 16px;">
+Estamos em manutenção
+</div>
 
 
 <div style="display: none;">
