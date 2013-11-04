@@ -123,7 +123,7 @@ Please donate via PayPal to donate@opencart.com
 </div>
 
 
-<div id="popmsg" style="position: absolute; top: 30px; left: 30px; width: 200px; height: 20px; border: solid 10px #FF6060; border-radius: 22px; padding: 20px; font-family: c4y1, Arial, Verdana; font-size: 16px; background-color: #FFFFFF;">
+<div id="popmsg" style="position: absolute; top: 30px; left: 30px; width: 200px; height: 20px; border: solid 10px #FF6060; border-radius: 22px; padding: 20px; z-index: 100; font-family: c4y1, Arial, Verdana; font-size: 16px; background-color: #FFFFFF;">
 Estamos em manutenção!<br />
 <a href="#" onclick="document.getElementById('popmsg').style.display = 'none';">Fechar</a>
 </div>
