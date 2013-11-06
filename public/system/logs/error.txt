@@ -725,3 +725,13 @@
 2013-10-25 23:05:16 - PHP Notice:  Use of undefined constant php - assumed 'php' in /var/www/case4you.com.br/public/catalog/view/theme/theme254/template/module/featured.tpl on line 128
 2013-10-25 23:05:16 - PHP Notice:  Use of undefined constant php - assumed 'php' in /var/www/case4you.com.br/public/catalog/view/theme/theme254/template/module/featured.tpl on line 144
 2013-10-25 23:05:16 - PHP Notice:  Use of undefined constant php - assumed 'php' in /var/www/case4you.com.br/public/catalog/view/theme/theme254/template/module/featured.tpl on line 144
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/latest.tpl on line 45
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/latest.tpl on line 46
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/latest.tpl on line 47
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/latest.tpl on line 62
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/latest.tpl on line 62
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/bestseller.tpl on line 25
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/bestseller.tpl on line 26
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/bestseller.tpl on line 27
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/bestseller.tpl on line 45
+2013-11-06 3:35:43 - PHP Notice:  Use of undefined constant php - assumed 'php' in /Users/fernandomendes/gitproj/case4you/public/catalog/view/theme/theme254/template/module/bestseller.tpl on line 45

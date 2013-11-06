@@ -103,7 +103,7 @@ ondragover="allowDrop(event)"></div>
 
 <?php
     $ic = 0;
-    $path    = '/var/www/case4you.com.br/public/case4you/1/uploads';
+    $path    = '/Users/fernandomendes/gitproj/case4you/public/case4you/1/uploads';
     if ($handle = opendir($path)) {
         while (false !== ($entry = readdir($handle))) {
             if ($entry != "." && $entry != "..") { 
