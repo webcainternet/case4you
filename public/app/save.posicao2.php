@@ -1,22 +1,7 @@
 <?php
-session_start();
+ini_set("memory_limit","128M");
 
-if (isset($_SESSION["userid"])) {
-  //echo "Logado como:" . $_SESSION["userid"];
-  $idcsession = $_SESSION["userid"];
-}
-else {
-  //Randomiza nome do arquivo
-  $date1 = date_create();
-  //$timestamp1 = date_timestamp_get($date1);
-  $timestamp1 = '2222222222';
-  $ramdomico4 = rand(1000,9999);
-  $idsession = $timestamp1."".$ramdomico4;
-  $_SESSION["userid"] = $idsession;
-  
-  header('location: /case4you/0/');
-  //echo "Nao logado:" . $_SESSION["userid"];
-}
+  $idcsession = $_GET["idcsession"];
 
     include '../config.php';
 
@@ -40,8 +25,7 @@ else {
         //Randomiza nome do arquivo
         $idsession = $idcsession;
         $date1 = date_create();
-        //$timestamp1 = date_timestamp_get($date1);
-        $timestamp1 = '2222222222';
+        $timestamp1 = date_timestamp_get($date1);
         $ramdomico4 = rand(1000,9999);
         $novoarq = "imagesuso/img-".$idsession."-".$timestamp1."-".$ramdomico4;
 
@@ -325,7 +309,7 @@ $sql_statement = "INSERT INTO  `case4you2`.`c4y_capasconstrucao` (
 `ntop`
 )
 VALUES (
-'$gidcsession',  '$gmodelo',  '$glayout',  '$gposicao',  'http://case4you.com.br/case4you/$gimagem2',  '$qnheight',  '$qnwidth',  '$qnleft',  '$qntop'
+'$gidcsession',  '$gmodelo',  '$glayout',  '$gposicao',  'http://case4you.com.br/app/$gimagem2',  '$qnheight',  '$qnwidth',  '$qnleft',  '$qntop'
 )
 ";
 
@@ -336,13 +320,12 @@ if (!$result) {
 }
 else {
     ?>
-        <img src="http://case4you.com.br/case4you/<?php echo "$novoarq"; ?>.png">
-        <img src="http://case4you.com.br/case4you/<?php echo "$novoarq"; ?>.png-40.png">
-        <img src="http://case4you.com.br/case4you/<?php echo "$novoarq"; ?>.png-pb.png">
-        <img src="http://case4you.com.br/case4you/<?php echo "$novoarq"; ?>.png-sp.png">
+        <img src="http://case4you.com.br/app/<?php echo "$novoarq"; ?>.png">
+        <img src="http://case4you.com.br/app/<?php echo "$novoarq"; ?>.png-40.png">
+        <img src="http://case4you.com.br/app/<?php echo "$novoarq"; ?>.png-pb.png">
+        <img src="http://case4you.com.br/app/<?php echo "$novoarq"; ?>.png-sp.png">
     <?php
 }
-
 
 ?>
 

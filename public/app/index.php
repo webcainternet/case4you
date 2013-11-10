@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+if (isset($_SESSION["userid"])) {
+  $idcsession = $_SESSION["userid"];
+}
+else {
+  //Randomiza nome do arquivo
+  $date1 = date_create();
+  $timestamp1 = date_timestamp_get($date1);
+  $ramdomico4 = rand(1000,9999);
+  $idsession = $timestamp1."".$ramdomico4;
+  $_SESSION["userid"] = $idsession;
+  $idcsession = $idsession;
+}
+?>
+
 <html>
 
 <head>
@@ -6,16 +23,15 @@
 
 	<!-- libs -->
 	<link rel="stylesheet" href="lib/jquery-ui.css" />
-	<script src="lib/jquery-1.9.1.js"></script>
-	<script src="lib/jquery-ui.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
 
 
 	<!-- Case4you -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script src="js/acordion.js"></script>
 	<script src="js/montacapa.js"></script>
+	<script src="js/montapreview.js"></script>
 
 	<!-- upload -->
 
@@ -220,7 +236,7 @@
 				<div style="float: left; margin-left: 20px; width: 250px;">
 					<div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
 					        <div style="float: left; text-align: left">
-					                <input onchange="selecionarfiltro('1', '')" type="radio" name="filtro" id="fsepia" value="-sp.png">
+					                <input onchange="selecionarfiltro('0')" type="radio" name="filtro" id="fsepia" value="-sp.png">
 					        </div>
 					        <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
 					                <img src="img/pic-n.png" style="width: 65px;border:" alt="">
@@ -229,7 +245,7 @@
 
 					<div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
 					        <div style="float: left; text-align: left">
-					                <input onchange="selecionarfiltro('1', '-sp.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
+					                <input onchange="selecionarfiltro('2')" type="radio" name="filtro" id="fsepia" value="-sp.png">
 					        </div>
 					        <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
 					                <img src="img/pic-s.png" style="width: 65px;border:" alt="">
@@ -238,7 +254,7 @@
 
 					<div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
 					        <div style="float: left; text-align: left">
-					                <input onchange="selecionarfiltro('1', '-pb.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
+					                <input onchange="selecionarfiltro('1')" type="radio" name="filtro" id="fsepia" value="-sp.png">
 					        </div>
 					        <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
 					                <img src="img/pic-p.png" style="width: 65px;border:" alt="">
@@ -247,7 +263,7 @@
 
 					<div style="float: left; text-align: left; width: 95px; margin-bottom: 20px; margin-left: 15px;">
 					        <div style="float: left; text-align: left">
-					                <input onchange="selecionarfiltro('1', '-40.png')" type="radio" name="filtro" id="fsepia" value="-sp.png">
+					                <input onchange="selecionarfiltro('3')" type="radio" name="filtro" id="fsepia" value="-sp.png">
 					        </div>
 					        <div style="float: left; text-align: left;padding-left: 5px; height: 80px;">
 					                <img src="img/pic-c.png" style="width: 65px;border:" alt="">
@@ -273,18 +289,68 @@
 			margin-top: 2px;">
 			&nbsp;
 		</div>
+
+		<div id="divcapinhapreview" style="width: 360px;
+			float: left;
+			margin-left: 10px;
+			border: 1px solid #aaaaaa;
+			border-radius: 5px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-top: 2px;
+			padding-left: 10px;
+			display: none;">
+			<iframe name="previewframe" src=""  width="340" height="540" scrolling="no" frameborder="0"></iframe>
+		</div>
+
+		<div id="ircheckout1"  style="width: 340px;
+			float: left;
+			margin-left: 10px;
+			border: 1px solid #aaaaaa;
+			border-radius: 5px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-top: 2px;
+			padding-left: 10px;
+			padding-right: 10px;
+			display: none;
+			text-align: right;
+			font-size: 11px;">
+			Voltar para a edição da capinha
+			<img src="img/price.png" style="margin-top: 5px;">
+			<img src="img/comprar.png" style="margin-top: 10px;">
+		</div>
+
+		<div id="ircheckout2"  style="width: 340px;
+			float: left;
+			margin-left: 10px;
+			border: 1px solid #aaaaaa;
+			border-radius: 5px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-top: 2px;
+			padding-left: 10px;
+			padding-right: 10px;
+			display: block;
+			text-align: right;
+			font-size: 11px;">
+			<a href="#" onclick="finalizar()"><img src="img/finalizar.png" style="margin-top: 5px;"></a>
+		</div>
+
 	</div>
 
 <script>
-MontaCapa(0,0);
+	MontaCapa(0,0);
 </script>
 
 <input type="text" name="modelodocelular" id="modelodocelular" value="">
 <input type="text" name="layoutdacapinha" id="layoutdacapinha" value="">
+<input type="text" name="filtrocapinha" id="filtrocapinha" value="">
+<input type="text" name="idsession" id="idsession" value="<?php echo $idcsession; ?>">
 
 
 
-<div class="mascarasuperior" id="mascarasuperior" onmouseover="this.style.display='none'">
+<div class="mascarasuperior" id="mascarasuperior" onmouseover="escondemascarasup()">
 	&nbsp;
 </div>
 

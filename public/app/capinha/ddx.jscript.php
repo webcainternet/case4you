@@ -7,9 +7,10 @@ function allowDrop(ev)
 function drag(ev)
 {
 	ev.dataTransfer.setData("Text",ev.target.id);
+    escondemascarasup();
 }
 
-function saveposition(posicao, imagemurl)
+function saveposition3(posicao, imagemurl)
 {
     document.getElementById("invfr"+posicao).src="http://case4you.com.br/app/save.posicao.php?idcsession=<?php echo $idcsession; ?>&modelo=<?php echo $gmodelo; ?>&layout=<?php echo $glayout; ?>&posicao="+posicao+"&imagem="+imagemurl;
 }
@@ -17,6 +18,11 @@ function saveposition(posicao, imagemurl)
 function saveposition2(posicao, imagemurl, nheight, nwidth, nleft, ntop)
 {
     document.getElementById("invfr"+posicao).src="http://case4you.com.br/app/save.posicao2.php?idcsession=<?php echo $idcsession; ?>&modelo=<?php echo $gmodelo; ?>&layout=<?php echo $glayout; ?>&posicao="+posicao+"&imagem="+imagemurl+"&nheight="+nheight+"&nwidth="+nwidth+"&nleft="+nleft+"&ntop="+ntop;
+}
+
+function saveposition(idsession, posicao, imagemurl, nheight, nwidth, nleft, ntop)
+{
+    document.getElementById("invfr"+posicao).src="http://case4you.com.br/app/save.posicao2.php?idcsession="+idsession+"&modelo=<?php echo $gmodelo; ?>&layout=<?php echo $glayout; ?>&posicao="+posicao+"&imagem="+imagemurl+"&nheight="+nheight+"&nwidth="+nwidth+"&nleft="+nleft+"&ntop="+ntop;
 }
 
 function drop(ev, posicao)
@@ -64,7 +70,8 @@ function drop(ev, posicao)
 
     imagemurl = document.getElementById(data).src;
     //saveposition(posicao, imagemurl);
-	saveposition2(posicao, imagemurl, nheight, nwidth, nleft, ntop);
+    idtsession = document.getElementById("idsession").value;
+	saveposition(idtsession, posicao, imagemurl, nheight, nwidth, nleft, ntop);
 }
 
 function dropl2(ev, posicao)
@@ -112,7 +119,8 @@ function dropl2(ev, posicao)
 
         imagemurl = document.getElementById(data).src;
     //saveposition(posicao, imagemurl);
-        saveposition2(posicao, imagemurl, nheight, nwidth, nleft, ntop);
+        idtsession = document.getElementById("idsession").value;
+        saveposition(idtsession, posicao, imagemurl, nheight, nwidth, nleft, ntop);
 }
 
 function dropl15a(ev, posicao)
@@ -160,7 +168,8 @@ function dropl15a(ev, posicao)
 
         imagemurl = document.getElementById(data).src;
     //saveposition(posicao, imagemurl);
-        saveposition2(posicao, imagemurl, nheight, nwidth, nleft, ntop); 
+        idtsession = document.getElementById("idsession").value;
+        saveposition(idtsession, posicao, imagemurl, nheight, nwidth, nleft, ntop);
 }
 
 function droplixeira(ev)
@@ -250,7 +259,8 @@ function dropl15b(ev, posicao)
 
         imagemurl = document.getElementById(data).src;
     //saveposition(posicao, imagemurl);
-        saveposition2(posicao, imagemurl, nheight, nwidth, nleft, ntop); 
+        idtsession = document.getElementById("idsession").value;
+        saveposition(idtsession, posicao, imagemurl, nheight, nwidth, nleft, ntop);
 }
 
 </script>
