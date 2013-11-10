@@ -59,8 +59,8 @@ background-color: transparent;
 
 </head>
 
-<script type="text/javascript" src="scripts/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.wallform.js"></script>
+<script type="text/javascript" src="/case4you/4/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="/case4you/4/scripts/jquery.wallform.js"></script>
 
 <script type="text/javascript" >
  $(document).ready(function() { 

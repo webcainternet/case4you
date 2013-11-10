@@ -1,3 +1,22 @@
+.tituloacc {
+  float: left; width: 60%; margin-top: -8px; margin-left: 10px; font-family: c4y2, Arial, Verdana; font-size: 14px;
+}
+.descacc {
+  float: right; width: 30%; margin-top: -5px; font-family: c4y2, Arial, Verdana; font-size: 10px; text-align: right; margin-right: 20px; font-weight: 100; color: #6aa11a;
+}
+
+.preview
+{
+width:200px;
+border:solid 1px #dedede;
+padding:10px;
+}
+#preview
+{
+color:#cc0000;
+font-size:12px
+}
+
 @font-face {
   font-family: "c4y1";
   src: url(http://capamaniacos.com.br/css/fontes/alrightsans-regularitalic-v3.ttf);
@@ -39,7 +58,7 @@ background-color: transparent;
   font-size: 14px;
   font-weight: bold;
   margin-top: 2px;
-  padding-left: 30px;
+  padding-left: 35px;
 }
 
 .c4ysteptext {
@@ -60,3 +79,13 @@ background-color: transparent;
   font-weight: bold;
 }
 
+.mascarasuperior {
+      position: absolute;
+      top: 33px;
+      left: 441px;
+      width: 342px;
+      height: 540px;
+      z-index: 10;
+      background-repeat: no-repeat;
+      background-image: url('/app/img/mask-iphone4-top.png');
+}

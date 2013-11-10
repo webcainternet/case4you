@@ -1,18 +1,27 @@
 <?php
-session_start();
 
-if (isset($_SESSION["userid"])) {
-  $idcsession = $_SESSION["userid"];
+if (isset($_GET["idsession"])) {
+    $idcsession = $_GET["idsession"];
+    $_SESSION["userid"] = $idcsession;
 }
-else {
-  //Randomiza nome do arquivo
-  $date1 = date_create();
-  $timestamp1 = date_timestamp_get($date1);
-  $ramdomico4 = rand(1000,9999);
-  $idsession = $timestamp1."".$ramdomico4;
-  $_SESSION["userid"] = $idsession;
+else
+{
 
-  //echo "Nao logado:" . $_SESSION["userid"];
+    session_start();
+
+    if (isset($_SESSION["userid"])) {
+      $idcsession = $_SESSION["userid"];
+    }
+    else {
+      //Randomiza nome do arquivo
+      $date1 = date_create();
+      $timestamp1 = date_timestamp_get($date1);
+      $ramdomico4 = rand(1000,9999);
+      $idsession = $timestamp1."".$ramdomico4;
+      $_SESSION["userid"] = $idsession;
+
+      //echo "Nao logado:" . $_SESSION["userid"];
+    }
 }
 
     $idcsession = $idcsession;
